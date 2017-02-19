@@ -3,12 +3,13 @@ from dynet import LSTMBuilder
 from util import *
 import numpy
 import random
+import nltk
 
 
 class EncoderDecoder:
 
     # define dynet model for the encoder-decoder model
-    def __init__(self, train_src_file, train_tgt_file, num_layers=1, embed_size=200, hidden_size=128):
+    def __init__(self, train_src_file, train_tgt_file, num_layers=1, embed_size=200, hidden_size=200):
 
         self.num_layers = num_layers
         self.embed_size, self.hidden_size = embed_size, hidden_size
@@ -25,14 +26,12 @@ class EncoderDecoder:
         self.tgt_lookup = self.model.add_lookup_parameters((self.tgt_vocab_size, self.embed_size))
         self.W_y = self.model.add_parameters((self.tgt_vocab_size, self.hidden_size))
         self.b_y = self.model.add_parameters((self.tgt_vocab_size,))
-        self.W_eh = self.model.add_parameters((self.embed_size, self.hidden_size))
 
     # Training step over a single sentence pair
     def __step(self, src_sent_vec, tgt_sent_vec):
         dy.renew_cg()
         W_y = dy.parameter(self.W_y)
         b_y = dy.parameter(self.b_y)
-        W_eh = dy.parameter(self.W_eh)
 
         losses = []
 
@@ -42,7 +41,6 @@ class EncoderDecoder:
             embed = dy.lookup(self.src_lookup, cID)
             enc_state = enc_state.add_input(embed)
         encoded = enc_state.output()
-        encoded = W_eh * encoded
 
         # Set initial decoder state to the result of the encoder
         dec_state = self.dec_builder.initial_state()
@@ -68,7 +66,6 @@ class EncoderDecoder:
         dy.renew_cg()
         W_y = dy.parameter(self.W_y)
         b_y = dy.parameter(self.b_y)
-        W_eh = dy.parameter(self.W_eh)
 
         # Start the encoder for the sentence to be translated
         enc_state = self.enc_builder.initial_state()
@@ -77,7 +74,6 @@ class EncoderDecoder:
             embed = dy.lookup(self.src_lookup, cID)
             enc_state = enc_state.add_input(embed)
         encoded = enc_state.output()
-        encoded = W_eh * encoded
 
         # Decoder
         trans_sentence = ['<S>']
@@ -129,7 +125,8 @@ class EncoderDecoder:
                     src_sents = [src_sent_vecs_test[k] for k in randIndex]
                     tgt_sents = [tgt_sentences_test[k] for k in randIndex]
                     self.test(src_sents, tgt_sents)
-            save_model(self.model, 'LSTM_layer1_SGD_{0}'.format(i + 1))
+            save_model(self.model,"LSTM_layer1_SGD_{0}".format(num_epoch))
+            # TODO: save model
 
     def test(self, src_sent_vecs_test, tgt_sentences_test):
         num_test = len(src_sent_vecs_test)
@@ -139,14 +136,13 @@ class EncoderDecoder:
         print
 
 
-def save_model(model, file_path):
+def save_model(model,file_path):
     folder_path = "../models"
     if not os.path.exists(folder_path):
         os.mkdir(folder_path)
-    model_file_path = os.path.join(folder_path, file_path)
+    model_file_path = os.path.join(folder_path,file_path)
     model.save(model_file_path)
     print 'saved to {0}'.format(model_file_path)
-
 
 def test1():
     encdec = EncoderDecoder(train_de, train_en)

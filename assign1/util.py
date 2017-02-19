@@ -1,5 +1,5 @@
 import os
-
+import nltk
 from collections import defaultdict
 
 data_root = '../data'
@@ -88,5 +88,10 @@ def test1():
 
 
 if __name__ == '__main__':
-    test1()
+    #test1()
+    hypothesis = ['It', 'is', 'a', 'cat', 'at', 'room']
+    reference = ['It', 'is', 'a', 'cat', 'inside', 'the', 'room']
+    #there may be several references
+    BLEUscore = nltk.translate.bleu_score.bleu(reference,hypothesis,weights=(0.5, 0.5))
+    print BLEUscore
 
