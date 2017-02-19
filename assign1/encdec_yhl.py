@@ -14,7 +14,7 @@ class EncoderDecoder:
         self.embed_size, self.hidden_size = embed_size, hidden_size
 
         self.model = dy.Model()
-        self.trainer = dy.MomentumSGDTrainer(self.model)
+        self.trainer = dy.AdamTrainer(self.model)
 
         self.src_token_to_id, self.src_id_to_token, self.src_sent_vecs, self.src_vocab_size = read_file(train_src_file)
         self.tgt_token_to_id, self.tgt_id_to_token, self.tgt_sent_vecs, self.tgt_vocab_size = read_file(train_tgt_file)
@@ -43,17 +43,20 @@ class EncoderDecoder:
 
         # Set initial decoder state to the result of the encoder
         dec_state = self.dec_builder.initial_state()
-        dec_state = dec_state.add_input(encoded)
+        start = True
         # Calculate losses for decoding
         for (cID, nID) in zip(tgt_sent_vec, tgt_sent_vec[1:]):
-            embed = dy.lookup(self.tgt_lookup, cID)
+            if start:
+                embed = encoded
+            else:
+                embed = dy.lookup(self.tgt_lookup, cID)
             dec_state = dec_state.add_input(embed)
             y_star = W_y * dec_state.output() + b_y
             p = dy.softmax(y_star)
             loss = -dy.log(dy.pick(p, nID))
             losses.append(loss)
 
-        loss = dy.esum(losses) / len(losses)
+        loss = dy.esum(losses)
 
         return loss
 
@@ -76,9 +79,14 @@ class EncoderDecoder:
 
         # Set the intial state to the result of the encoder
         dec_state = self.dec_builder.initial_state()
-        dec_state = dec_state.add_input(encoded)
+        # dec_state = dec_state.add_input(encoded)
+        start = True
         while len(trans_sentence) < max_len:
-            embed = dy.lookup(self.tgt_lookup, cID)
+            if start:
+                embed = encoded
+                start = False
+            else:
+                embed = dy.lookup(self.tgt_lookup, cID)
             dec_state = dec_state.add_input(embed)
             y_star = W_y * dec_state.output() + b_y
             # Get probability distribution for the next word to be generated
@@ -88,6 +96,7 @@ class EncoderDecoder:
             if cw == '</S>':
                 break
             trans_sentence.append(cw)
+            cID = self.tgt_token_to_id[cw]
 
         return ' '.join(trans_sentence[1:])
 
