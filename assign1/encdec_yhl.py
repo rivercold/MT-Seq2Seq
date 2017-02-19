@@ -53,7 +53,7 @@ class EncoderDecoder:
             loss = -dy.log(dy.pick(p, nID))
             losses.append(loss)
 
-        loss = dy.average(losses)
+        loss = dy.esum(losses)
 
         return loss
 
