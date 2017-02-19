@@ -49,7 +49,7 @@ class EncoderDecoder:
         encoded = enc_state.output()
         encoded = W_eh * encoded'''
 
-        embeds = [dy.lookup(self.src_lookup, cID) for cID in src_sent_vec]
+        embeds = dy.lookup_batch(src_sent_vec, src_sent_vec)
         enc_states = enc_state.add_inputs(embeds)
         encoded = enc_states[-1].output()
         encoded = W_eh * encoded
@@ -89,7 +89,7 @@ class EncoderDecoder:
             enc_state = enc_state.add_input(embed)
         encoded = enc_state.output()
         encoded = W_eh * encoded'''
-        embeds = [dy.lookup(self.src_lookup, cID) for cID in src_sent_vec]
+        embeds = dy.lookup_batch(self.src_lookup, src_sent_vec)
         enc_states = enc_state.add_inputs(embeds)
         encoded = enc_states[-1].output()
         encoded = W_eh * encoded
@@ -120,6 +120,9 @@ class EncoderDecoder:
             cID = self.tgt_token_to_id[cw]
 
         return ' '.join(trans_sentence[1:])
+
+    def __step_batch(self, src_batch, tgt_batch):
+        pass
 
     def train(self, test_src_file, test_tgt_file, num_epoch=20, report_iter=100, save=False):
         src_sent_vecs_test = read_test_file(test_src_file, self.src_token_to_id)
