@@ -58,7 +58,7 @@ class EncoderDecoder:
 
         loss = dy.esum(losses)
 
-        return loss
+        return loss, len(losses)
 
     def translate_sentence(self, src_sent_vec, max_len=50):
         dy.renew_cg()
@@ -111,8 +111,8 @@ class EncoderDecoder:
         loss_avg = 0.
         for i in xrange(num_epoch):
             for j in xrange(num_train):
-                loss = self.__step(self.src_sent_vecs[j], self.tgt_sent_vecs[j])
-                loss_val = loss.value()
+                loss, total_word = self.__step(self.src_sent_vecs[j], self.tgt_sent_vecs[j])
+                loss_val = loss.value() / total_word
                 loss_avg += loss_val
                 loss.backward()
                 self.trainer.update()
