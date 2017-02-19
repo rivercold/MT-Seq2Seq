@@ -42,12 +42,13 @@ class EncoderDecoder:
         encoded = enc_state.output()
 
         # Set initial decoder state to the result of the encoder
-        dec_state = self.dec_builder.initial_state(encoded)
+        dec_state = self.dec_builder.initial_state()
         start = True
         # Calculate losses for decoding
         for (cID, nID) in zip(tgt_sent_vec, tgt_sent_vec[1:]):
             if start:
                 embed = encoded
+                start = False
             else:
                 embed = dy.lookup(self.tgt_lookup, cID)
             dec_state = dec_state.add_input(embed)
