@@ -14,7 +14,7 @@ class EncoderDecoder:
         self.embed_size, self.hidden_size = embed_size, hidden_size
 
         self.model = dy.Model()
-        self.trainer = dy.AdamTrainer(self.model)
+        self.trainer = dy.SimpleSGDTrainer(self.model)
 
         self.src_token_to_id, self.src_id_to_token, self.src_sent_vecs, self.src_vocab_size = read_file(train_src_file)
         self.tgt_token_to_id, self.tgt_id_to_token, self.tgt_sent_vecs, self.tgt_vocab_size = read_file(train_tgt_file)
