@@ -124,6 +124,7 @@ class EncoderDecoder:
                     src_sents = [src_sent_vecs_test[k] for k in randIndex]
                     tgt_sents = [tgt_sentences_test[k] for k in randIndex]
                     self.test(src_sents, tgt_sents)
+                    save_model(self.model,"LSTM_layer1_SGD_{0}".format(num_epoch))
 
             # TODO: save model
 
