@@ -3,7 +3,7 @@ __author__ = 'yuhongliang324'
 import os
 from collections import defaultdict
 
-data_root = '../data'
+data_root = '../../data'
 train_en = os.path.join(data_root, 'train.en-de.low.filt.en')
 train_de = os.path.join(data_root, 'train.en-de.low.filt.de')
 valid_en = os.path.join(data_root, 'valid.en-de.low.en')
