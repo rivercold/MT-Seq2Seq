@@ -19,7 +19,8 @@ class EncoderDecoder:
         self.trainer = dy.SimpleSGDTrainer(self.model)
 
         self.src_token_to_id, self.src_id_to_token, self.src_sent_vecs, self.src_vocab_size = read_file(train_src_file)
-        self.tgt_token_to_id, self.tgt_id_to_token, self.tgt_sent_vecs, self.tgt_vocab_size = read_file(train_tgt_file)
+        self.tgt_token_to_id, self.tgt_id_to_token, self.tgt_sent_vecs, self.tgt_vocab_size = read_file(train_tgt_file,
+                                                                                                        target=True)
 
         self.enc_builder = LSTMBuilder(self.num_layers, self.embed_size, self.hidden_size, self.model)
         self.dec_builder = LSTMBuilder(self.num_layers, self.embed_size, self.hidden_size, self.model)
@@ -108,7 +109,7 @@ class EncoderDecoder:
 
         return ' '.join(trans_sentence[1:])
 
-    def train(self, test_src_file, test_tgt_file, num_epoch=10, report_iter=100):
+    def train(self, test_src_file, test_tgt_file, num_epoch=20, report_iter=100, save=False):
         src_sent_vecs_test = read_test_file(test_src_file, self.src_token_to_id)
         tgt_sentences_test = read_test_file(test_tgt_file)
 
@@ -131,7 +132,8 @@ class EncoderDecoder:
                     src_sents = [src_sent_vecs_test[k] for k in randIndex]
                     tgt_sents = [tgt_sentences_test[k] for k in randIndex]
                     self.test(src_sents, tgt_sents)
-            save_model(self.model, 'LSTM_layer1_SGD_{0}'.format(i + 1))
+            if save:
+                save_model(self.model, 'LSTM_layer1_SGD_{0}'.format(i + 1))
 
     def test(self, src_sent_vecs_test, tgt_sentences_test):
         num_test = len(src_sent_vecs_test)
@@ -152,7 +154,7 @@ def save_model(model, file_path):
 
 def test1():
     encdec = EncoderDecoder(train_de, train_en)
-    encdec.train(valid_de, valid_en)
+    encdec.train(valid_de, valid_en, save=True)
 
 
 def test2():
