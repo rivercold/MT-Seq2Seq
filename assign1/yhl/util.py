@@ -17,7 +17,7 @@ toy_test_en = os.path.join(data_root, 'toy.test.en')
 toy_test_de = os.path.join(data_root, 'toy.test.de')
 
 
-def read_file(file_name, threshold=2, target=False):
+def read_file(file_name, threshold=1, target=False):
     reader = open(file_name)
     lines = reader.readlines()
     reader.close()
