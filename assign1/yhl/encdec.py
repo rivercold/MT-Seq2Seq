@@ -30,17 +30,22 @@ class EncoderDecoder:
         self.b_y = self.model.add_parameters((self.tgt_vocab_size,))
         self.W_eh = self.model.add_parameters((self.embed_size, self.hidden_size))
 
+    def encode(self, src_sent_vec):
+        W_eh = dy.parameter(self.W_eh)
+        enc_state = self.enc_builder.initial_state()
+        embeds = [dy.lookup(self.src_lookup, cID) for cID in src_sent_vec]
+        enc_states = enc_state.transduce(embeds)
+        encoded = enc_states[-1].output()
+        encoded = W_eh * encoded
+        return encoded
+
     # Training step over a single sentence pair
     def __step(self, src_sent_vec, tgt_sent_vec):
         dy.renew_cg()
         W_y = dy.parameter(self.W_y)
         b_y = dy.parameter(self.b_y)
-        W_eh = dy.parameter(self.W_eh)
 
         losses = []
-
-        # Start the rnn for the encoder
-        enc_state = self.enc_builder.initial_state()
 
         '''
         for cID in src_sent_vec:
@@ -49,10 +54,7 @@ class EncoderDecoder:
         encoded = enc_state.output()
         encoded = W_eh * encoded'''
 
-        embeds = dy.lookup_batch(self.src_lookup, src_sent_vec)
-        enc_states = enc_state.add_inputs(embeds)
-        encoded = enc_states[-1].output()
-        encoded = W_eh * encoded
+        encoded = self.encode(src_sent_vec)
 
         # Set initial decoder state to the result of the encoder
         dec_state = self.dec_builder.initial_state()
@@ -78,10 +80,6 @@ class EncoderDecoder:
         dy.renew_cg()
         W_y = dy.parameter(self.W_y)
         b_y = dy.parameter(self.b_y)
-        W_eh = dy.parameter(self.W_eh)
-
-        # Start the encoder for the sentence to be translated
-        enc_state = self.enc_builder.initial_state()
 
         '''
         for cID in src_sent_vec:
@@ -89,10 +87,8 @@ class EncoderDecoder:
             enc_state = enc_state.add_input(embed)
         encoded = enc_state.output()
         encoded = W_eh * encoded'''
-        embeds = dy.lookup_batch(self.src_lookup, src_sent_vec)
-        enc_states = enc_state.add_inputs(embeds)
-        encoded = enc_states[-1].output()
-        encoded = W_eh * encoded
+
+        encoded = self.encode(src_sent_vec)
 
         # Decoder
         trans_sentence = ['<S>']
