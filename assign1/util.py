@@ -10,6 +10,10 @@ valid_de = os.path.join(data_root, 'valid.en-de.low.de')
 test_en = os.path.join(data_root, 'test.en-de.low.en')
 test_de = os.path.join(data_root, 'test.en-de.low.de')
 
+toy_train_en = os.path.join(data_root, 'toy.train.en')
+toy_train_de = os.path.join(data_root, 'toy.train.de')
+toy_test_en = os.path.join(data_root, 'toy.test.en')
+toy_test_de = os.path.join(data_root, 'toy.test.de')
 
 def read_file(file_name, threshold=0):
     reader = open(file_name)

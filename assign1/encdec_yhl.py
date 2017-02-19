@@ -14,7 +14,7 @@ class EncoderDecoder:
         self.embed_size, self.hidden_size = embed_size, hidden_size
 
         self.model = dy.Model()
-        self.trainer = dy.AdamTrainer(self.model)
+        self.trainer = dy.MomentumSGDTrainer(self.model)
 
         self.src_token_to_id, self.src_id_to_token, self.src_sent_vecs, self.src_vocab_size = read_file(train_src_file)
         self.tgt_token_to_id, self.tgt_id_to_token, self.tgt_sent_vecs, self.tgt_vocab_size = read_file(train_tgt_file)
@@ -129,5 +129,10 @@ def test1():
     encdec = EncoderDecoder(train_de, train_en)
     encdec.train(valid_de, valid_en)
 
+
+def test2():
+    encdec = EncoderDecoder(toy_train_de, toy_train_en)
+    encdec.train(toy_test_de, toy_test_en)
+
 if __name__ == '__main__':
-    test1()
+    test2()
