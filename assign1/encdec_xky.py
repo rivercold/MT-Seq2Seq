@@ -3,6 +3,7 @@ from dynet import LSTMBuilder
 from util import *
 import numpy
 import random
+import nltk
 
 
 class EncoderDecoder:
@@ -124,8 +125,7 @@ class EncoderDecoder:
                     src_sents = [src_sent_vecs_test[k] for k in randIndex]
                     tgt_sents = [tgt_sentences_test[k] for k in randIndex]
                     self.test(src_sents, tgt_sents)
-                    save_model(self.model,"LSTM_layer1_SGD_{0}".format(num_epoch))
-
+            save_model(self.model,"LSTM_layer1_SGD_{0}".format(num_epoch))
             # TODO: save model
 
     def test(self, src_sent_vecs_test, tgt_sentences_test):
@@ -154,4 +154,4 @@ def test2():
     encdec.train(toy_test_de, toy_test_en, num_epoch=100)
 
 if __name__ == '__main__':
-    test1()
+    test2()
