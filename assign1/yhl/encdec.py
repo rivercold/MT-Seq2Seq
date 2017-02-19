@@ -49,7 +49,7 @@ class EncoderDecoder:
         encoded = enc_state.output()
         encoded = W_eh * encoded'''
 
-        embeds = dy.lookup_batch(src_sent_vec, src_sent_vec)
+        embeds = dy.lookup_batch(self.src_lookup, src_sent_vec)
         enc_states = enc_state.add_inputs(embeds)
         encoded = enc_states[-1].output()
         encoded = W_eh * encoded
