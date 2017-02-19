@@ -34,8 +34,8 @@ class EncoderDecoder:
         W_eh = dy.parameter(self.W_eh)
         enc_state = self.enc_builder.initial_state()
         embeds = [dy.lookup(self.src_lookup, cID) for cID in src_sent_vec]
-        enc_states = enc_state.transduce(embeds)
-        encoded = enc_states[-1].output()
+        outputs = enc_state.transduce(embeds)
+        encoded = outputs[-1]
         encoded = W_eh * encoded
         return encoded
 
