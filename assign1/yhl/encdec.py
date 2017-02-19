@@ -41,10 +41,17 @@ class EncoderDecoder:
 
         # Start the rnn for the encoder
         enc_state = self.enc_builder.initial_state()
+
+        '''
         for cID in src_sent_vec:
             embed = dy.lookup(self.src_lookup, cID)
             enc_state = enc_state.add_input(embed)
         encoded = enc_state.output()
+        encoded = W_eh * encoded'''
+
+        embeds = [dy.lookup(self.src_lookup, cID) for cID in src_sent_vec]
+        enc_states = enc_state.add_inputs(embeds)
+        encoded = enc_states[-1].output()
         encoded = W_eh * encoded
 
         # Set initial decoder state to the result of the encoder
@@ -76,10 +83,15 @@ class EncoderDecoder:
         # Start the encoder for the sentence to be translated
         enc_state = self.enc_builder.initial_state()
 
+        '''
         for cID in src_sent_vec:
             embed = dy.lookup(self.src_lookup, cID)
             enc_state = enc_state.add_input(embed)
         encoded = enc_state.output()
+        encoded = W_eh * encoded'''
+        embeds = [dy.lookup(self.src_lookup, cID) for cID in src_sent_vec]
+        enc_states = enc_state.add_inputs(embeds)
+        encoded = enc_states[-1].output()
         encoded = W_eh * encoded
 
         # Decoder
