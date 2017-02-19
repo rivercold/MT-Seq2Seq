@@ -42,7 +42,7 @@ class EncoderDecoder:
         encoded = enc_state.output()
 
         # Set initial decoder state to the result of the encoder
-        dec_state = self.dec_builder.initial_state()
+        dec_state = self.dec_builder.initial_state(encoded)
         start = True
         # Calculate losses for decoding
         for (cID, nID) in zip(tgt_sent_vec, tgt_sent_vec[1:]):
@@ -141,7 +141,7 @@ def test1():
 
 def test2():
     encdec = EncoderDecoder(toy_train_de, toy_train_en)
-    encdec.train(toy_test_de, toy_test_en)
+    encdec.train(toy_test_de, toy_test_en, num_epoch=100)
 
 if __name__ == '__main__':
-    test1()
+    test2()
