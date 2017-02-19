@@ -8,7 +8,7 @@ class EncoderDecoder:
 
     # define dynet model for the encoder-decoder model
     def __init__(self, training_src, training_tgt, ...):
-        self.model = dynet.Model()
+        self.model = dy.Model()
         self.trainer = dy.SimpleSGDTrainer(model)
 
         self.src_token_to_id, self.src_id_to_token = XXXX
@@ -142,4 +142,5 @@ def main():
     test_src = read_file(sys.argv[5])
     encdec = EncoderDecoder(model, training_src, training_tgt)
 
-if __name__ == '__main__': main()
+if __name__ == '__main__':
+    main()

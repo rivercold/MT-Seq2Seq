@@ -135,6 +135,14 @@ class EncoderDecoder:
         print
 
 
+def save_model(model,file_path):
+    folder_path = "../models"
+    if not os.path.exists(folder_path):
+        os.mkdir(folder_path)
+    model_file_path = os.path.join(folder_path,file_path)
+    model.save(model_file_path)
+    print 'saved to {0}'.format(model_file_path)
+
 def test1():
     encdec = EncoderDecoder(train_de, train_en)
     encdec.train(valid_de, valid_en)
