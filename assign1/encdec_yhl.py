@@ -107,7 +107,6 @@ class EncoderDecoder:
                 loss_avg += loss_val
                 loss.backward()
                 self.trainer.update()
-                print 'epoch=%d, iter=%d' % (i + 1, j + 1)
                 if (j + 1) % report_iter == 0:
                     loss_avg /= report_iter
                     print 'epoch=%d, iter=%d, loss=%f' % (i + 1, j + 1, loss_avg)
