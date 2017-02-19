@@ -15,7 +15,8 @@ toy_train_de = os.path.join(data_root, 'toy.train.de')
 toy_test_en = os.path.join(data_root, 'toy.test.en')
 toy_test_de = os.path.join(data_root, 'toy.test.de')
 
-def read_file(file_name, threshold=0):
+
+def read_file(file_name, threshold=2):
     reader = open(file_name)
     lines = reader.readlines()
     reader.close()
@@ -28,7 +29,7 @@ def read_file(file_name, threshold=0):
             tok_count[tok] += 1
 
     tok_ID = defaultdict(int)  # Unknown words are set to ID = 0
-    ID_tok = {}
+    ID_tok = {0: '<UNKNOWN>'}
     curID = 1
 
     for tok, cnt in tok_count.items():
