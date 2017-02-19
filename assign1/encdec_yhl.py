@@ -145,4 +145,4 @@ def test2():
     encdec.train(toy_test_de, toy_test_en, num_epoch=100)
 
 if __name__ == '__main__':
-    test2()
+    test1()
