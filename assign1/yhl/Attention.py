@@ -332,7 +332,7 @@ def test1():
 
 def test2():
     att = Attention(toy_train_de, toy_train_en)
-    att.train(toy_test_de, toy_test_en, num_epoch=100, save=False)
+    att.train(toy_test_de, toy_test_en, num_epoch=100, save=True)
 
 
 def test3():
@@ -346,4 +346,4 @@ def test4():
 
 
 if __name__ == '__main__':
-    test1()
+    test2()
