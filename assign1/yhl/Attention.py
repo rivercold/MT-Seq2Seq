@@ -10,7 +10,7 @@ import math
 from sklearn.externals import joblib
 
 
-class Attention:
+class Attention():
 
     # define dynet model for the encoder-decoder model
     def __init__(self, train_src_file, train_tgt_file, num_layers=1, embed_size=150, hidden_size=128, attention_size=128, load_from=None):
@@ -27,8 +27,20 @@ class Attention:
         self.src_sent_vecs, self.tgt_sent_vecs = sort_by_length(self.src_sent_vecs, self.tgt_sent_vecs)
 
         if load_from is not None:
-            self.model.load(load_from)
-            print 'Loaded from', load_from
+            theta = self.model.load(load_from)
+            self.l2r_builder = theta[0]
+            self.r2l_builder = theta[1]
+            self.dec_builder = theta[2]
+            self.src_lookup = theta[3]
+            self.tgt_lookup = theta[4]
+            self.W_y = theta[5]
+            self.b_y = theta[6]
+            self.W_eh = theta[7]
+            self.W_hh = theta[8]
+
+            self.W1_att_e = theta[9]
+            self.W1_att_f = theta[10]
+            self.w2_att = theta[11]
         else:
             self.l2r_builder = LSTMBuilder(self.num_layers, self.embed_size, self.hidden_size, self.model)
             self.r2l_builder = LSTMBuilder(self.num_layers, self.embed_size, self.hidden_size, self.model)
@@ -306,11 +318,14 @@ class Attention:
             print trans_sent + '|\t|' + tgt_sentences_test[i]
         print
 
-    def pickle_model(self, file_name):
+    def save_model(self, file_name):
         folder_path = "../models"
         file_path = os.path.join(folder_path, file_name)
         if not os.path.exists(folder_path):
             os.mkdir(folder_path)
+        theta = [self.l2r_builder, self.r2l_builder, self.dec_builder, self.src_lookup, self.tgt_lookup,
+                 self.W_y, self.b_y, self.W_eh, self.W_hh, self.W1_att_e, self.W1_att_f, self.w2_att]
+        self.model.save(file_path, theta)
         print 'saved to {0}'.format(file_path)
 
 
