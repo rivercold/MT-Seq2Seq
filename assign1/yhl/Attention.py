@@ -12,7 +12,7 @@ import math
 class Attention:
 
     # define dynet model for the encoder-decoder model
-    def __init__(self, train_src_file, train_tgt_file, num_layers=1, embed_size=150, hidden_size=128, attention_size=128):
+    def __init__(self, train_src_file, train_tgt_file, num_layers=1, embed_size=150, hidden_size=128, attention_size=128, load_from=None):
 
         self.num_layers = num_layers
         self.embed_size, self.hidden_size, self.attention_size = embed_size, hidden_size, attention_size
@@ -25,20 +25,23 @@ class Attention:
                                                                                                         target=True)
         self.src_sent_vecs, self.tgt_sent_vecs = sort_by_length(self.src_sent_vecs, self.tgt_sent_vecs)
 
-        self.l2r_builder = LSTMBuilder(self.num_layers, self.embed_size, self.hidden_size, self.model)
-        self.r2l_builder = LSTMBuilder(self.num_layers, self.embed_size, self.hidden_size, self.model)
-        self.dec_builder = LSTMBuilder(self.num_layers, self.embed_size + self.hidden_size * 2, self.hidden_size,
-                                       self.model)
-        self.src_lookup = self.model.add_lookup_parameters((self.src_vocab_size, self.embed_size))
-        self.tgt_lookup = self.model.add_lookup_parameters((self.tgt_vocab_size, self.embed_size))
-        self.W_y = self.model.add_parameters((self.tgt_vocab_size, 3 * self.hidden_size))
-        self.b_y = self.model.add_parameters((self.tgt_vocab_size,))
-        self.W_eh = self.model.add_parameters((self.embed_size, self.hidden_size * 2))
-        self.W_hh = self.model.add_parameters((self.hidden_size, self.hidden_size * 2))
+        if load_from is None:
+            self.model.load(load_from)
+        else:
+            self.l2r_builder = LSTMBuilder(self.num_layers, self.embed_size, self.hidden_size, self.model)
+            self.r2l_builder = LSTMBuilder(self.num_layers, self.embed_size, self.hidden_size, self.model)
+            self.dec_builder = LSTMBuilder(self.num_layers, self.embed_size + self.hidden_size * 2, self.hidden_size,
+                                           self.model)
+            self.src_lookup = self.model.add_lookup_parameters((self.src_vocab_size, self.embed_size))
+            self.tgt_lookup = self.model.add_lookup_parameters((self.tgt_vocab_size, self.embed_size))
+            self.W_y = self.model.add_parameters((self.tgt_vocab_size, 3 * self.hidden_size))
+            self.b_y = self.model.add_parameters((self.tgt_vocab_size,))
+            self.W_eh = self.model.add_parameters((self.embed_size, self.hidden_size * 2))
+            self.W_hh = self.model.add_parameters((self.hidden_size, self.hidden_size * 2))
 
-        self.W1_att_e = self.model.add_parameters((self.attention_size, self.hidden_size))
-        self.W1_att_f = self.model.add_parameters((self.attention_size, 2 * self.hidden_size))
-        self.w2_att = self.model.add_parameters((1, self.attention_size))
+            self.W1_att_e = self.model.add_parameters((self.attention_size, self.hidden_size))
+            self.W1_att_f = self.model.add_parameters((self.attention_size, 2 * self.hidden_size))
+            self.w2_att = self.model.add_parameters((1, self.attention_size))
 
         self.batch_size = 1
 
@@ -184,8 +187,8 @@ class Attention:
             h_e_batch = dec_state.output()
             c_t_batch = self.__attention_mlp(H_f_batch, h_e_batch, W1_att_e, W1_att_f, w2_att)
             y_star = W_y * dy.concatenate([h_e_batch, c_t_batch]) + b_y  # (voc_size, batch_size)
-            loss = dy.pickneglogsoftmax_batch(y_star, nID_batch)  # (batch_size,)
-            loss = dy.reshape(loss, (self.batch_size,))
+            loss = dy.pickneglogsoftmax_batch(y_star, nID_batch)
+            loss = dy.reshape(loss, (self.batch_size,))  # (batch_size,)
             for j in xrange(self.batch_size):
                 if lengths[j] > i + 1:
                     losses.append(dy.pick(loss, j))
@@ -284,7 +287,7 @@ class Attention:
                 self.trainer.update()
                 if (j + 1) % report_iter == 0:
                     loss_avg /= report_iter
-                    print 'epoch=%d, iter=%d, loss=%f' % (i + 1, j + 1, loss_avg)
+                    print 'epoch=%d, iter=%d/%d, loss=%f' % (i + 1, j + 1, num_iter, loss_avg)
                     loss_avg = 0.
                     src_sents = [src_sent_vecs_test[k] for k in randIndex]
                     tgt_sents = [tgt_sentences_test[k] for k in randIndex]
@@ -326,5 +329,10 @@ def test3():
     att.train_batch(valid_de, valid_en, save=True)
 
 
+def test4():
+    att = Attention(train_de, train_en, num_layers=2, load_from='../models/LSTM_epoch_4_layer2_hidden_128_embed_150_att_128_02-20-16-59-09')
+    att.train_batch(valid_de, valid_en, save=False)
+
+
 if __name__ == '__main__':
-    test3()
+    test4()
