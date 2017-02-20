@@ -264,9 +264,9 @@ class Attention:
                     tgt_sents = [tgt_sentences_test[k] for k in randIndex]
                     self.test(src_sents, tgt_sents)
             if save:
-                ctime = time.strftime("%m-%d-%H-%M-%S",time.gmtime())
-                pickle_model(self, 'Attention_batch_epoch_{0}_layer{1}_hidden_{2}_embed_{3}_att_{4}_{5}.pkl'
-                             .format(i + 1, self.num_layers, self.hidden_size, self.embed_size, self.attention_size,ctime))
+                ctime = time.strftime("%m-%d-%H-%M-%S", time.gmtime())
+                save_model(self.model, 'Attention_epoch_{0}_layer{1}_hidden_{2}_embed_{3}_att_{4}_{5}'
+                           .format(i + 1, self.num_layers, self.hidden_size, self.embed_size, self.attention_size,ctime))
 
     def train_batch(self, test_src_file, test_tgt_file, num_epoch=20, batch_size=20, report_iter=5, save=False):
         src_sent_vecs_test = read_test_file(test_src_file, self.src_token_to_id)
@@ -296,8 +296,8 @@ class Attention:
                     self.test(src_sents, tgt_sents)
             if save:
                 ctime = time.strftime("%m-%d-%H-%M-%S",time.gmtime())
-                pickle_model(self, 'Attention_batch_epoch_{0}_layer{1}_hidden_{2}_embed_{3}_att_{4}_{5}.pkl'
-                             .format(i + 1, self.num_layers, self.hidden_size, self.embed_size, self.attention_size,ctime))
+                save_model(self.model, 'Attention_batch_epoch_{0}_layer{1}_hidden_{2}_embed_{3}_att_{4}_{5}'
+                           .format(i + 1, self.num_layers, self.hidden_size, self.embed_size, self.attention_size,ctime))
 
     def test(self, src_sent_vecs_test, tgt_sentences_test):
         num_test = len(src_sent_vecs_test)
@@ -305,6 +305,13 @@ class Attention:
             trans_sent = self.translate_sentence(src_sent_vecs_test[i])
             print trans_sent + '|\t|' + tgt_sentences_test[i]
         print
+
+    def pickle_model(self, file_name):
+        folder_path = "../models"
+        file_path = os.path.join(folder_path, file_name)
+        if not os.path.exists(folder_path):
+            os.mkdir(folder_path)
+        print 'saved to {0}'.format(file_path)
 
 
 def save_model(model, file_path):
@@ -314,15 +321,6 @@ def save_model(model, file_path):
     model_file_path = os.path.join(folder_path, file_path)
     model.save(model_file_path)
     print 'saved to {0}'.format(model_file_path)
-
-
-def pickle_model(att, file_name):
-    folder_path = "../models"
-    file_path = os.path.join(folder_path, file_name)
-    if not os.path.exists(folder_path):
-        os.mkdir(folder_path)
-    joblib.dump(att, file_path)
-    print 'saved to {0}'.format(file_path)
 
 
 def test1():
