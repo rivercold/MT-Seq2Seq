@@ -85,6 +85,52 @@ def read_test_file(file_name, tok_ID=None):
     return sentVecs
 
 
+def sort_by_length(src_vecs, tgt_vecs):
+    import random
+
+    def bylen(a, b):
+        if a[2] != b[2]:
+            return a[2] - b[2]
+        return a[3] - b[3]
+    lens = [len(vec) for vec in src_vecs]
+    num_sent = len(src_vecs)
+    ind = range(num_sent)
+    random.shuffle(ind)
+    cb = zip(src_vecs, tgt_vecs, lens, ind)
+    cb.sort(cmp=bylen)
+    src_vecs = [item[0] for item in cb]
+    tgt_vecs = [item[1] for item in cb]
+    return src_vecs, tgt_vecs
+
+
+# For target batch: pad at the end
+def make_pad(vecs, padID):
+    num_vec = len(vecs)
+    lengths = [len(vec) for vec in vecs]
+    maxLen = max(lengths)
+    pads = [[padID for _ in xrange(num_vec)] for _ in xrange(maxLen)]
+    for i in xrange(num_vec):
+        for j in xrange(lengths[i]):
+            pads[j][i] = vecs[i][j]
+    return pads, lengths, maxLen
+
+
+# For source batch: pad at both sides
+def make_pad_bidirection(vecs, startID, stopID):
+    num_vec = len(vecs)
+    lengths = [len(vec) for vec in vecs]
+    maxLen = max(lengths)
+    pads = [[stopID for _ in xrange(num_vec)] for _ in xrange(maxLen)]
+    for i in xrange(num_vec):
+        dif = maxLen - lengths[i]
+        num_startID = (dif + 1) // 2
+        for j in xrange(num_startID):
+            pads[j][i] = startID
+        for j in xrange(lengths[i]):
+            pads[j + num_startID][i] = vecs[i][j]
+    return pads, lengths, maxLen
+
+
 def test1():
     tok_ID, ID_tok, sentVecs, vocSize = read_file(train_en)
     for i in xrange(10):

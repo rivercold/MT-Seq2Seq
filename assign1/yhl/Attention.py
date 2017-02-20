@@ -6,6 +6,7 @@ from util_yhl import *
 import numpy
 import random
 import time
+import math
 
 
 class Attention:
@@ -22,6 +23,7 @@ class Attention:
         self.src_token_to_id, self.src_id_to_token, self.src_sent_vecs, self.src_vocab_size = read_file(train_src_file)
         self.tgt_token_to_id, self.tgt_id_to_token, self.tgt_sent_vecs, self.tgt_vocab_size = read_file(train_tgt_file,
                                                                                                         target=True)
+        self.src_sent_vecs, self.tgt_sent_vecs = sort_by_length(self.src_sent_vecs, self.tgt_sent_vecs)
 
         self.l2r_builder = LSTMBuilder(self.num_layers, self.embed_size, self.hidden_size, self.model)
         self.r2l_builder = LSTMBuilder(self.num_layers, self.embed_size, self.hidden_size, self.model)
@@ -49,6 +51,12 @@ class Attention:
         encoded_h = outputs[-1]'''
         return outputs
 
+    def encode_single_direction_batch(self, builder, pad_batch):
+        enc_state = builder.initial_state()
+        embeds_batch = [dy.lookup_batch(self.src_lookup, pad) for pad in pad_batch]
+        outputs_batch = enc_state.transduce(embeds_batch)
+        return outputs_batch
+
     def encode(self, src_sent_vec):
         outputs_l2r = self.encode_single_direction(self.l2r_builder, src_sent_vec)
         outputs_r2l = self.encode_single_direction(self.r2l_builder, src_sent_vec[::-1])
@@ -65,6 +73,25 @@ class Attention:
 
         return H_f, encoded, encoded_h
 
+    def encode_batch(self, vec_batch):
+        startID, stopID = self.src_token_to_id['<S>'], self.src_token_to_id['</S>']
+        pad_batch, lengths, maxLen = make_pad_bidirection(vec_batch, startID, stopID)
+        outputs_l2r_batch = self.encode_single_direction_batch(self.l2r_builder, pad_batch)
+        outputs_r2l_batch = self.encode_single_direction_batch(self.r2l_builder, pad_batch[::-1])
+        outputs_r2l_batch = outputs_r2l_batch[::-1]
+
+        encoded_h_batch = dy.concatenate([outputs_l2r_batch[-1], outputs_r2l_batch[-1]])  # (2 * hidden_size, batch_size)
+        H_f_l2r_batch = dy.concatenate_cols(outputs_l2r_batch)  # (hidden_size, num_step, batch_size)
+        H_f_r2l_batch = dy.concatenate_cols(outputs_r2l_batch)  # (hidden_size, num_step, batch_size)
+        H_f_batch = dy.concatenate([H_f_l2r_batch, H_f_r2l_batch])  # (2 * hidden_size, num_step, batch_size)
+
+        W_eh = dy.parameter(self.W_eh)
+        W_hh = dy.parameter(self.W_hh)
+        encoded_batch = W_eh * encoded_h_batch  # (embed_size, batch_size)
+        encoded_h_batch = W_hh * encoded_h_batch  # (hidden_size, batch_size)
+
+        return H_f_batch, encoded_batch, encoded_h_batch
+
     def __attention_mlp(self, H_f, h_e, W1_att_e, W1_att_f, w2_att):
 
         # Calculate the alignment score vector
@@ -74,6 +101,17 @@ class Attention:
         alignment = dy.softmax(a_t)
         c_t = H_f * alignment
         return c_t
+
+    def __attention_mlp_batch(self, H_f_batch, h_e_batch, W1_att_e, W1_att_f, w2_att):
+        # H_f_batch: (2 * hidden_size, num_step, batch_size)
+        # h_e_batch: (hidden_size, batch_size)
+
+        a_t_batch = dy.tanh(dy.colwise_add(W1_att_f * H_f_batch, W1_att_e * h_e_batch))  # (attention_size, num_step, batch_size)
+        a_t_batch = w2_att * a_t_batch  # (1, num_step, batch_size)
+        a_t_batch = a_t_batch[0]  # (num_step, batch_size)
+        alignment_batch = dy.softmax(a_t_batch)  # (num_step, batch_size)
+        c_t_batch = H_f_batch * alignment_batch  # (2 * hidden_size, batch_size)
+        return c_t_batch
 
     # Training step over a single sentence pair
     def __step(self, src_sent_vec, tgt_sent_vec):
@@ -112,6 +150,49 @@ class Attention:
         loss = dy.esum(losses)
 
         return loss, len(losses)
+
+    # Training step over a single sentence pair
+    def __step_batch(self, src_sent_vec_batch, tgt_sent_vec_batch):
+        dy.renew_cg()
+        W_y = dy.parameter(self.W_y)
+        b_y = dy.parameter(self.b_y)
+        W1_att_e = dy.parameter(self.W1_att_e)
+        W1_att_f = dy.parameter(self.W1_att_f)
+        w2_att = dy.parameter(self.w2_att)
+
+        losses = []
+
+        H_f_batch, encoded_batch, encoded_h_batch = self.encode_batch(src_sent_vec_batch)
+
+        # Set initial decoder state to the result of the encoder
+        dec_state = self.dec_builder.initial_state()
+        start = True
+        c_t_batch = None
+        # Calculate losses for decoding
+        stopID = self.tgt_token_to_id['</S>']
+        pad_batch, lengths, maxLen = make_pad(tgt_sent_vec_batch, stopID)
+        for i in xrange(maxLen - 1):
+            cID_batch, nID_batch = pad_batch[i], pad_batch[i + 1]
+            if start:
+                embed_batch = encoded_batch
+                h_e_batch = encoded_h_batch
+                c_t_batch = self.__attention_mlp_batch(H_f_batch, h_e_batch, W1_att_e, W1_att_f, w2_att)
+                start = False
+            else:
+                embed_batch = dy.lookup_batch(self.tgt_lookup, cID_batch)
+            dec_state = dec_state.add_input(dy.concatenate([embed_batch, c_t_batch]))
+            h_e_batch = dec_state.output()
+            c_t_batch = self.__attention_mlp(H_f_batch, h_e_batch, W1_att_e, W1_att_f, w2_att)
+            y_star = W_y * dy.concatenate([h_e_batch, c_t_batch]) + b_y  # (voc_size, batch_size)
+            loss = dy.pickneglogsoftmax_batch(y_star, nID_batch)  # (batch_size,)
+            loss = dy.reshape(loss, (self.batch_size,))
+            for j in xrange(self.batch_size):
+                if lengths[j] > i + 1:
+                    losses.append(dy.pick(loss, j))
+
+        loss = dy.esum(losses)
+
+        return loss, sum(lengths)
 
     def translate_sentence(self, src_sent_vec, max_len=50):
         dy.renew_cg()
@@ -179,7 +260,39 @@ class Attention:
                     self.test(src_sents, tgt_sents)
             if save:
                 ctime = time.strftime("%m-%d-%H-%M-%S",time.gmtime())
-                save_model(self.model, 'LSTM_epoch_{0}_layer{1}_hidden_{2}_embed_{3}_att_{4}_{5}'.format(i + 1, self.num_layers, self.hidden_size, self.embed_size, self.attention_size,ctime))
+                save_model(self.model, 'LSTM_epoch_{0}_layer{1}_hidden_{2}_embed_{3}_att_{4}_{5}'
+                           .format(i + 1, self.num_layers, self.hidden_size, self.embed_size, self.attention_size,ctime))
+
+    def train_batch(self, test_src_file, test_tgt_file, num_epoch=20, batch_size=20, report_iter=5, save=False):
+        src_sent_vecs_test = read_test_file(test_src_file, self.src_token_to_id)
+        tgt_sentences_test = read_test_file(test_tgt_file)
+        self.batch_size = batch_size
+
+        num_train, num_test = len(self.src_sent_vecs), len(src_sent_vecs_test)
+        num_iter = int(math.ceil(num_train / float(self.batch_size)))
+        randIndex = random.sample(xrange(num_test), 3)
+        loss_avg = 0.
+        for i in xrange(num_epoch):
+            for j in xrange(num_iter):
+                start, end = j * self.batch_size, min((j + 1) * self.batch_size, num_train)
+                lens = [len(sent) for sent in self.src_sent_vecs[start: end]]
+                print 'Lens:', min(lens), max(lens)
+                loss, total_word = self.__step_batch(self.src_sent_vecs[start: end], self.tgt_sent_vecs[start: end])
+                loss_val = loss.value() / total_word
+                loss_avg += loss_val
+                loss.backward()
+                self.trainer.update()
+                if (j + 1) % report_iter == 0:
+                    loss_avg /= report_iter
+                    print 'epoch=%d, iter=%d, loss=%f' % (i + 1, j + 1, loss_avg)
+                    loss_avg = 0.
+                    src_sents = [src_sent_vecs_test[k] for k in randIndex]
+                    tgt_sents = [tgt_sentences_test[k] for k in randIndex]
+                    self.test(src_sents, tgt_sents)
+            if save:
+                ctime = time.strftime("%m-%d-%H-%M-%S",time.gmtime())
+                save_model(self.model, 'LSTM_epoch_{0}_layer{1}_hidden_{2}_embed_{3}_att_{4}_{5}'
+                           .format(i + 1, self.num_layers, self.hidden_size, self.embed_size, self.attention_size,ctime))
 
     def test(self, src_sent_vecs_test, tgt_sentences_test):
         num_test = len(src_sent_vecs_test)
@@ -199,13 +312,19 @@ def save_model(model, file_path):
 
 
 def test1():
-    encdec = Attention(train_de, train_en, num_layers=2)
-    encdec.train(valid_de, valid_en, save=True)
+    att = Attention(train_de, train_en, num_layers=2)
+    att.train(valid_de, valid_en, save=True)
 
 
 def test2():
-    encdec = Attention(toy_train_de, toy_train_en)
-    encdec.train(toy_test_de, toy_test_en, num_epoch=100, save=True)
+    att = Attention(toy_train_de, toy_train_en)
+    att.train(toy_test_de, toy_test_en, num_epoch=100, save=False)
+
+
+def test3():
+    att = Attention(train_de, train_en, num_layers=2)
+    att.train_batch(valid_de, valid_en, save=True)
+
 
 if __name__ == '__main__':
-    test1()
+    test3()
