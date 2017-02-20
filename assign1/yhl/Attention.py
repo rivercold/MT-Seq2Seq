@@ -199,7 +199,7 @@ def save_model(model, file_path):
 
 
 def test1():
-    encdec = Attention(train_de, train_en)
+    encdec = Attention(train_de, train_en, num_layers=2)
     encdec.train(valid_de, valid_en, save=True)
 
 
