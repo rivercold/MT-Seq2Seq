@@ -32,10 +32,11 @@ class Attention:
         self.W_y = self.model.add_parameters((self.tgt_vocab_size, 3 * self.hidden_size))
         self.b_y = self.model.add_parameters((self.tgt_vocab_size,))
         self.W_eh = self.model.add_parameters((self.embed_size, self.hidden_size * 2))
+        self.W_hh = self.model.add_parameters((self.hidden_size, self.hidden_size * 2))
 
         self.W1_att_e = self.model.add_parameters((self.attention_size, self.hidden_size))
         self.W1_att_f = self.model.add_parameters((self.attention_size, 2 * self.hidden_size))
-        self.w2_att = self.model.add_parameters((self.attention_size,))
+        self.w2_att = self.model.add_parameters((1, self.attention_size))
 
         self.batch_size = 1
 
@@ -58,17 +59,18 @@ class Attention:
         H_f = dy.concatenate([H_f_l2r, H_f_r2l])  # (2 * hidden_size, num_step)
 
         W_eh = dy.parameter(self.W_eh)
+        W_hh = dy.parameter(self.W_hh)
         encoded = W_eh * encoded_h  # (embed_size,)
+        encoded_h = W_hh * encoded_h  # (hidden_size,)
 
         return H_f, encoded, encoded_h
 
     def __attention_mlp(self, H_f, h_e, W1_att_e, W1_att_f, w2_att):
 
         # Calculate the alignment score vector
-        print (W1_att_e * h_e).npvalue().shape
-        print (W1_att_f * H_f).npvalue().shape
-        a_t = dy.tanh(W1_att_e * h_e + W1_att_f * H_f)
-        a_t *= w2_att
+        a_t = dy.tanh(dy.colwise_add(W1_att_f * H_f, W1_att_e * h_e))
+        a_t = w2_att * a_t
+        a_t = a_t[0]
         alignment = dy.softmax(a_t)
         c_t = H_f * alignment
         return c_t
@@ -168,6 +170,7 @@ class Attention:
                 loss_avg += loss_val
                 loss.backward()
                 self.trainer.update()
+                print j + 1
                 if (j + 1) % report_iter == 0:
                     loss_avg /= report_iter
                     print 'epoch=%d, iter=%d, loss=%f' % (i + 1, j + 1, loss_avg)
