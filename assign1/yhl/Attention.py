@@ -5,7 +5,7 @@ from dynet import LSTMBuilder
 from util_yhl import *
 import numpy
 import random
-import math
+import time
 
 
 class Attention:
@@ -179,7 +179,8 @@ class Attention:
                     tgt_sents = [tgt_sentences_test[k] for k in randIndex]
                     self.test(src_sents, tgt_sents)
             if save:
-                save_model(self.model, 'LSTM_layer1_SGD_{0}'.format(i + 1))
+                ctime = time.strftime("%m-%d-%H-%M-%S",time.gmtime())
+                save_model(self.model, 'LSTM_epoch_{0}_layer{1}_hidden_{2}_embed_{3}_att_{4}_{5}'.format(i + 1, self.num_layers, self.hidden_size, self.embed_size, self.attention_size,ctime))
 
     def test(self, src_sent_vecs_test, tgt_sentences_test):
         num_test = len(src_sent_vecs_test)
@@ -205,7 +206,7 @@ def test1():
 
 def test2():
     encdec = Attention(toy_train_de, toy_train_en)
-    encdec.train(toy_test_de, toy_test_en, num_epoch=100)
+    encdec.train(toy_test_de, toy_test_en, num_epoch=100, save=True)
 
 if __name__ == '__main__':
-    test1()
+    test2()
