@@ -76,7 +76,7 @@ class Attention:
 
         # Decoder
         c_t = dy.vecInput(XXXX)
-        start = dy.concatenate([dy.lookup(self.tgt_lookup, self.tgt_token_to_id['<S>']), c_t])
+        start = dy.concatenate([dy.lookup(self.tgt_lookup, sexlf.tgt_token_to_id['<S>']), c_t])
         dec_state = self.dec_builder.initial_state().add_input(start)
         for (cw, nw) in zip(tgt_sent, tgt_sent[1:]):
             h_e = dec_state.output()
