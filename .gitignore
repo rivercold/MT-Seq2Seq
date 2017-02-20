@@ -66,6 +66,7 @@ target/
 # IDE 
 /.idea/
 *.iml
+.idea/workspace.xml
 
 # condor
 .condor*
