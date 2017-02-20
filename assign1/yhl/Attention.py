@@ -25,7 +25,7 @@ class Attention:
                                                                                                         target=True)
         self.src_sent_vecs, self.tgt_sent_vecs = sort_by_length(self.src_sent_vecs, self.tgt_sent_vecs)
 
-        if load_from is None:
+        if load_from is not None:
             self.model.load(load_from)
         else:
             self.l2r_builder = LSTMBuilder(self.num_layers, self.embed_size, self.hidden_size, self.model)
@@ -335,4 +335,4 @@ def test4():
 
 
 if __name__ == '__main__':
-    test4()
+    test1()
