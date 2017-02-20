@@ -277,8 +277,8 @@ class Attention():
                     self.test(src_sents, tgt_sents)
             if save:
                 ctime = time.strftime("%m-%d-%H-%M-%S", time.gmtime())
-                save_model(self.model, 'Attention_epoch_{0}_layer{1}_hidden_{2}_embed_{3}_att_{4}_{5}'
-                           .format(i + 1, self.num_layers, self.hidden_size, self.embed_size, self.attention_size,ctime))
+                self.save_model('Attention_epoch_{0}_layer{1}_hidden_{2}_embed_{3}_att_{4}_{5}'
+                                .format(i + 1, self.num_layers, self.hidden_size, self.embed_size, self.attention_size,ctime))
 
     def train_batch(self, test_src_file, test_tgt_file, num_epoch=20, batch_size=20, report_iter=5, save=False):
         src_sent_vecs_test = read_test_file(test_src_file, self.src_token_to_id)
