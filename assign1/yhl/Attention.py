@@ -315,8 +315,8 @@ def save_model(model, file_path):
 
 
 def test1():
-    att = Attention(train_de, train_en, num_layers=2)
-    att.train(valid_de, valid_en, save=True)
+    att = Attention(train_de, train_en, num_layers=2, load_from='../models/LSTM_epoch_4_layer2_hidden_128_embed_150_att_128_02-20-16-59-09')
+    att.train(valid_de, valid_en, save=False)
 
 
 def test2():
