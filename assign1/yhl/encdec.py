@@ -245,12 +245,12 @@ def save_model(model, file_path):
 
 def test1():
     encdec = EncoderDecoder(train_de, train_en)
-    encdec.train_batch(valid_de, valid_en, save=True)
+    encdec.train(valid_de, valid_en, save=True)
 
 
 def test2():
     encdec = EncoderDecoder(toy_train_de, toy_train_en)
-    encdec.train_batch(toy_test_de, toy_test_en, num_epoch=100)
+    encdec.train(toy_test_de, toy_test_en, num_epoch=100)
 
 if __name__ == '__main__':
     test1()
