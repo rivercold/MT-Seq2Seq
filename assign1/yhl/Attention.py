@@ -11,7 +11,7 @@ import math
 class Attention:
 
     # define dynet model for the encoder-decoder model
-    def __init__(self, train_src_file, train_tgt_file, num_layers=1, embed_size=200, hidden_size=128, attention_size=196):
+    def __init__(self, train_src_file, train_tgt_file, num_layers=1, embed_size=150, hidden_size=128, attention_size=128):
 
         self.num_layers = num_layers
         self.embed_size, self.hidden_size, self.attention_size = embed_size, hidden_size, attention_size
