@@ -270,7 +270,7 @@ class Attention:
 
         num_train, num_test = len(self.src_sent_vecs), len(src_sent_vecs_test)
         num_iter = int(math.ceil(num_train / float(self.batch_size)))
-        randIndex = random.sample(xrange(num_test), 3)
+        randIndex = random.sample(xrange(num_test), 5)
         loss_avg = 0.
         for i in xrange(num_epoch):
             for j in xrange(num_iter):
