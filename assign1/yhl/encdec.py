@@ -2,9 +2,10 @@ __author__ = 'yuhongliang324'
 
 import dynet as dy
 from dynet import LSTMBuilder
-from util import *
+from util_yhl import *
 import numpy
 import random
+import math
 
 
 class EncoderDecoder:
@@ -29,6 +30,7 @@ class EncoderDecoder:
         self.W_y = self.model.add_parameters((self.tgt_vocab_size, self.hidden_size))
         self.b_y = self.model.add_parameters((self.tgt_vocab_size,))
         self.W_eh = self.model.add_parameters((self.embed_size, self.hidden_size))
+        self.batch_size = 1
 
     def encode(self, src_sent_vec):
         W_eh = dy.parameter(self.W_eh)
@@ -38,6 +40,28 @@ class EncoderDecoder:
         encoded = outputs[-1]
         encoded = W_eh * encoded
         return encoded
+
+    def make_mask(self, vecs):
+        num_vec = len(vecs)
+        stopID = self.tgt_token_to_id['</S>']
+        lengths = [len(vec) for vec in vecs]
+        maxLen = max(lengths)
+        masks = []
+        for j in xrange(maxLen):
+            masks.append([(vecs[i][j] if lengths[i] > j else stopID) for i in xrange(num_vec)])
+        return masks, lengths, maxLen
+
+    def encode_batch(self, src_sent_vecs):
+        W_eh = dy.parameter(self.W_eh)
+        enc_state = self.enc_builder.initial_state()
+
+        masks, lengths, maxLen = self.make_mask(src_sent_vecs)
+        embeds_batch = [dy.lookup_batch(self.src_lookup, mask) for mask in masks]
+        outputs_batch = enc_state.transduce(embeds_batch)
+        encoded_batch = outputs_batch[-1]
+        # (hidden_size, batch_size)
+        encoded_batch = W_eh * encoded_batch  # (embed_size, batch_size)
+        return encoded_batch
 
     # Training step over a single sentence pair
     def __step(self, src_sent_vec, tgt_sent_vec):
@@ -75,6 +99,36 @@ class EncoderDecoder:
         loss = dy.esum(losses)
 
         return loss, len(losses)
+
+    def __step_batch(self, src_sent_vecs, tgt_sent_vecs):
+        dy.renew_cg()
+        W_y = dy.parameter(self.W_y)
+        b_y = dy.parameter(self.b_y)
+
+        losses = []
+        encoded_batch = self.encode_batch(src_sent_vecs)
+
+        dec_state = self.dec_builder.initial_state()
+        start = True
+
+        masks, lengths, maxLen = self.make_mask(tgt_sent_vecs)
+        for i in xrange(maxLen - 1):
+            cID_batch, nID_batch = masks[i], masks[i + 1]
+            if start:
+                embed_batch = encoded_batch
+                start = False
+            else:
+                embed_batch = dy.lookup_batch(self.tgt_lookup, cID_batch)
+            dec_state = dec_state.add_input(embed_batch)  # (hidden_size, batch_size)
+            y_star = W_y * dec_state.output() + b_y  # (voc_size, batch_size)
+            loss = dy.pickneglogsoftmax_batch(y_star, nID_batch)  # (batch_size,)
+            loss = dy.reshape(loss, (self.batch_size,))
+            for j in xrange(self.batch_size):
+                if lengths[j] > i + 1:
+                    losses.append(dy.pick(loss, j))
+
+        loss = dy.esum(losses)
+        return loss, sum(lengths)
 
     def translate_sentence(self, src_sent_vec, max_len=50):
         dy.renew_cg()
@@ -117,9 +171,6 @@ class EncoderDecoder:
 
         return ' '.join(trans_sentence[1:])
 
-    def __step_batch(self, src_batch, tgt_batch):
-        pass
-
     def train(self, test_src_file, test_tgt_file, num_epoch=20, report_iter=100, save=False):
         src_sent_vecs_test = read_test_file(test_src_file, self.src_token_to_id)
         tgt_sentences_test = read_test_file(test_tgt_file)
@@ -152,6 +203,35 @@ class EncoderDecoder:
             trans_sent = self.translate_sentence(src_sent_vecs_test[i])
             print trans_sent + '|\t|' + tgt_sentences_test[i]
         print
+
+    def train_batch(self, test_src_file, test_tgt_file, num_epoch=20, batch_size=50, report_iter=2, save=False):
+        self.batch_size = batch_size
+        src_sent_vecs_test = read_test_file(test_src_file, self.src_token_to_id)
+        tgt_sentences_test = read_test_file(test_tgt_file)
+
+        # TODO: shuffle training set
+
+        num_train, num_test = len(self.src_sent_vecs), len(src_sent_vecs_test)
+        num_iter = int(math.ceil(num_train / float(self.batch_size)))
+        randIndex = random.sample(xrange(num_test), 10)
+        loss_avg = 0.
+        for i in xrange(num_epoch):
+            for j in xrange(num_iter):
+                start, end = j * self.batch_size, min((j + 1) * self.batch_size, num_train)
+                loss, total_word = self.__step_batch(self.src_sent_vecs[start: end], self.tgt_sent_vecs[start: end])
+                loss_val = loss.value() / total_word
+                loss_avg += loss_val
+                loss.backward()
+                self.trainer.update()
+                if (j + 1) % report_iter == 0:
+                    loss_avg /= report_iter
+                    print 'epoch=%d, iter=%d/%d, loss=%f' % (i + 1, j + 1, num_iter, loss_avg)
+                    loss_avg = 0.
+                    src_sents = [src_sent_vecs_test[k] for k in randIndex]
+                    tgt_sents = [tgt_sentences_test[k] for k in randIndex]
+                    self.test(src_sents, tgt_sents)
+            if save:
+                save_model(self.model, 'LSTM_layer1_SGD_{0}'.format(i + 1))
 
 
 def save_model(model, file_path):
