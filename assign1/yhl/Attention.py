@@ -7,7 +7,7 @@ import numpy
 import random
 import time
 import math
-import cPickle as pickle
+from sklearn.externals import joblib
 
 
 class Attention:
@@ -321,8 +321,8 @@ def pickle_model(att, file_name):
     file_path = os.path.join(folder_path, file_name)
     if not os.path.exists(folder_path):
         os.mkdir(folder_path)
-    with open(file_path, 'wb') as outfile:
-        pickle.dump(att, outfile)
+    joblib.dump(att, file_path)
+    print 'saved to {0}'.format(file_path)
 
 
 def test1():
