@@ -27,6 +27,7 @@ class Attention:
 
         if load_from is not None:
             self.model.load(load_from)
+            print 'Loaded from', load_from
         else:
             self.l2r_builder = LSTMBuilder(self.num_layers, self.embed_size, self.hidden_size, self.model)
             self.r2l_builder = LSTMBuilder(self.num_layers, self.embed_size, self.hidden_size, self.model)
