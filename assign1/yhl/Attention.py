@@ -269,7 +269,6 @@ class Attention():
                 self.save_model('Attention_epoch_{0}_layer{1}_hidden_{2}_embed_{3}_att_{4}_{5}.model'
                                 .format(i + 1 + start_epoch, self.num_layers, self.hidden_size, self.embed_size,
                                         self.attention_size, ctime))
-
     def train_batch(self, test_src_file, test_tgt_file, num_epoch=20, batch_size=20, report_iter=5, save=False,
                     start_epoch=0):
         src_sent_vecs_test = read_test_file(test_src_file, self.src_token_to_id)
@@ -278,15 +277,26 @@ class Attention():
 
         num_train, num_test = len(self.src_sent_vecs), len(src_sent_vecs_test)
         num_iter = int(math.ceil(num_train / float(self.batch_size)))
+
+        # Separate batches
+        src_sent_vec_batches = []
+        tgt_sent_vec_batches = []
+        for i in xrange(num_iter):
+            start, end = i * self.batch_size, min((i + 1) * self.batch_size, num_train)
+            src_sent_vec_batches.append(self.src_sent_vecs[start: end])
+            tgt_sent_vec_batches.append(self.tgt_sent_vecs[start: end])
+        z = zip(src_sent_vec_batches, tgt_sent_vec_batches)
+        src_sent_vec_batches = [item[0] for item in z]
+        tgt_sent_vec_batches = [item[1] for item in z]
+
         randIndex = random.sample(xrange(num_test), 5)
         loss_avg = 0.
         for i in xrange(num_epoch):
             for j in xrange(num_iter):
-                start, end = j * self.batch_size, min((j + 1) * self.batch_size, num_train)
-                lens = [len(sent) for sent in self.src_sent_vecs[start: end]]
-                self.batch_size = end - start
+                lens = [len(sent) for sent in src_sent_vec_batches[j]]
+                self.batch_size = len(src_sent_vec_batches[j])
                 print 'Lens:', min(lens), max(lens)
-                loss, total_word = self.__step_batch(self.src_sent_vecs[start: end], self.tgt_sent_vecs[start: end])
+                loss, total_word = self.__step_batch(src_sent_vec_batches[j], tgt_sent_vec_batches[j])
                 loss_val = loss.value() * self.batch_size / total_word
                 loss_avg += loss_val
                 loss.backward()
