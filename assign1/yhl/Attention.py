@@ -296,7 +296,7 @@ class Attention():
             for j in xrange(num_iter):
                 lens = [len(sent) for sent in src_sent_vec_batches[j]]
                 self.batch_size = len(src_sent_vec_batches[j])
-                print 'Lens:', min(lens), max(lens)
+                # print 'Lens:', min(lens), max(lens)
                 loss, total_word = self.__step_batch(src_sent_vec_batches[j], tgt_sent_vec_batches[j])
                 loss_val = loss.value() * self.batch_size / total_word
                 loss_avg += loss_val
