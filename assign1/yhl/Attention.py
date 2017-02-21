@@ -196,8 +196,7 @@ class Attention():
             for j in xrange(self.batch_size):
                 if lengths[j] > i + 1:
                     losses.append(dy.pick(loss, j))
-
-        loss = dy.esum(losses)
+        loss = dy.esum(losses) / self.batch_size
 
         return loss, sum(lengths)
 
@@ -285,9 +284,10 @@ class Attention():
             for j in xrange(num_iter):
                 start, end = j * self.batch_size, min((j + 1) * self.batch_size, num_train)
                 lens = [len(sent) for sent in self.src_sent_vecs[start: end]]
+                self.batch_size = end - start
                 print 'Lens:', min(lens), max(lens)
                 loss, total_word = self.__step_batch(self.src_sent_vecs[start: end], self.tgt_sent_vecs[start: end])
-                loss_val = loss.value() / total_word
+                loss_val = loss.value() * self.batch_size / total_word
                 loss_avg += loss_val
                 loss.backward()
                 self.trainer.update()
