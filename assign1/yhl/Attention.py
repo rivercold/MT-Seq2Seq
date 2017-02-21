@@ -362,6 +362,8 @@ def main():
     parser.add_argument('-save', type=bool, default=True)
     parser.add_argument('-se', type=int, default=0)
     parser.add_argument('-bs', type=int, default=20)
+    parser.add_argument('--dynet-mem', type=int, default=3072)
+    parser.add_argument('--dynet-gpu-ids', type=int, default=3)
     args = parser.parse_args()
 
     att = Attention(train_de, train_en, num_layers=args.layer, embed_size=args.embed,
