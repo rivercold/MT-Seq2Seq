@@ -7,13 +7,14 @@ import numpy
 import random
 import time
 import math
-from sklearn.externals import joblib
+import argparse
 
 
 class Attention():
 
     # define dynet model for the encoder-decoder model
-    def __init__(self, train_src_file, train_tgt_file, num_layers=1, embed_size=150, hidden_size=128, attention_size=128, load_from=None):
+    def __init__(self, train_src_file, train_tgt_file,
+                 num_layers=1, embed_size=150, hidden_size=128, attention_size=128, load_from=None):
 
         self.num_layers = num_layers
         self.embed_size, self.hidden_size, self.attention_size = embed_size, hidden_size, attention_size
@@ -241,7 +242,7 @@ class Attention():
 
         return ' '.join(trans_sentence[1:])
 
-    def train(self, test_src_file, test_tgt_file, num_epoch=20, report_iter=100, save=False):
+    def train(self, test_src_file, test_tgt_file, num_epoch=20, report_iter=100, save=False, start_epoch=0):
         src_sent_vecs_test = read_test_file(test_src_file, self.src_token_to_id)
         tgt_sentences_test = read_test_file(test_tgt_file)
 
@@ -267,9 +268,11 @@ class Attention():
             if save:
                 ctime = time.strftime("%m-%d-%H-%M-%S", time.gmtime())
                 self.save_model('Attention_epoch_{0}_layer{1}_hidden_{2}_embed_{3}_att_{4}_{5}.model'
-                                .format(i + 1, self.num_layers, self.hidden_size, self.embed_size, self.attention_size,ctime))
+                                .format(i + 1 + start_epoch, self.num_layers, self.hidden_size, self.embed_size,
+                                        self.attention_size, ctime))
 
-    def train_batch(self, test_src_file, test_tgt_file, num_epoch=20, batch_size=20, report_iter=5, save=False):
+    def train_batch(self, test_src_file, test_tgt_file, num_epoch=20, batch_size=20, report_iter=5, save=False,
+                    start_epoch=0):
         src_sent_vecs_test = read_test_file(test_src_file, self.src_token_to_id)
         tgt_sentences_test = read_test_file(test_tgt_file)
         self.batch_size = batch_size
@@ -297,8 +300,9 @@ class Attention():
                     self.test(src_sents, tgt_sents)
             if save:
                 ctime = time.strftime("%m-%d-%H-%M-%S",time.gmtime())
-                save_model(self.model, 'Attention_batch_epoch_{0}_layer{1}_hidden_{2}_embed_{3}_att_{4}_{5}'
-                           .format(i + 1, self.num_layers, self.hidden_size, self.embed_size, self.attention_size,ctime))
+                self.save_model('Attention_batch_epoch_{0}_layer{1}_hidden_{2}_embed_{3}_att_{4}_{5}.model'
+                                .format(i + 1 + start_epoch, self.num_layers, self.hidden_size, self.embed_size,
+                                        self.attention_size, ctime))
 
     def test(self, src_sent_vecs_test, tgt_sentences_test):
         num_test = len(src_sent_vecs_test)
@@ -328,8 +332,8 @@ def save_model(model, file_path):
 
 
 def test1():
-    att = Attention(train_de, train_en, num_layers=2, load_from='../models/LSTM_epoch_4_layer2_hidden_128_embed_150_att_128_02-20-16-59-09')
-    att.train(valid_de, valid_en, save=False)
+    att = Attention(train_de, train_en, num_layers=2)
+    att.train(valid_de, valid_en, save=True)
 
 
 def test2():
@@ -347,5 +351,25 @@ def test4():
     att.train_batch(valid_de, valid_en, save=False)
 
 
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-batch', type=bool, default=False)
+    parser.add_argument('-layer', type=int, default=2)
+    parser.add_argument('-embed', type=int, default=200)
+    parser.add_argument('-hid', type=int, default=128)
+    parser.add_argument('-att', type=int, default=128)
+    parser.add_argument('-load', type=str, default=None)
+    parser.add_argument('-save', type=bool, default=True)
+    parser.add_argument('-se', type=int, default=0)
+    parser.add_argument('-bs', type=int, default=20)
+    args = parser.parse_args()
+
+    att = Attention(train_de, train_en, num_layers=args.layer, embed_size=args.embed,
+                    hidden_size=args.hid, attention_size=args.att, load_from=args.load)
+    if args.batch:
+        att.train_batch(valid_de, valid_en, save=args.save, start_epoch=args.se, batch_size=args.bs)
+    else:
+        att.train(valid_de, valid_en, save=args.save, start_epoch=args.se)
+
 if __name__ == '__main__':
-    test2()
+    main()
