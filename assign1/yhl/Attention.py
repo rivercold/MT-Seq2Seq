@@ -286,6 +286,7 @@ class Attention():
             src_sent_vec_batches.append(self.src_sent_vecs[start: end])
             tgt_sent_vec_batches.append(self.tgt_sent_vecs[start: end])
         z = zip(src_sent_vec_batches, tgt_sent_vec_batches)
+        random.shuffle(z)
         src_sent_vec_batches = [item[0] for item in z]
         tgt_sent_vec_batches = [item[1] for item in z]
 
