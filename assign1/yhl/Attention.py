@@ -27,20 +27,9 @@ class Attention():
         self.src_sent_vecs, self.tgt_sent_vecs = sort_by_length(self.src_sent_vecs, self.tgt_sent_vecs)
 
         if load_from is not None:
-            theta = self.model.load(load_from)
-            self.l2r_builder = theta[0]
-            self.r2l_builder = theta[1]
-            self.dec_builder = theta[2]
-            self.src_lookup = theta[3]
-            self.tgt_lookup = theta[4]
-            self.W_y = theta[5]
-            self.b_y = theta[6]
-            self.W_eh = theta[7]
-            self.W_hh = theta[8]
-
-            self.W1_att_e = theta[9]
-            self.W1_att_f = theta[10]
-            self.w2_att = theta[11]
+            [self.l2r_builder, self.r2l_builder, self.dec_builder,
+             self.src_lookup, self.tgt_lookup, self.W_y, self.b_y,
+             self.W_eh, self.W_hh, self.W1_att_e, self.W1_att_f, self.w2_att] = self.model.load(load_from)
         else:
             self.l2r_builder = LSTMBuilder(self.num_layers, self.embed_size, self.hidden_size, self.model)
             self.r2l_builder = LSTMBuilder(self.num_layers, self.embed_size, self.hidden_size, self.model)
@@ -277,7 +266,7 @@ class Attention():
                     self.test(src_sents, tgt_sents)
             if save:
                 ctime = time.strftime("%m-%d-%H-%M-%S", time.gmtime())
-                self.save_model('Attention_epoch_{0}_layer{1}_hidden_{2}_embed_{3}_att_{4}_{5}'
+                self.save_model('Attention_epoch_{0}_layer{1}_hidden_{2}_embed_{3}_att_{4}_{5}.model'
                                 .format(i + 1, self.num_layers, self.hidden_size, self.embed_size, self.attention_size,ctime))
 
     def train_batch(self, test_src_file, test_tgt_file, num_epoch=20, batch_size=20, report_iter=5, save=False):
@@ -344,8 +333,8 @@ def test1():
 
 
 def test2():
-    att = Attention(toy_train_de, toy_train_en)
-    att.train(toy_test_de, toy_test_en, num_epoch=100, save=True)
+    att = Attention(toy_train_de, toy_train_en, load_from='../models/Attention_epoch_1_layer1_hidden_128_embed_150_att_128_02-21-00-31-15.model')
+    att.train(toy_test_de, toy_test_en, num_epoch=100, save=False)
 
 
 def test3():
