@@ -201,8 +201,12 @@ class Attention():
         return loss, sum(lengths)
 
 
+
     def translate_beam_sentence(self, src_sent_vec, max_len=50 ,beam_width=3):
         dy.renew_cg()
+        def softmax(x):
+            scoreMatExp = numpy.exp(numpy.asarray(x))
+            return scoreMatExp / scoreMatExp.sum(0)
         W_y = dy.parameter(self.W_y)
         b_y = dy.parameter(self.b_y)
         W1_att_e = dy.parameter(self.W1_att_e)
@@ -212,42 +216,50 @@ class Attention():
 
         H_f, encoded, encoded_h = self.encode(src_sent_vec)
         max_seq = (-1000.0,["<S>"])
-        beam_list = [(encoded_h, None, None, ["<S>"]) for _ in range(beam_width)] #  dec_sate/h_e(only the first), c_t, embed, log_prob,tran_seq
+        beam_list = [(encoded_h, None, 0, ["<S>"]) for _ in range(beam_width)] #  dec_sate/h_e(only the first), c_t, embed, log_prob,tran_seq
         # Decoder - # Set the intial state to the result of the encoder
         iter = 0
         while iter < max_len:
             dec_state_list, c_t_list = [],[]
             for i, state in enumerate(beam_list):
+                print "{} beamwidth iter {} beam {}".format(beam_width,iter, i)
                 [dec_state, c_t, log_prob, trans_seq] = state
                 if iter == 0:
                     c_t = self.__attention_mlp(H_f, dec_state, W1_att_e, W1_att_f, w2_att)
                     dec_state = self.dec_builder.initial_state()
                 cID = self.tgt_token_to_id[trans_seq[-1]]
+                print "trans_seq", trans_seq, cID
                 embed = dy.lookup(self.tgt_lookup,cID)
                 dec_state = dec_state.add_input(dy.concatenate([embed, c_t]))
                 h_e = dec_state.output()
                 c_t = self.__attention_mlp(H_f, h_e, W1_att_e, W1_att_f, w2_att)
                 dec_state_list.append(dec_state)
                 c_t_list.append(c_t)
-                y_star = W_y * dy.concatenate([h_e, c_t]) + b_y
+                y_star = (W_y * dy.concatenate([h_e, c_t]) + b_y).npvalue()
+                y_star = softmax(y_star)
                 # Get probability distribution for the next word to be generated
-                p = numpy.log(y_star.npvalue()) + log_prob
+                p = numpy.log(y_star) + log_prob
+                end_prob = log_prob + p[stopID]
+                if end_prob > max_seq[0]:
+                    max_seq = (end_prob, trans_seq)
                 if i == 0:
                     beam_p = p
                 else:
                     beam_p = numpy.concatenate([beam_p,p])
-
-                end_prob = log_prob + math.log(p[stopID])
-                if end_prob > max_seq[0]:
-                    max_seq = (end_prob, trans_seq)
+            #print "beam_p", type(beam_p), beam_p.shape
             temp = numpy.argpartition(beam_p, beam_width)
             top_width_ids = temp[:beam_width]
+            print top_width_ids, "top_width_ids"
             tmp = []
             for rank, pid in enumerate(top_width_ids):
                 state_id = pid//self.tgt_vocab_size
                 token_id = pid%self.tgt_vocab_size
-                tmp.append((dec_state_list[state_id],c_t_list[state_id], beam_list[state_id][2] + beam_p[pid], beam_list[state_id][3].append(self.tgt_id_to_token[token_id])))
+                #print rank, pid, state_id, token_id, state_id
+                #print beam_list[state_id][2], pid, beam_p[pid]
+                tmp.append((dec_state_list[state_id],c_t_list[state_id], beam_list[state_id][2] + beam_p[pid], beam_list[state_id][3]+[self.tgt_id_to_token[token_id]]))
             beam_list = tmp
+            #print beam_list, "beam_list"
+            #print beam_list[0][3]
             iter += 1
         return ' '.join(max_seq[1][1:])
 
@@ -306,7 +318,7 @@ class Attention():
                 loss_avg += loss_val
                 loss.backward()
                 self.trainer.update()
-                if (j + 1) % report_iter == 0:
+                if (j) % report_iter == 0:
                     loss_avg /= report_iter
                     print 'epoch=%d, iter=%d, loss=%f' % (i + 1, j + 1, loss_avg)
                     loss_avg = 0.
@@ -369,10 +381,8 @@ class Attention():
     def test(self, src_sent_vecs_test, tgt_sentences_test):
         num_test = len(src_sent_vecs_test)
         for i in xrange(num_test):
-            trans_sent = self.translate_sentence(src_sent_vecs_test[i])
+            trans_sent = self.translate_beam_sentence(src_sent_vecs_test[i])
             print trans_sent + '|\t|' + tgt_sentences_test[i]
-            eval_file.write(trans_sent+"\n")
-
 
     def save_model(self, file_name):
         folder_path = "../models"
@@ -384,15 +394,19 @@ class Attention():
         self.model.save(file_path, theta)
         print 'saved to {0}'.format(file_path)
 
-    def eval(self, test_src_file, test_tgt_file, eval_file="./results/test.txt"):
+    def eval(self, test_src_file, test_tgt_file, eval_file="./results/test_beam.txt"):
         src_sent_vecs_test = read_test_file(test_src_file, self.src_token_to_id)
         tgt_sentences_test = read_test_file(test_tgt_file)
+        randIndex = random.sample(xrange(len(src_sent_vecs_test)), 10)
+        src_sents = [src_sent_vecs_test[k] for k in randIndex]
+        tgt_sents = [tgt_sentences_test[k] for k in randIndex]
         eval_file = open(eval_file,"w")
-        num_test = len(src_sent_vecs_test)
+        num_test = len(src_sents)
         for i in xrange(num_test):
             if (i+1)%10 == 0:
                 print "eval num {0}".format(i+1)
             trans_sent = self.translate_sentence(src_sent_vecs_test[i])
+            print trans_sent+ "|\t|" + tgt_sents[i]
             eval_file.write(trans_sent+"\n")
 
 def save_model(model, file_path):
@@ -448,7 +462,7 @@ def main():
     parser.add_argument('--dynet-gpu-ids', type=int, default=3)
     parser.add_argument('-beam',default=False)
     parser.add_argument('-beam-width',default=3)
-    parser.add_argument('-eval',type=bool, default=True)
+    parser.add_argument('-eval',type=bool, default=False)
     args = parser.parse_args()
 
     att = Attention(train_de, train_en, num_layers=args.layer, embed_size=args.embed,
