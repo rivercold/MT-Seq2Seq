@@ -3,6 +3,7 @@ __author__ = 'yuhongliang324'
 import os
 from collections import defaultdict
 import nltk
+import numpy as np
 
 data_root = '../../data'
 train_en = os.path.join(data_root, 'train.en-de.low.filt.en')
@@ -103,6 +104,17 @@ def sort_by_length(src_vecs, tgt_vecs):
     tgt_vecs = [item[1] for item in cb]
     return src_vecs, tgt_vecs
 
+def compute_length_prob(src_vecs,tgt_vecs):
+    print "Computing length prob for beam search!"
+    num_sent = len(src_vecs)
+    #max_ls, max_lt = max(map(lambda x: len(x), src_vecs)), max(map(lambda x: len(x), tgt_vecs))
+    LP = np.zeros((120,120))
+    for i in range(num_sent):
+        ls, lt = len(src_vecs[i]), len(tgt_vecs[i])
+        LP[ls,lt] += 1
+    LP /= float(num_sent) # add smoothing
+    return LP
+
 
 # For target batch: pad at the end
 def make_pad(vecs, padID):
@@ -140,6 +152,9 @@ def test1():
     for i in xrange(10):
         print sentVecs[i]
     print vocSize
+
+# def calculate_length_prior_Prob(src_vecs, tgt_vecs):
+
 
 
 if __name__ == '__main__':
