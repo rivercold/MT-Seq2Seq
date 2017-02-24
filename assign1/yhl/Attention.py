@@ -210,6 +210,15 @@ class Attention():
         def softmax(x):
             scoreMatExp = numpy.exp(numpy.asarray(x))
             return scoreMatExp / scoreMatExp.sum(0)
+        def top_no_stop_list(rank_ids,stopID,beam_size):
+            count, top_list = 0, []
+            for i in rank_ids:
+                if (i%self.tgt_vocab_size) != stopID:
+                    top_list.append(i)
+                    count += 1
+                if count == beam_size:
+                    return top_list
+
         W_y = dy.parameter(self.W_y)
         b_y = dy.parameter(self.b_y)
         W1_att_e = dy.parameter(self.W1_att_e)
@@ -223,7 +232,7 @@ class Attention():
         # Decoder - # Set the intial state to the result of the encoder
         iter = 0
         while iter < max_len:
-            dec_state_list, c_t_list = [],[]
+            dec_state_list, c_t_list, y_star_list = [],[], []
             for i, state in enumerate(beam_list):
                 #print "{} beamwidth iter {} beam {}".format(beam_width,iter, i)
                 [dec_state, c_t, log_prob, trans_seq] = state
@@ -238,32 +247,29 @@ class Attention():
                 c_t = self.__attention_mlp(H_f, h_e, W1_att_e, W1_att_f, w2_att)
                 dec_state_list.append(dec_state)
                 c_t_list.append(c_t)
-                y_star = softmax((W_y * dy.concatenate([h_e, c_t]) + b_y).npvalue())
+                y_star = numpy.log(softmax((W_y * dy.concatenate([h_e, c_t]) + b_y).npvalue()))
+                y_star_list.append(y_star)
                 # Get probability distribution for the next word to be generated
-                p = numpy.log(y_star) + log_prob
-                lt = len(trans_seq) - 1
-                if self.LP[ls,lt] != 0:
-                    end_prob = log_prob + p[stopID] + math.log(self.LP[ls,lt])
-                    print lt, end_prob
-                    if end_prob > max_seq[0]:
-                        max_seq = (end_prob, trans_seq)
+                end_prob = log_prob + y_star[stopID]
+                p = y_star + log_prob
+                lt = len(trans_seq)
+                #print lt, end_prob/float(lt)
+                if end_prob/float(lt) > max_seq[0]:
+                    max_seq = (end_prob/float(lt), trans_seq)
                 if i == 0:
                     beam_p = p
                 else:
                     beam_p = numpy.concatenate([beam_p,p])
-            #print "beam_p", type(beam_p), beam_p.shape
-            temp = numpy.argpartition(beam_p, beam_width)
-            top_width_ids = temp[:beam_width]
+            temp = numpy.argpartition(-beam_p, 2*beam_width)
+            top_width_ids = top_no_stop_list(temp,stopID, beam_width)
             tmp = []
             for rank, pid in enumerate(top_width_ids):
                 state_id = pid//self.tgt_vocab_size
                 token_id = pid%self.tgt_vocab_size
                 #print rank, pid, state_id, token_id, state_id
                 #print beam_list[state_id][2], pid, beam_p[pid]
-                tmp.append((dec_state_list[state_id],c_t_list[state_id], beam_list[state_id][2] + beam_p[pid], beam_list[state_id][3]+[self.tgt_id_to_token[token_id]]))
+                tmp.append((dec_state_list[state_id],c_t_list[state_id], beam_list[state_id][2] + y_star_list[state_id][token_id], beam_list[state_id][3]+[self.tgt_id_to_token[token_id]]))
             beam_list = tmp
-            #print beam_list, "beam_list"
-            #print beam_list[0][3]
             iter += 1
         return ' '.join(max_seq[1][1:])
 
@@ -401,16 +407,16 @@ class Attention():
     def eval(self, test_src_file, test_tgt_file, eval_file="./results/test_beam.txt"):
         src_sent_vecs_test = read_test_file(test_src_file, self.src_token_to_id)
         tgt_sentences_test = read_test_file(test_tgt_file)
-        randIndex = random.sample(xrange(len(src_sent_vecs_test)), 10)
-        src_sents = [src_sent_vecs_test[k] for k in randIndex]
-        tgt_sents = [tgt_sentences_test[k] for k in randIndex]
+        #randIndex = random.sample(xrange(len(src_sent_vecs_test)), 10)
+        #src_sents = [src_sent_vecs_test[k] for k in randIndex]
+        #tgt_sents = [tgt_sentences_test[k] for k in randIndex]
         eval_file = open(eval_file,"w")
-        num_test = len(src_sents)
+        num_test = len(src_sent_vecs_test)
         for i in xrange(num_test):
             if (i+1)%10 == 0:
                 print "eval num {0}".format(i+1)
             trans_sent = self.translate_beam_sentence(src_sent_vecs_test[i])
-            print trans_sent+ "|\t|" + tgt_sents[i]
+            print trans_sent+ "|\t|" + tgt_sentences_test[i]
             eval_file.write(trans_sent+"\n")
 
 def save_model(model, file_path):
