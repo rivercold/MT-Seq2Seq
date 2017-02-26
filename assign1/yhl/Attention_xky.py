@@ -26,8 +26,8 @@ class Attention():
                                                                                                         target=True)
         self.src_sent_vecs, self.tgt_sent_vecs = sort_by_length(self.src_sent_vecs, self.tgt_sent_vecs)
 
-        if beam_search:
-            self.LP = compute_length_prob(self.src_sent_vecs, self.tgt_sent_vecs)
+        #if beam_search:
+        #    self.LP = compute_length_prob(self.src_sent_vecs, self.tgt_sent_vecs)
 
         if load_from is not None:
             [self.l2r_builder, self.r2l_builder, self.dec_builder,
@@ -95,12 +95,10 @@ class Attention():
         H_f_r2l_batch = dy.concatenate_cols(outputs_r2l_batch)  # (hidden_size, num_step, batch_size)
         H_f_batch = dy.concatenate([H_f_l2r_batch, H_f_r2l_batch])  # (2 * hidden_size, num_step, batch_size)
 
-        W_eh = dy.parameter(self.W_eh)
         W_hh = dy.parameter(self.W_hh)
-        encoded_batch = W_eh * encoded_h_batch  # (embed_size, batch_size)
         encoded_h_batch = W_hh * encoded_h_batch  # (hidden_size, batch_size)
 
-        return H_f_batch, encoded_batch, encoded_h_batch
+        return H_f_batch, encoded_h_batch
 
     def __attention_mlp(self, H_f, h_e, W1_att_e, W1_att_f, w2_att):
 
@@ -172,10 +170,10 @@ class Attention():
 
         losses = []
 
-        H_f_batch, encoded_batch, encoded_h_batch = self.encode_batch(src_sent_vec_batch)
+        H_f_batch, encoded_h_batch = self.encode_batch(src_sent_vec_batch)
 
         # Set initial decoder state to the result of the encoder
-        dec_state = self.dec_builder.initial_state()
+        dec_state = self.dec_builder.initial_state([encoded_h_batch])
         start = True
         c_t_batch = None
         # Calculate losses for decoding
@@ -184,12 +182,11 @@ class Attention():
         for i in xrange(maxLen - 1):
             cID_batch, nID_batch = pad_batch[i], pad_batch[i + 1]
             if start:
-                embed_batch = encoded_batch
                 h_e_batch = encoded_h_batch
                 c_t_batch = self.__attention_mlp_batch(H_f_batch, h_e_batch, W1_att_e, W1_att_f, w2_att)
                 start = False
-            else:
-                embed_batch = dy.lookup_batch(self.tgt_lookup, cID_batch)
+
+            embed_batch = dy.lookup_batch(self.tgt_lookup, cID_batch)
             dec_state = dec_state.add_input(dy.concatenate([embed_batch, c_t_batch]))
             h_e_batch = dec_state.output()
             c_t_batch = self.__attention_mlp(H_f_batch, h_e_batch, W1_att_e, W1_att_f, w2_att)
@@ -227,6 +224,8 @@ class Attention():
         stopID, dec_state = self.tgt_token_to_id['</S>'], None
         ls = len(src_sent_vec)
         H_f, encoded, encoded_h = self.encode(src_sent_vec)
+        c_t = self.__attention_mlp(H_f, dec_state, W1_att_e, W1_att_f, w2_att)
+        dec_state = self.dec_builder.initial_state()
         max_seq = (float('-inf'),["<S>"])
         beam_list = [(encoded_h, None, 0, ["<S>"]) for _ in range(beam_width)] #  dec_sate/h_e(only the first), c_t, embed, log_prob,tran_seq
         # Decoder - # Set the intial state to the result of the encoder
@@ -238,11 +237,9 @@ class Attention():
                 [dec_state, c_t, log_prob, trans_seq] = state
                 if iter == 0:
                     c_t = self.__attention_mlp(H_f, dec_state, W1_att_e, W1_att_f, w2_att)
-                    dec_state = self.dec_builder.initial_state()
-                    embed =  encoded
-                else:
-                    cID = self.tgt_token_to_id[trans_seq[-1]]
-                    embed = dy.lookup(self.tgt_lookup,cID)
+                    dec_state = self.dec_builder.initial_state([dec_state])
+                cID = self.tgt_token_to_id[trans_seq[-1]]
+                embed = dy.lookup(self.tgt_lookup,cID)
                 dec_state = dec_state.add_input(dy.concatenate([embed, c_t]))
                 h_e = dec_state.output()
                 c_t = self.__attention_mlp(H_f, h_e, W1_att_e, W1_att_f, w2_att)
@@ -405,7 +402,7 @@ class Attention():
         self.model.save(file_path, theta)
         print 'saved to {0}'.format(file_path)
 
-    def eval(self, test_src_file, test_tgt_file, eval_file="./results/test_beam.txt"):
+    def eval(self, test_src_file, test_tgt_file, eval_file="./results/test_beam_final.txt"):
         src_sent_vecs_test = read_test_file(test_src_file, self.src_token_to_id)
         tgt_sentences_test = read_test_file(test_tgt_file)
         #randIndex = random.sample(xrange(len(src_sent_vecs_test)), 10)
@@ -413,6 +410,7 @@ class Attention():
         #tgt_sents = [tgt_sentences_test[k] for k in randIndex]
         eval_file = open(eval_file,"w")
         num_test = len(src_sent_vecs_test)
+        print "evaluating function starts"
         for i in xrange(num_test):
             if (i+1)%10 == 0:
                 print "eval num {0}".format(i+1)

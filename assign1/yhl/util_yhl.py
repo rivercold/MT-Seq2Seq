@@ -24,7 +24,6 @@ def read_file(file_name, threshold=1, target=False):
     lines = reader.readlines()
     reader.close()
     sentences = map(lambda x: x.strip().split(), lines)
-
     tok_count = defaultdict(int)
 
     for sent in sentences:
