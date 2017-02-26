@@ -480,7 +480,7 @@ def main():
                     hidden_size=args.hid, attention_size=args.att, load_from=args.load, beam_search=args.beam)
     if args.eval:
         print "start evaluatuon!"
-        att.eval(valid_de, valid_en)
+        att.eval(toy_test_de, toy_test_en)
     else:
         print "start training!"
         if args.batch:
