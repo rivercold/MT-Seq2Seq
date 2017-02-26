@@ -416,7 +416,8 @@ class Attention():
         for i in xrange(num_test):
             if (i+1)%10 == 0:
                 print "eval num {0}".format(i+1)
-            trans_sent = self.translate_beam_sentence(src_sent_vecs_test[i])
+            # trans_sent = self.translate_beam_sentence(src_sent_vecs_test[i])
+            trans_sent = self.translate_sentence(src_sent_vecs_test[i])
             print trans_sent+ "|\t|" + tgt_sentences_test[i]
             eval_file.write(trans_sent+"\n")
 
@@ -480,7 +481,7 @@ def main():
                     hidden_size=args.hid, attention_size=args.att, load_from=args.load, beam_search=args.beam)
     if args.eval:
         print "start evaluatuon!"
-        att.eval(toy_test_de, toy_test_en)
+        att.eval(test_de, test_en)
     else:
         print "start training!"
         if args.batch:

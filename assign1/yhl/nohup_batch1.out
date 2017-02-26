@@ -1,0 +1,1602 @@
+nohup: ignoring input
+[dynet] initializing CUDA
+[dynet] Request for 1 specific GPU ...
+[dynet] Device Number: 1
+[dynet]   Device name: GeForce GTX TITAN X
+[dynet]   Memory Clock Rate (KHz): 3505000
+[dynet]   Memory Bus Width (bits): 384
+[dynet]   Peak Memory Bandwidth (GB/s): 336.48
+[dynet]   Memory Free (GB): 12.6893/12.8055
+[dynet]
+[dynet] Device(s) selected: 1
+[dynet] random seed: 311465772
+[dynet] allocating memory: 4096MB
+[dynet] memory allocation done.
+epoch=1, iter=100/98132, loss=7.645945
+and , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ,|	|the sister who had done that brave deed was put into an education camp .
+and , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ,|	|now , what if that picture links to all of your pictures ?
+, , , , . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .|	|you know , is it rational ?
+and , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ,|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ,|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=200/98132, loss=6.599707
+the the . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .|	|the sister who had done that brave deed was put into an education camp .
+the the . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .|	|now , what if that picture links to all of your pictures ?
+the .|	|you know , is it rational ?
+the the . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+the the . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=300/98132, loss=6.394664
+and , , . .|	|the sister who had done that brave deed was put into an education camp .
+and , , . .|	|now , what if that picture links to all of your pictures ?
+and .|	|you know , is it rational ?
+and , , , , , , , , , , , , , ,|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and , , . .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=400/98132, loss=6.202653
+and i , , . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .|	|the sister who had done that brave deed was put into an education camp .
+and i , , . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .|	|now , what if that picture links to all of your pictures ?
+and .|	|you know , is it rational ?
+and and , , , , , , , , , , , , , . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and i , , . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=500/98132, loss=6.356457
+and of of of of of of of of of of of of of of of of of of of of of of of of of of of of of|	|the sister who had done that brave deed was put into an education camp .
+and of of of of of of of of of of of of of of of of of of of of of of of of of of of of of of|	|now , what if that picture links to all of your pictures ?
+so . .|	|you know , is it rational ?
+and of of of of of of of of of of of of of of of of of of of of of of of of of of of of of of of of of of of of of of of of of of of of of of of of|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and of of of of of of of of of of of of of of of of of of of of of of of of of of of of of of of of of of of of of of of of of of of of of of of of|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=600/98132, loss=6.131048
+and is is to . . . . . . .|	|the sister who had done that brave deed was put into an education camp .
+and is is to . . . . . . .|	|now , what if that picture links to all of your pictures ?
+and . . .|	|you know , is it rational ?
+and this to to to to to to to . . . . . . . . . . .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and is is to . . . . . . .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=700/98132, loss=6.157049
+i the the the the the the the the . . .|	|the sister who had done that brave deed was put into an education camp .
+i the the the the the the the the . . .|	|now , what if that picture links to all of your pictures ?
+i . . .|	|you know , is it rational ?
+i the the the the the the the the the the the the the the the the the the the the the the the the the|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+i the the the the the the the the the . . .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=800/98132, loss=6.075067
+and , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ,|	|the sister who had done that brave deed was put into an education camp .
+and , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ,|	|now , what if that picture links to all of your pictures ?
+and , , .|	|you know , is it rational ?
+and , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ,|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ,|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=900/98132, loss=6.138456
+and and is is and and and and and and and and .|	|the sister who had done that brave deed was put into an education camp .
+and and is is and and and and and and and and .|	|now , what if that picture links to all of your pictures ?
+and is . .|	|you know , is it rational ?
+and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and and is is and and and and and and and and and .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=1000/98132, loss=6.009924
+and , , , the the the the the .|	|the sister who had done that brave deed was put into an education camp .
+and , , , the the the the the the .|	|now , what if that picture links to all of your pictures ?
+and , .|	|you know , is it rational ?
+and , , , , the the the the the the the the the the the the the the the the .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and , , , the the the the the the .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=1100/98132, loss=6.065232
+and , , , , , , , , , .|	|the sister who had done that brave deed was put into an education camp .
+and , , , , , , , , , .|	|now , what if that picture links to all of your pictures ?
+you|	|you know , is it rational ?
+and , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ,|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and , , , , , , , , , , , .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=1200/98132, loss=5.706972
+and the the the of of of of of of of of of of of of of of of .|	|the sister who had done that brave deed was put into an education camp .
+and the the the of of of of of of of of of of of of of of of .|	|now , what if that picture links to all of your pictures ?
+it the of .|	|you know , is it rational ?
+and the the the the of of of of of of of of of of of of of of of of of of of of of of of of of of of of of of of of of of of of of of of of of of of of|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and the the the of of of of of of of of of of of of of of of of of .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=1300/98132, loss=5.809806
+and 's , , , , , , .|	|the sister who had done that brave deed was put into an education camp .
+and 's , , , , , , .|	|now , what if that picture links to all of your pictures ?
+so|	|you know , is it rational ?
+and 's , , , , , , , , , , , , , , , , .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and 's , , , , , , , .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=1400/98132, loss=5.839789
+and you you of of of of of of of of of .|	|the sister who had done that brave deed was put into an education camp .
+and you you of of of of of of of of of .|	|now , what if that picture links to all of your pictures ?
+you you you .|	|you know , is it rational ?
+and you of of of to to to to to to to to to to to to to to to to to to to to to to to to to to to to to .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and you you of of of of of of of of of of .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=1500/98132, loss=5.844427
+and in , , the , the the the that .|	|the sister who had done that brave deed was put into an education camp .
+and i , , the , the the the that .|	|now , what if that picture links to all of your pictures ?
+and 's .|	|you know , is it rational ?
+and , , , , , , , and , and , and , and , and , and , and .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and i , , the , the , the that , and .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=1600/98132, loss=5.829558
+and , , the the the the the the .|	|the sister who had done that brave deed was put into an education camp .
+and , , the the the the the the .|	|now , what if that picture links to all of your pictures ?
+and 's .|	|you know , is it rational ?
+and , , , and , and the the the the the the the the the the the the .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and , , the the the the the the the .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=1700/98132, loss=5.721177
+so i is , and and the and and .|	|the sister who had done that brave deed was put into an education camp .
+so i is , and and the and and .|	|now , what if that picture links to all of your pictures ?
+so 's .|	|you know , is it rational ?
+so i , i , and and and and and and and and and and and and and and and and and and and .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+so i is , and and the and and and .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=1800/98132, loss=5.661594
+and , , , , , , , , , , , .|	|the sister who had done that brave deed was put into an education camp .
+and , , , , , , , , , , , , .|	|now , what if that picture links to all of your pictures ?
+i , .|	|you know , is it rational ?
+and , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ,|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and , , , , , , , , , , , , , .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=1900/98132, loss=5.744286
+and 's , the the , and the , and .|	|the sister who had done that brave deed was put into an education camp .
+and 's , the the , and the , and and .|	|now , what if that picture links to all of your pictures ?
+it 's .|	|you know , is it rational ?
+and , we , the , and , and , and , and , and , and , and , and , and , and , and , and , and , and , and .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and 's , the the , and the , and and .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=2000/98132, loss=5.732322
+and we that that that that that that that that that that that .|	|the sister who had done that brave deed was put into an education camp .
+and we that that that that that that that that that that that that .|	|now , what if that picture links to all of your pictures ?
+and is .|	|you know , is it rational ?
+and we that that that that that that that that that that that that that that that that that that that that that that that that that that that that that that that that that that that that that that that that that that that that that that that|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and we that that that that that that that that that that that that that .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=2100/98132, loss=5.678706
+so , the the , the , the , the , the , they , the they , the they , the they , the they , the they , the they , the they , the they , the they , the they , the they , the|	|the sister who had done that brave deed was put into an education camp .
+so , the the , the , the , the , they , the they , the they , the they , the they , the they , the they , the they , the they , the they , the they , the they , the they ,|	|now , what if that picture links to all of your pictures ?
+so , the ?|	|you know , is it rational ?
+so , the , the , the , the , they , the they , the they , the they , the they , the they , the they , the they , the they , the they , the they , the they , the they , the|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+so , the the , the , the , the , they , the they , the they , the they , the they , the they , the they , the they , the they , the they , the they , the they , the they ,|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=2200/98132, loss=5.852821
+we that that that that that that that .|	|the sister who had done that brave deed was put into an education camp .
+we that that that that that that that .|	|now , what if that picture links to all of your pictures ?
+you 's .|	|you know , is it rational ?
+we that , the we that , the we that that that that that that that .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+we that that that that that that that that .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=2300/98132, loss=5.684699
+and so , and and and , and and , and and , and and , and and , and and , and and .|	|the sister who had done that brave deed was put into an education camp .
+and so , and and and , and and , and and , and and , and and , and and , and and , and and .|	|now , what if that picture links to all of your pictures ?
+so was .|	|you know , is it rational ?
+and so , and and , and and , and and , and and , and and , and and , and and , and and , and and , and and , and and , and and , and and , and and , and and , and|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and so , and and and , and and , and and , and and , and and , and and , and and , and and .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=2400/98132, loss=5.716175
+we we , and we 's a and we , and we 's the and we of the and we of the and we|	|the sister who had done that brave deed was put into an education camp .
+we we , and we , and we , and we , and we , and we , and we of the and we of the and we|	|now , what if that picture links to all of your pictures ?
+we 's a a .|	|you know , is it rational ?
+we we , and we , and we , and we , and we , and we , and we , and we , and we , and we , and we , and we , and we , and we , and we , and we , and|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+we we , and we , and we , and we , and we , and we , and we of the and we of the and we|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=2500/98132, loss=5.523119
+and we , the we , the the the the the the the the the the the the the the the the the the the the the .|	|the sister who had done that brave deed was put into an education camp .
+and we , the we , the the the the the the the the the the the the the the the the the the the the the the the the the the the .|	|now , what if that picture links to all of your pictures ?
+and you .|	|you know , is it rational ?
+and we , the we , the we , the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and we , the we , the the the the the the the the the the the the the the the the the the the the the the the the the the the the .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=2600/98132, loss=5.546692
+and the the the the the the the the the the the the the the the the the the the the the the the .|	|the sister who had done that brave deed was put into an education camp .
+and the the the the the the the the the the the the the the the the the the the the the the the the the the the the|	|now , what if that picture links to all of your pictures ?
+this is the a .|	|you know , is it rational ?
+and the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and the the the the the the the the the the the the the the the the the the the the the the the the the the the the the|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=2700/98132, loss=5.509591
+so a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a|	|the sister who had done that brave deed was put into an education camp .
+so a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a|	|now , what if that picture links to all of your pictures ?
+so a a a a a .|	|you know , is it rational ?
+so a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+so a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=2800/98132, loss=5.410969
+and i , `` i , `` i , `` i , `` i , `` i , `` i , `` you is the `` .|	|the sister who had done that brave deed was put into an education camp .
+and i , `` i , `` i , `` i , `` i , `` i , `` i , `` you is the `` that|	|now , what if that picture links to all of your pictures ?
+so i is the you .|	|you know , is it rational ?
+and i , `` i , `` i , `` i , `` i , `` i , `` i , `` you , `` you , `` you , `` you , `` you , `` you , `` you , `` you , `` you , ``|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and i , `` i , `` i , `` i , `` i , `` i , `` i , `` you is the `` that|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=2900/98132, loss=5.614859
+and i , a i , a i , a a a a a .|	|the sister who had done that brave deed was put into an education camp .
+and i , a i , a i , a a a a a .|	|now , what if that picture links to all of your pictures ?
+so the a .|	|you know , is it rational ?
+and i , a i , a a a a a a a a a a a a a a a a a a .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and i , a i , a i , a a a a a .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=3000/98132, loss=5.653098
+and you , i is the the the you is , and you 's the the the the the the the the the the the the the the the .|	|the sister who had done that brave deed was put into an education camp .
+and you , i is the the the you is , and you 's the the the the the the the the the the the the the the the the the the the the the .|	|now , what if that picture links to all of your pictures ?
+so you is a the you is .|	|you know , is it rational ?
+and you , the you , the you , the you is , and you 's the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and you , i is the the the you is , and you 's the the the the the the the the the the the the the the the the the the the the the the the .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=3100/98132, loss=5.556338
+and i , i , i , i , i , i , i , i , i , we 's not for .|	|the sister who had done that brave deed was put into an education camp .
+and i , i , i , i , i , i , i , i , i , we , we , we , we , we , we , we , we .|	|now , what if that picture links to all of your pictures ?
+i 's not .|	|you know , is it rational ?
+and i , i , i , i , i , i , i , we , we , we , we , we , we , we , we , we , we , we , we , we , we , we , we , we ,|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and i , i , i , i , i , i , i , i , i , we , we , we , we , we , we , we , we .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=3200/98132, loss=5.421067
+and the the the the the the the the and and i 's the the the and and and the the the and and and the the the and and and the the the and and and the the the and and and the the the and and and|	|the sister who had done that brave deed was put into an education camp .
+and the the the the the the the and and i 's the the the and and and the the the and and and the the the and and and the the the and and and and the the the and and and and the the the and and|	|now , what if that picture links to all of your pictures ?
+and the the this .|	|you know , is it rational ?
+and the the the the the the the and and the the the the and and and the the the and and and the the the and and and the the the and and and and the the the and and and and the the the and and and|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and the the the the the the the and and i 's the the the and and and the the the and and and the the the and and and the the the and and and and the the the and and and and the the the and and|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=3300/98132, loss=5.551281
+and we 's a that , we 's a that of the that .|	|the sister who had done that brave deed was put into an education camp .
+and we 's a that , we 's a that of the that .|	|now , what if that picture links to all of your pictures ?
+we 's a a .|	|you know , is it rational ?
+and we 's a that , we 's a that and we 's a that and we|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and we 's a that , we 's a that of the that .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=3400/98132, loss=5.499881
+so i 's a a the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the|	|the sister who had done that brave deed was put into an education camp .
+so i 's a a the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the|	|now , what if that picture links to all of your pictures ?
+so you 's a a a the ?|	|you know , is it rational ?
+so i , `` i , `` i , `` i , `` i , `` i , `` i 's a `` the the the the the the the the the the the the the the the the the the the the the the the the the the|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+so i , `` i , `` i 's a a the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=3500/98132, loss=5.403100
+it 's a a world of the world of the world of the world .|	|the sister who had done that brave deed was put into an education camp .
+it 's a a world of the world of the world of the world .|	|now , what if that picture links to all of your pictures ?
+it 's a a a a a .|	|you know , is it rational ?
+it 's a `` the world , and i 's a world , and i 's a world , and i 's a world , and i 's a world , and i 's a world , and i 's the world .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+it 's a a world of the world of the world of the world .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=3600/98132, loss=5.407696
+and we , we 's a a world .|	|the sister who had done that brave deed was put into an education camp .
+and we , we 's a a world .|	|now , what if that picture links to all of your pictures ?
+it 's a a .|	|you know , is it rational ?
+and we , we 's a a world , and we 's a world .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and we , we 's a a world .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=3700/98132, loss=5.421341
+and we can , it 's a a world of the world .|	|the sister who had done that brave deed was put into an education camp .
+and we can , it 's a a world of the world .|	|now , what if that picture links to all of your pictures ?
+it 's a a it .|	|you know , is it rational ?
+and we can , it can , it can , it can to a a world of the world of the world .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and we can , it 's a a world of the world .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=3800/98132, loss=5.502532
+so , you 's a a a a a a world .|	|the sister who had done that brave deed was put into an education camp .
+so , you 's a a a a a a a a a a a world .|	|now , what if that picture links to all of your pictures ?
+it 's a a a .|	|you know , is it rational ?
+so , you 's a a a a a a a a a a a a a a a a a a a a world .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+so , you 's a a a a a a a a a a a a a world .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=3900/98132, loss=5.394811
+and i 's a world of the world of the world of the world .|	|the sister who had done that brave deed was put into an education camp .
+and i 's a world of the world of the world of the world of the world .|	|now , what if that picture links to all of your pictures ?
+i 's a little .|	|you know , is it rational ?
+and i 's a world of the world of the world of the world of the world of the world of the world of the world of the world of the world of the world of the world of the world of the world of the world of the|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and i 's a world of the world of the world of the world of the world .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=4000/98132, loss=5.410226
+and i can a same that , you 's a same .|	|the sister who had done that brave deed was put into an education camp .
+and i can a same that , you 's a same .|	|now , what if that picture links to all of your pictures ?
+i 's a same .|	|you know , is it rational ?
+and i can a same , and you can a same , and you can a same , and you can a same .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and i can a same that , and you 's a same .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=4100/98132, loss=5.431943
+and i is a lot , and i is a lot , and they is a lot , and they is a lot .|	|the sister who had done that brave deed was put into an education camp .
+and i is a lot , and i is a lot , and they is a lot , and they is a lot .|	|now , what if that picture links to all of your pictures ?
+i 's a lot .|	|you know , is it rational ?
+and i is a lot , and i is a lot , and they is a lot , and they is a lot , and they is a lot , and they is a lot , and they is a lot , and they is a lot , and|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and i is a lot , and i is a lot , and they is a lot , and they is a lot .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=4200/98132, loss=5.346123
+we 's a world of the world .|	|the sister who had done that brave deed was put into an education camp .
+we 's a world of the world .|	|now , what if that picture links to all of your pictures ?
+it 's a world .|	|you know , is it rational ?
+we 's a world of the world of the world of the world of the world .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+we 's a world of the world .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=4300/98132, loss=5.335820
+and i 's the world is the world is the world and the world and the world|	|the sister who had done that brave deed was put into an education camp .
+and i 's the world is the world is the world and the world and the world|	|now , what if that picture links to all of your pictures ?
+it 's a world .|	|you know , is it rational ?
+and i 's the world , i 's the world , i 's the world , and i 's the world , and i 's the world , and i 's the world , and i 's the world , and i 's the world , and i 's|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and i 's the world is the world is the world and the world and the world and the world|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=4400/98132, loss=5.270094
+and we 's a first of the first of the time of the time of the time of the time .|	|the sister who had done that brave deed was put into an education camp .
+and we 's a first of the first of the time of the time of the time and the time and the time .|	|now , what if that picture links to all of your pictures ?
+but we 's not a very time .|	|you know , is it rational ?
+and we is the first of the first of the first and the time and the time and the time and the time and the time and the time and the time and the time and the time and the time and the time and the time and the|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and we 's a first of the first of the time of the time of the time and the time and the time .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=4500/98132, loss=5.228935
+and you 're a lot of the world of the world .|	|the sister who had done that brave deed was put into an education camp .
+and you 're a lot of the world of the world .|	|now , what if that picture links to all of your pictures ?
+thank you .|	|you know , is it rational ?
+and you 're a lot , `` the the world , the world , the the world , the world , the world , the world , the world , the world , the world , the world .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and you 're a lot of the world of the world .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=4600/98132, loss=5.319341
+and i 's a world of the world of the world of the world .|	|the sister who had done that brave deed was put into an education camp .
+and i 's a world of the world of the world of the world .|	|now , what if that picture links to all of your pictures ?
+thank you 's be .|	|you know , is it rational ?
+and the world of the world of the world of the world of the world of the world of the world of the world .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and i 's a world of the world of the world of the world .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=4700/98132, loss=5.284123
+and the first , we do n't be a world , and i do n't be a world .|	|the sister who had done that brave deed was put into an education camp .
+and i do n't be a world , and i do n't be a world .|	|now , what if that picture links to all of your pictures ?
+thank i do n't be a world .|	|you know , is it rational ?
+and the first , the world , we do n't be a world , and the world , and the world , and the world ,|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and the first , we do n't be a world , and i do n't be a world .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=4800/98132, loss=5.240463
+and , i 's a world , and i 's a world , and i 's a world .|	|the sister who had done that brave deed was put into an education camp .
+and we 're a world , and i 's a world , and i 's a world .|	|now , what if that picture links to all of your pictures ?
+it 's a very .|	|you know , is it rational ?
+and , i 's a world , and , i 's a world , and i 's a world , and i 's a world , and , i 's a world , and , they 's a world ,|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and we 're a world , and i 's a world , and i 's a world .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=4900/98132, loss=5.257329
+and you do to be to be to be to be to be to be to be to be to be .|	|the sister who had done that brave deed was put into an education camp .
+and you do to be to be to be to be to be to be to be to be to be .|	|now , what if that picture links to all of your pictures ?
+it 's not be .|	|you know , is it rational ?
+and you do to be to be to be to be to be to be to be to be to be to be to be to be to be to be to be to be to be to be to be to be .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and you do to be to be to be to be to be to be to be to be to be .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=5000/98132, loss=5.316027
+and we did n't n't n't n't n't be a very very time .|	|the sister who had done that brave deed was put into an education camp .
+and we did n't n't n't n't be a very very time .|	|now , what if that picture links to all of your pictures ?
+thank we did n't .|	|you know , is it rational ?
+and we did n't n't n't n't n't , and we was a first , and we was a first , and we was a first , and we can n't n't .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and we did n't n't n't n't be a very very time .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=5100/98132, loss=5.065453
+and you was a very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very|	|the sister who had done that brave deed was put into an education camp .
+and you was a very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very|	|now , what if that picture links to all of your pictures ?
+thank you very very very very very very very very .|	|you know , is it rational ?
+and you was a first , but you 're a very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and you was a very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=5200/98132, loss=5.389335
+the first of the first of the world of the world of the world of the world of the world .|	|the sister who had done that brave deed was put into an education camp .
+the first of the first of the world of the world of the world of the world of the world .|	|now , what if that picture links to all of your pictures ?
+this is a very very .|	|you know , is it rational ?
+the first of the first of the world of the world of the world of the world of the world of the world of the world of the world of the world of the world of the world of the world .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+the first of the first of the world of the world of the world of the world of the world .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=5300/98132, loss=5.361454
+and we 're just a world , i 're just a world .|	|the sister who had done that brave deed was put into an education camp .
+and we 're just a world , i 're just a world , and we 're just a world .|	|now , what if that picture links to all of your pictures ?
+we 're just a very .|	|you know , is it rational ?
+and we 're just a world , i 're just a world , and we 're just a world , and we 're just a world .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and we 're just a world , i 're just a world .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=5400/98132, loss=5.365412
+i can n't n't be the world , i can n't n't be the world .|	|the sister who had done that brave deed was put into an education camp .
+i can n't n't the world , i can n't n't be the world , i can n't n't .|	|now , what if that picture links to all of your pictures ?
+i can n't .|	|you know , is it rational ?
+and the first , i can n't n't the world , i can n't n't the world , i can n't n't the world , i can n't n't the world , and you can n't n't .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+i can n't n't the world , i can n't n't be the world , i can n't n't .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=5500/98132, loss=5.264812
+i was to be the lot , i can n't n't n't n't n't n't n't n't n't n't n't n't n't .|	|the sister who had done that brave deed was put into an education camp .
+i was to be the lot , i can n't n't n't n't n't n't n't n't n't n't n't n't n't .|	|now , what if that picture links to all of your pictures ?
+it 's not a very very .|	|you know , is it rational ?
+i was to the lot , i can n't to the lot , i can n't n't to the brain , i can n't n't n't n't n't n't n't n't n't the brain , it 's the brain , it 's the brain .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+i was to be the lot , i can n't n't n't n't n't n't n't n't n't n't n't n't n't .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=5600/98132, loss=5.132454
+we know to not the lot of the way of the way of the way of the way of the way of the way .|	|the sister who had done that brave deed was put into an education camp .
+we know to not the lot of the way of the way of the way of the way of the way of the way .|	|now , what if that picture links to all of your pictures ?
+we 'm not not not .|	|you know , is it rational ?
+we know to not the lot of the way of the way of the way of the way of the way of the way of the way of the way of the way of the way of the way of the way of the way of the way of|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+we know to not the lot of the way of the way of the way of the way of the way of the way .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=5700/98132, loss=5.148809
+and we was the lot , we know , we know , we know , we know , we can not the lot .|	|the sister who had done that brave deed was put into an education camp .
+and we was the lot , we know , we know , we know , we know , and we know , we know .|	|now , what if that picture links to all of your pictures ?
+thank you .|	|you know , is it rational ?
+and we was the lot , we know , we know , we know , we know , and we know , we know , and we know , we know , and we know , and we know , we know , and we can not the lot|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and we was the lot , we know , we know , we know , we know , and we know , we know .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=5800/98132, loss=5.222469
+and we was n't have the same of the same of the same of the same of the same .|	|the sister who had done that brave deed was put into an education camp .
+and we was n't have the same that we have the same that we have the same of the same .|	|now , what if that picture links to all of your pictures ?
+it 's not a same .|	|you know , is it rational ?
+and we was n't have the same that we have the same that we have the same of the same of the same of the same of the same of the same .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and we was n't have the same of the same of the same of the same of the same .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=5900/98132, loss=5.231839
+i do n't have a lot of the world of the world of the world .|	|the sister who had done that brave deed was put into an education camp .
+and i do n't have a lot of the world of the world .|	|now , what if that picture links to all of your pictures ?
+it 's a lot .|	|you know , is it rational ?
+and i do n't have a lot of the world of the world of the world of the world of the world of the world of the world .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and i do n't have a lot of the world of the world .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=6000/98132, loss=5.224989
+and i 'm a world to do to do to do to do to do .|	|the sister who had done that brave deed was put into an education camp .
+and i 'm a world to do to do to do to do .|	|now , what if that picture links to all of your pictures ?
+it 's a very .|	|you know , is it rational ?
+and i 'm a world to do to do to do to do to do to do to do to do to do .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and i 'm a world to do to do to do to do to do .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=6100/98132, loss=5.208495
+and we 'm a lot of the world of the world of the world .|	|the sister who had done that brave deed was put into an education camp .
+and i 'm a lot that i do n't do to do to do .|	|now , what if that picture links to all of your pictures ?
+it 's a very very .|	|you know , is it rational ?
+and i 'm a lot that i do n't do to do to do that , and i 'm a world that 's a world that 's a world that 's a world that 's a world .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and i 'm a lot that i do n't do to do to do that .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=6200/98132, loss=5.286393
+and we 're not the lot of the world of the world .|	|the sister who had done that brave deed was put into an education camp .
+and we 're not the lot of the world of the world .|	|now , what if that picture links to all of your pictures ?
+thank you .|	|you know , is it rational ?
+and we 're not the lot of the world of the world of the world of the world .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and we 're not the lot of the world of the world .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=6300/98132, loss=5.027372
+but you can be be be the little world .|	|the sister who had done that brave deed was put into an education camp .
+and you can be not be a little world .|	|now , what if that picture links to all of your pictures ?
+it 's not not .|	|you know , is it rational ?
+but you can be be a little world of the world of the world .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+but you can be not be a little world .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=6400/98132, loss=5.090562
+and you think , you think , you think , and you think to do .|	|the sister who had done that brave deed was put into an education camp .
+and you think , and you think , and you think , and you do n't do n't do .|	|now , what if that picture links to all of your pictures ?
+it 's not just .|	|you know , is it rational ?
+and you think , and you think , and you think , and you think , and you think , and you think , and you think , and you think , and you think , and you think , and you do n't do n't .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and you think , and you think , and you think , and you think , and you do n't do n't .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=6500/98132, loss=5.041949
+so you can a new of a way of a way of a way .|	|the sister who had done that brave deed was put into an education camp .
+and you can a new of a way of a way is a way .|	|now , what if that picture links to all of your pictures ?
+thank you .|	|you know , is it rational ?
+and you can a new of a way of a way is a way of a way is a way of a way is a way of a way .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and you can a new of a way of a way of a way .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=6600/98132, loss=4.979135
+the first of the lot of the lot of the lot of the lot of the lot of the lot of the own the way .|	|the sister who had done that brave deed was put into an education camp .
+and we have the lot of the lot of the lot of the lot of the lot of the own the way .|	|now , what if that picture links to all of your pictures ?
+it 's a lot .|	|you know , is it rational ?
+and the first , we have the lot of the lot of the lot of the way of the way of the way of the own the way of the own the way of the own the way of the own the way of the own the way of|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and we have the lot of the lot of the lot of the lot of the lot of the own the way .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=6700/98132, loss=5.052198
+and i was the very world of the world of the world .|	|the sister who had done that brave deed was put into an education camp .
+and i was the very very world of the world .|	|now , what if that picture links to all of your pictures ?
+and i .|	|you know , is it rational ?
+and i was the first of the world of the world of the world of the world of the world of the world .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and i was the very very world of the world .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=6800/98132, loss=5.058627
+and he was a lot of the lot of the lot .|	|the sister who had done that brave deed was put into an education camp .
+and i think , i have to have a lot of the lot .|	|now , what if that picture links to all of your pictures ?
+i have to .|	|you know , is it rational ?
+and i have to have a lot of the lot of the lot of the lot of the lot .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and i have to have a lot of the lot .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=6900/98132, loss=5.133461
+so you can get the lot of the world of the world of the world .|	|the sister who had done that brave deed was put into an education camp .
+so you can get the lot of the world , and you can get the lot .|	|now , what if that picture links to all of your pictures ?
+so you can be a lot .|	|you know , is it rational ?
+so you can get the lot of the world , and you can get the lot of the world , and you can get the world , and you can get the world , and you can get the world , and you can get the world .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+so you can get the lot of the world , and you can get the lot .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=7000/98132, loss=5.093024
+and the first , the lot , the lot , the lot , the lot , `` you can see the lot .|	|the sister who had done that brave deed was put into an education camp .
+and i can see the lot , and i can n't do to do .|	|now , what if that picture links to all of your pictures ?
+it 's not .|	|you know , is it rational ?
+and i can see the lot , and i can see the lot , and it 's not the lot , and it 's not the lot . ''|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and the first , i can see the lot , and it 's the lot .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=7100/98132, loss=4.964536
+and we can do to be the world , `` you can do to do the world .|	|the sister who had done that brave deed was put into an education camp .
+and you can do , `` you can do to do , `` you can do to do .|	|now , what if that picture links to all of your pictures ?
+thank you .|	|you know , is it rational ?
+and we said , `` we can do , `` you can do , `` you can do , `` you can do , `` you can do , `` you can do , and you can do , `` you can do , and you can do ,|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and we can do to do , `` you can do to do , `` you can do .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=7200/98132, loss=5.053128
+and we 've be the new new new new new new new new new .|	|the sister who had done that brave deed was put into an education camp .
+and i 've going to be a new new new new new new .|	|now , what if that picture links to all of your pictures ?
+so , you .|	|you know , is it rational ?
+and i 've also a new new new new , and i 've be a new new new new , and i 've be a new new new , and i 've be a new new new .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and i 've be a new new new new new new new new .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=7300/98132, loss=5.007497
+the first thing is the first of the world of the world of the world of the world of the world .|	|the sister who had done that brave deed was put into an education camp .
+and i 'm going to be the first of the world , and i can be the first of the world , and i can be the first of the world .|	|now , what if that picture links to all of your pictures ?
+and i 'm going to be .|	|you know , is it rational ?
+and i can be the first , and i can be the first , and i can be the first , and i can be the first , and i can be the first , and i can be the first , and i can be the first ,|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and the first thing is the first of the first , and i can be the first of the world .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=7400/98132, loss=5.051668
+and the way , the way , the way , the way , the way , the way of the time .|	|the sister who had done that brave deed was put into an education camp .
+and i was a little time , and i was be the little time .|	|now , what if that picture links to all of your pictures ?
+thank you .|	|you know , is it rational ?
+and the time , i was be the little time , and i was be the little time , and i was be the little time .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and the time , i was be the little time .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=7500/98132, loss=5.038183
+and we can be the little time of the time of the world .|	|the sister who had done that brave deed was put into an education camp .
+and i can see you can be the time of the time .|	|now , what if that picture links to all of your pictures ?
+so you .|	|you know , is it rational ?
+and i can see the little time that we can be the little time , and i can see the little time that 's the time .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and we can see the little time that we can be the little time .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=7600/98132, loss=5.187291
+the problem is the way of the world of the world .|	|the sister who had done that brave deed was put into an education camp .
+and you 're going to do the little way of the world .|	|now , what if that picture links to all of your pictures ?
+thank you .|	|you know , is it rational ?
+and the way is that we 're going to do , and the way of the way of the way .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and the way of the way of the way of the way .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=7700/98132, loss=4.993300
+and the fact of the world , the problem of the world , the world is the world of the world .|	|the sister who had done that brave deed was put into an education camp .
+and you can going to do it , and you 're going to do it ?|	|now , what if that picture links to all of your pictures ?
+thank you can be a very very|	|you know , is it rational ?
+and you 're a lot of the world , and you 're a lot of the world , and it 's a new time , and it 's a world , and it 's a world , and it 's a world , and it 's a world .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and the fact , the fact of the world , and it 's a new time , and it 's a new time .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=7800/98132, loss=5.044065
+so we have a world of the world , we 're a world of the world .|	|the sister who had done that brave deed was put into an education camp .
+and we do n't do to do to do to do to do to do to do to do to do to do ?|	|now , what if that picture links to all of your pictures ?
+so you are a very very ?|	|you know , is it rational ?
+and we have a world , and we have a world , and we have a world , and we 're a little world , and we 're a little world , and we 're a little world , and we 're a little world , and we 're|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+so we have a world of a world , and we 're a little world .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=7900/98132, loss=5.120351
+we 're the first time of the world of the world .|	|the sister who had done that brave deed was put into an education camp .
+and we 're the first time of the first time , and we 're going to do to do ?|	|now , what if that picture links to all of your pictures ?
+and you do n't do n't do ?|	|you know , is it rational ?
+and we 're the first time , we 're the first time of the first time , and we 're the first time of the world .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and we 're the first time of the world of the world .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=8000/98132, loss=5.065508
+so you 're going to make the little little little little little little little little little little little little little little little little little little little little little little little little .|	|the sister who had done that brave deed was put into an education camp .
+and you do n't do n't do n't do n't do n't do n't do ?|	|now , what if that picture links to all of your pictures ?
+thank you .|	|you know , is it rational ?
+and you can make the little little little little little little little little little little little little little little little little little little little little little little little little little little little little little little little little little little little little little little little little little little little little|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and you 're going to make the little little little little little little little little little little little little little little little little little little little little little little little little .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=8100/98132, loss=5.211262
+and we can be a very very very very very very very very very very very very very very very very very very very very very very very very very very very very .|	|the sister who had done that brave deed was put into an education camp .
+and we can be a very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very|	|now , what if that picture links to all of your pictures ?
+this is a very very very very very very very very|	|you know , is it rational ?
+and we can be a very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and we can be a very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=8200/98132, loss=5.148470
+the second is a second of the world , the second of the world , the second of the world .|	|the sister who had done that brave deed was put into an education camp .
+but the first , i do n't know a first , you do n't do n't do n't do n't do n't do n't do ?|	|now , what if that picture links to all of your pictures ?
+it 's a very very .|	|you know , is it rational ?
+but the first , i think , `` the second , the second , the second , the second , the second , the second , the second , the second , the second , the second , the second , the second , the second , the second|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+but the second , the second is a world , the second of the world , the second of the world .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=8300/98132, loss=5.047495
+the second is the world , the world is the world of the world .|	|the sister who had done that brave deed was put into an education camp .
+and you do n't have to do to be a world , and the world , the world , the world , the world , the world , the world ?|	|now , what if that picture links to all of your pictures ?
+it 's a very very very .|	|you know , is it rational ?
+and the way , the way , the way , the way , the world is the world , the world , the world , the world , the world , the world , the world , the world , the world , the world , the world ,|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and we can have to the bit of the world , and the world of the world .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=8400/98132, loss=4.895642
+and we have a lot of the lot of the world of the world of the world of the world of the world of the world .|	|the sister who had done that brave deed was put into an education camp .
+and what you do n't do do do ?|	|now , what if that picture links to all of your pictures ?
+it 's a lot ?|	|you know , is it rational ?
+and i 've have a lot of the lot of the lot of the world , and you have a lot of the world , and you have a lot of the world , and you have a lot of the world of the world , and you have|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and we have a lot of the lot of the world of the world of the world of the world of the world of the world .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=8500/98132, loss=5.058092
+and the way of the way of the way of the way of the way of the way .|	|the sister who had done that brave deed was put into an education camp .
+and what you can see you can do a same ?|	|now , what if that picture links to all of your pictures ?
+and you can see you ?|	|you know , is it rational ?
+and you can see a same and a way and the way and the way and the way and the way and the way and the way and the way and the way .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and the way of the way , we can see a way of the way .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=8600/98132, loss=4.994971
+the next of the next of the next of the world , the next of the world .|	|the sister who had done that brave deed was put into an education camp .
+what you 're going to be ? ''|	|now , what if that picture links to all of your pictures ?
+what 's you ?|	|you know , is it rational ?
+and you 're going to be the little bit of the little bit of the little bit of the world , the little bit of the world .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+the next of the next of the next of the next of the world , the next of the world .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=8700/98132, loss=4.915425
+the next is the little way of the world is a little world .|	|the sister who had done that brave deed was put into an education camp .
+and what you 're a little little little bit ?|	|now , what if that picture links to all of your pictures ?
+you 're a little little little .|	|you know , is it rational ?
+and the next is , and the next is , and the next is , and the next is a little way , and the next is a little way .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and the next is a little way of the world is a little little world .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=8800/98132, loss=4.944200
+the first of the same of the world of the world of the world .|	|the sister who had done that brave deed was put into an education camp .
+it 's a little bit ? it 's not a little bit ?|	|now , what if that picture links to all of your pictures ?
+it 's not a little bit .|	|you know , is it rational ?
+it 's not a little bit of the world , and it 's not a little bit of the world .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and we 're not a little bit of the world of the world .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=8900/98132, loss=5.001474
+and we 're a little world to be a world of the world of the world .|	|the sister who had done that brave deed was put into an education camp .
+and i was a first , and i was a little right , and i was a right ?|	|now , what if that picture links to all of your pictures ?
+thank you ?|	|you know , is it rational ?
+and i was a first , and i 're a first , and i 're a first , and i 're a first of the world , and i 're a little world to be a world .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and we 're a first of the world , and we 're a little world to be a world .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=9000/98132, loss=4.748854
+we have the lot of the same of the same of the same .|	|the sister who had done that brave deed was put into an education camp .
+and what we have that , `` it 's the right ?|	|now , what if that picture links to all of your pictures ?
+thank you ?|	|you know , is it rational ?
+and the first is that is the same , and we have to have to have to the little bit .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and we have the same of the same of the same of the same .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=9100/98132, loss=4.823036
+and we 're going to be a little bit , the world of the world .|	|the sister who had done that brave deed was put into an education camp .
+and it 's a little bit , but it 's a little bit ?|	|now , what if that picture links to all of your pictures ?
+it 's a right ?|	|you know , is it rational ?
+and it 's a same , a first , and it 's a little bit , and it 's a little bit , and it 's a little bit .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and we have a little bit , and we have to be a little bit .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=9200/98132, loss=4.863767
+the first , the first , the little bit of the little bit of the little bit of the little bit of the little bit .|	|the sister who had done that brave deed was put into an education camp .
+it 's a little bit , it 's a little bit , it 's a little bit ?|	|now , what if that picture links to all of your pictures ?
+it 's a little bit .|	|you know , is it rational ?
+it 's a little little bit , and it 's a little little bit , and it 's a little bit , it 's a little bit , it 's a little bit , it 's a little bit , it 's a little bit , it 's a|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and we can not a little little little bit , and it 's a little little bit of the little bit .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=9300/98132, loss=5.060345
+we have to see a very bit of a very bit of a very world .|	|the sister who had done that brave deed was put into an education camp .
+so , you have to do to be a very bit of a very bit of a very bit of a very world .|	|now , what if that picture links to all of your pictures ?
+it 's a very right .|	|you know , is it rational ?
+so , you have to see a very bit of a very bit of a very bit of a very world , and it 's a very very very very very very very very very very very very very very very very very very very very very very very|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and we have to see a very bit of a very bit of a very world .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=9400/98132, loss=4.868511
+we have the lot of the new , the first , the first , the first , the first , the first , the first , the first , the first .|	|the sister who had done that brave deed was put into an education camp .
+and you want to do that , `` you want to do that ?|	|now , what if that picture links to all of your pictures ?
+thank you ?|	|you know , is it rational ?
+and that 's an `` `` the first , you see , `` you know , `` you see , `` you see , `` you see , `` you see , `` you see , `` you see , `` you see , `` you see , ``|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and we see the first idea of the idea . ''|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=9500/98132, loss=5.028790
+the same thing that we can be the same of the world .|	|the sister who had done that brave deed was put into an education camp .
+it 's the same , it 's the world ?|	|now , what if that picture links to all of your pictures ?
+it 's it ?|	|you know , is it rational ?
+it 's the same , the same , the same , the same , the same , the same , the same , the same , the same of the world .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and the same thing that we can be the same of the world .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=9600/98132, loss=4.888940
+we have a world of the world , we have a world .|	|the sister who had done that brave deed was put into an education camp .
+it 's a `` `` `` what , you have a world ?|	|now , what if that picture links to all of your pictures ?
+it 's a very time .|	|you know , is it rational ?
+it 's a world , `` you have a world , i was a first , you have a world .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and we have a first , that 's a world .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=9700/98132, loss=5.108060
+the first thing that we 're the first of the world .|	|the sister who had done that brave deed was put into an education camp .
+and what you do n't do it ?|	|now , what if that picture links to all of your pictures ?
+it 's not ? it ?|	|you know , is it rational ?
+and there 's the first time , and the first thing , and you can be the world that you 're the first .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and the first thing that is the world that you 're the world .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=9800/98132, loss=4.711467
+the first is that we 're going to do to do to do to do the world of the world .|	|the sister who had done that brave deed was put into an education camp .
+it 's a first , `` the first is the world is the world ?|	|now , what if that picture links to all of your pictures ?
+it 's a way ?|	|you know , is it rational ?
+it 's a first , and you 're going to do , `` the first is a world , you 're going to do it , and you 're going to do it .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and we 're going to do that the world is a world of the world of the world .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=9900/98132, loss=4.828795
+so , the first thing is a first , the first thing , the first thing .|	|the sister who had done that brave deed was put into an education camp .
+so , it 's a first , `` it 's a first , it 's a world ?|	|now , what if that picture links to all of your pictures ?
+so , it 's a very very .|	|you know , is it rational ?
+so , if you can be a first , and it 's a first , you can a first , you can do a first .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and we can see this is a first time .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=10000/98132, loss=5.035668
+so , the first are a great of the world of the world of the world .|	|the sister who had done that brave deed was put into an education camp .
+so , what is it is a great , and it 's a great ?|	|now , what if that picture links to all of your pictures ?
+it 's a great .|	|you know , is it rational ?
+so , it 's a great of the great , and you can be a great , and you can be a little world , and you can be a little world .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and that 's a great of the world of the world .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=10100/98132, loss=4.921246
+the first thing is a world of the world of the world of the world of the world .|	|the sister who had done that brave deed was put into an education camp .
+so , `` what is the last thing that is the world of the world ?|	|now , what if that picture links to all of your pictures ?
+so , what is a great ?|	|you know , is it rational ?
+so , there 's a first , and he 's going to be a world of the world of the world , and i have to the little world that 's the world of the world .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and he have a first idea of the world of the world of the world of the world .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=10200/98132, loss=4.861759
+the first thing , the first thing , the first , we 're the way , the way , the way , the way .|	|the sister who had done that brave deed was put into an education camp .
+so , the first , you have the way , `` the question , the question , the question , the way ?|	|now , what if that picture links to all of your pictures ?
+it 's a way that 's the way .|	|you know , is it rational ?
+so , it 's not , you 're going to be the way , and you 're going to be the way , and you 're going to be the way , and you 're going to be the way , and you 're going to be the way|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and we 're the way that 's the way , and the way , the way , the way , the way , the way .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=10300/98132, loss=5.012146
+the first thing , the first are the way , the way , the way , the way , the way , the way , the way ,|	|the sister who had done that brave deed was put into an education camp .
+and what you do , `` `` what you do , `` `` what you do , `` `` the question ?|	|now , what if that picture links to all of your pictures ?
+it 's a way ?|	|you know , is it rational ?
+and it 's a way that 's a way , you know , `` you know , `` you know , `` you know , `` you know , `` you know , `` you know , `` you know , `` you know , `` you know ,|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and we know , `` the first thing , you know , `` the way , the way you have a way that 's a way .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=10400/98132, loss=4.841850
+the first people are the people that the people are the people .|	|the sister who had done that brave deed was put into an education camp .
+and the first thing is the people is the people ?|	|now , what if that picture links to all of your pictures ?
+what 's the very thing ?|	|you know , is it rational ?
+and the first thing is the people that 's not a people that 's not a people .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and the first thing is the people that 's the people .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=10500/98132, loss=4.596614
+it 's a lot of the world , the world , the world , the world , the world , the world .|	|the sister who had done that brave deed was put into an education camp .
+it 's a lot , but it 's a lot of the world , right , right ?|	|now , what if that picture links to all of your pictures ?
+it 's a right ?|	|you know , is it rational ?
+it 's a lot of the world , and it 's a lot of the world , and it 's a lot of the world , and it 's a very very , it 's a very world .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and it 's a lot of the world , and it 's a lot of the world .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=10600/98132, loss=4.852146
+now , the first thing is that , the world is that .|	|the sister who had done that brave deed was put into an education camp .
+now , you do n't do to do , `` what you do n't do to do that ?|	|now , what if that picture links to all of your pictures ?
+now , you do n't do ?|	|you know , is it rational ?
+now , it 's going to do that , you 're going to do to do to do to do to do to do to do to do to do .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and you 're going to do in a same time , and you 're going to do in a world .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=10700/98132, loss=5.082159
+in the world , in the world , in the world , in the world , in the world .|	|the sister who had done that brave deed was put into an education camp .
+but it 's what it 's a little bit , `` what do you to do ?|	|now , what if that picture links to all of your pictures ?
+it 's a little bit ?|	|you know , is it rational ?
+it 's a little bit , but it 's a little bit , and he 's a little bit , and he 's a little bit , and it 's a little bit , and it 's a little bit , and it 's a little bit , and|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and this is a little bit , and he 's a little bit , but it 's a little bit .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=10800/98132, loss=4.916197
+the first thing is the world to the world .|	|the sister who had done that brave deed was put into an education camp .
+so , `` what is what is what ? '' '' ''|	|now , what if that picture links to all of your pictures ?
+what is what ?|	|you know , is it rational ?
+it 's a little bit , and they 're going to be very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and this is a lot of the world is a very bit .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=10900/98132, loss=4.714411
+in the first , the first , the first , the first , the lot of the world .|	|the sister who had done that brave deed was put into an education camp .
+so , you can do it , it 's what it 's what you can do to do to do that ?|	|now , what if that picture links to all of your pictures ?
+it 's what it 's a right .|	|you know , is it rational ?
+it 's a lot of a lot of the world , and you 're going to be a lot of the world .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and the first thing of the most of the world , it 's a lot of the world .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=11000/98132, loss=4.680657
+the first are the world , the world is a world .|	|the sister who had done that brave deed was put into an education camp .
+but you can n't know , `` how is that ?|	|now , what if that picture links to all of your pictures ?
+it 's a right .|	|you know , is it rational ?
+it 's a first , but you can be a lot of the world , and you 're going to be , and you 're going to be , and you 're going to be .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and this is the world , but you 're going to be a world .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=11100/98132, loss=4.969225
+the first thing , the world are a world of the world .|	|the sister who had done that brave deed was put into an education camp .
+so , what is that , `` how do do do ?|	|now , what if that picture links to all of your pictures ?
+it 's a right ?|	|you know , is it rational ?
+so it 's a first , `` it 's a way that they 're going to be a way , and they 're going to be it .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and then we 're going to be a world of a world , the world is a world .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=11200/98132, loss=4.856771
+the world are the world , the world , the world is the world of the world .|	|the sister who had done that brave deed was put into an education camp .
+so what is what is the way that is the world ?|	|now , what if that picture links to all of your pictures ?
+it is a right ?|	|you know , is it rational ?
+it is a world that you 're going to be the world , the world , the world , the world is the world , the world , the world , the world is the world , the world , the world is the world .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and the most thing is the world of the world , the world is the world .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=11300/98132, loss=4.985708
+the first thing are the first , the first , the first , the first , the first , the way that 's the way .|	|the sister who had done that brave deed was put into an education camp .
+but what 's what it did n't have to do the right ?|	|now , what if that picture links to all of your pictures ?
+it 's the right .|	|you know , is it rational ?
+it 's a first thing , but they 're not a first , but they 're not a first , and they 're not a first , a way that 's not a way that 's not a way that 's not a way .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and the first thing is a first thing , but they 're not a very one of the way .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=11400/98132, loss=4.737257
+the first thing of the way of the way , the way of the way of the way of the way .|	|the sister who had done that brave deed was put into an education camp .
+so , what is that , `` what is that ? ''|	|now , what if that picture links to all of your pictures ?
+it is a right .|	|you know , is it rational ?
+it 's a first way that we have to the lot of a way that we have to do a way that we have to do a way of a way , and they have a way that 's a way that we can n't have to do a|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and the first thing is a way of a way that is a way of a way of a way .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=11500/98132, loss=4.770445
+the fact of the most of the world of the world .|	|the sister who had done that brave deed was put into an education camp .
+but what is what they 're going to do to do to do to do .|	|now , what if that picture links to all of your pictures ?
+it 's what ?|	|you know , is it rational ?
+it 's not a lot of a same , and they 're going to be going to be .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and this is a lot of the most of the big .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=11600/98132, loss=4.887087
+the first thing is the world , in the world , in the world .|	|the sister who had done that brave deed was put into an education camp .
+it 's what you do n't know , `` they 're going to be going to be ?|	|now , what if that picture links to all of your pictures ?
+this is a right .|	|you know , is it rational ?
+it 's not a lot of the world , and you 're going to be , you 're not not not not .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and this is a lot of the world , you 're not not a lot of the world .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=11700/98132, loss=4.802778
+the most thing is the lot of the most of the most of the world , in the most of the world .|	|the sister who had done that brave deed was put into an education camp .
+it 's what they can be going to be ?|	|now , what if that picture links to all of your pictures ?
+it 's an lot of the|	|you know , is it rational ?
+it 's a lot of the lot of the lot , and they can be a lot of the lot , and they can be a lot of the lot of the lot .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and then we can be a lot of the lot of the world , it 's a lot of the world .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=11800/98132, loss=4.792468
+the first thing is the world of the world of the world .|	|the sister who had done that brave deed was put into an education camp .
+so , `` it 's a lot of the world , `` the first , '' ''|	|now , what if that picture links to all of your pictures ?
+it 's a lot of the|	|you know , is it rational ?
+it 's a lot of a lot of a world , and it 's a lot of a little time , and it 's a lot of a little time .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and the most thing is a most , the world , it 's a little little time .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=11900/98132, loss=4.831137
+the first thing is the world of the world of the world .|	|the sister who had done that brave deed was put into an education camp .
+so , you can be the right , you can be the right ?|	|now , what if that picture links to all of your pictures ?
+this is the right ?|	|you know , is it rational ?
+it 's a lot of the world , and you can be a lot of the world , and you can be a same , and you can be a same , you can be a same .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and the most thing is the world of the world of the world .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=12000/98132, loss=4.578483
+the one of the world , the one of the world , the one of the world .|	|the sister who had done that brave deed was put into an education camp .
+what 's what you do n't be the lot of the world ? ''|	|now , what if that picture links to all of your pictures ?
+this is the right .|	|you know , is it rational ?
+it 's a lot of a world , `` the first , that 's the lot of the world , and you 're going to be .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and the one of the one of the world , the one of the world .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=12100/98132, loss=4.851263
+the other thing is the world , the other , the other , the other , the other , the other , the other , the other , the other , the other .|	|the sister who had done that brave deed was put into an education camp .
+what 's what you do n't be the `` `` `` the other ?|	|now , what if that picture links to all of your pictures ?
+this is the very very very|	|you know , is it rational ?
+it 's a lot of the very world , and the other , and the other , and the other , and the other , and it 's the very very very very very very very very very very very very very very very very very very very very|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and the other thing is the very world , the other thing is a very very very very very very very very very very very very very very very .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=12200/98132, loss=4.692156
+the fact of the world , the year of the world .|	|the sister who had done that brave deed was put into an education camp .
+but there is the problem of the world ?|	|now , what if that picture links to all of your pictures ?
+this is the very world .|	|you know , is it rational ?
+it 's not a lot of the world , `` the way , the way , the way , the way , the way .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and the fact is a very world that is a very world .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=12300/98132, loss=4.686295
+the people is the new , the world , the people are the new , the world , the world is the world .|	|the sister who had done that brave deed was put into an education camp .
+so , you can be a little idea of the world , `` you 're going to be the new ?|	|now , what if that picture links to all of your pictures ?
+that is that ?|	|you know , is it rational ?
+it 's a little way , and you 've been able to be , and you 've been able to be , and they 're going to be , and they 're going to be , and they 're going to be , and they 're going to be|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and the people is the new , and the people is , and you 're going to be a little world .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=12400/98132, loss=4.584995
+the people are going to be going to be going to be going to be going to be going to be going to be going to be going to be going to be|	|the sister who had done that brave deed was put into an education camp .
+but what 's what you can be going to do this ?|	|now , what if that picture links to all of your pictures ?
+this is what ?|	|you know , is it rational ?
+it 's going to be going to be going to be going to be going to be going to be going to be going to be going to be going to be going to be going to be going to be going to be going to be going to|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and the year of the year , it 's not going to be going to be going to be going to be going to be going to be going to be going to be going to be going to be going to be going to be going to be|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=12500/98132, loss=4.857578
+the first thing , the first thing , the first thing , the first thing , the little bit of the world .|	|the sister who had done that brave deed was put into an education camp .
+but you can do you do , `` `` the `` `` `` the `` `` `` the `` `` `` the `` `` `` the other time ?|	|now , what if that picture links to all of your pictures ?
+this is the bit of the|	|you know , is it rational ?
+it was the first thing , you can see , `` the first thing , the first thing , the first thing , the first thing , the little bit of the way , they have to get the little time .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and the first thing is the first time , it 's the bit of the world .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=12600/98132, loss=4.771840
+the first thing is the first thing of the first , the first thing of the way .|	|the sister who had done that brave deed was put into an education camp .
+but you can not a lot of the way that is you to be a lot of the way ?|	|now , what if that picture links to all of your pictures ?
+this is the story ?|	|you know , is it rational ?
+it 's a lot of a new way that you can see that they 're not a lot of the way that they 're not a lot of the way .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and the first thing is the first thing that is the new way that it 's the new .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=12700/98132, loss=4.607202
+the first , the first , the first , the world are the new , the world , the world .|	|the sister who had done that brave deed was put into an education camp .
+but it was what you can n't know that are you to be a new way ?|	|now , what if that picture links to all of your pictures ?
+it 's the problem .|	|you know , is it rational ?
+it was a lot of the way that we could n't think , `` the way , the way that you could n't know .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and the first thing is the new way that it was a new way that it was a new way .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=12800/98132, loss=4.716864
+the most thing is the most world , the most , the most , the world is the little bit .|	|the sister who had done that brave deed was put into an education camp .
+but you have you like you have you like about the little bit ?|	|now , what if that picture links to all of your pictures ?
+that 's the little bit .|	|you know , is it rational ?
+it 's not a little bit of the very bit , and they have the little bit of the very bit , and you have not not not not not not not not .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and the most thing is the little bit of the very bit of the very bit .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=12900/98132, loss=4.787669
+the fact , the most of the world , in the world , in the world .|	|the sister who had done that brave deed was put into an education camp .
+but what 's the `` `` what 's a little bit of a very bit ?|	|now , what if that picture links to all of your pictures ?
+this is the bit .|	|you know , is it rational ?
+it 's a little bit of the very bit , which is the little bit of the world , which is the little bit .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and the most of the very bit , it 's a very bit .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=13000/98132, loss=4.696335
+the first thing is the world , the year , the year .|	|the sister who had done that brave deed was put into an education camp .
+but you can do you do you do you do you do you do ?|	|now , what if that picture links to all of your pictures ?
+this is the right ?|	|you know , is it rational ?
+it was not a lot of the world , and you 're not not not a lot of the world , and you 're not not not not not .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and the year was not not not a very bit .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=13100/98132, loss=4.588126
+the fact is the world of the world , the world is the world .|	|the sister who had done that brave deed was put into an education camp .
+but what is you like to be the `` `` `` how is a lot of the world ?|	|now , what if that picture links to all of your pictures ?
+this is the thing .|	|you know , is it rational ?
+it 's not a lot of the world , and we 're not the same thing , and the other thing is not not not not not .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and the fact is the world , it 's not the same thing .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=13200/98132, loss=4.710264
+the world are the world , the world , the world are the world .|	|the sister who had done that brave deed was put into an education camp .
+but what 's what you do n't do the `` `` `` how do you do ?|	|now , what if that picture links to all of your pictures ?
+this is the right .|	|you know , is it rational ?
+it 's a lot of the world , but we know , `` the lot of the world , the world , the world , the world .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and the world was the world , it 's not the lot of the world .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=13300/98132, loss=4.755819
+the first thing is the world in the world in the world .|	|the sister who had done that brave deed was put into an education camp .
+but what you 're going to do this , what you 're going to do ?|	|now , what if that picture links to all of your pictures ?
+this is what ?|	|you know , is it rational ?
+it 's a lot of the world 's a same time , and we 're going to be the same time , and it 's a lot of the world .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and the first thing is a lot of the world , it 's not a lot of the world .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=13400/98132, loss=4.865806
+the first thing is the most of the world , the first thing is a little bit of the world .|	|the sister who had done that brave deed was put into an education camp .
+but you can be my `` `` `` `` `` `` `` `` `` `` `` `` what you can be going to be ?|	|now , what if that picture links to all of your pictures ?
+so that 's the important .|	|you know , is it rational ?
+it 's a lot of the time , you can be a lot of the time , you can be a little bit of the time , and you 're going to be .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and the first thing is the first thing that is the little bit of the time .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=13500/98132, loss=4.579333
+the few of the world are the few of the world , the few of the world .|	|the sister who had done that brave deed was put into an education camp .
+but what you can do n't do , `` what 's what you can do ?|	|now , what if that picture links to all of your pictures ?
+what is that ?|	|you know , is it rational ?
+it 's a few thing , you can be a few , you can have to do , you can have to do the few and you have to do the few and the few and the few and the few and the few and the few and the|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and we can be the few and the few and the few and it 's not the few time .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=13600/98132, loss=4.820596
+the idea is the world , the world are a lot of the world .|	|the sister who had done that brave deed was put into an education camp .
+but what you do n't do n't do n't do n't do ?|	|now , what if that picture links to all of your pictures ?
+this is what ?|	|you know , is it rational ?
+it 's a very bit , but you can see to get to be , and you 're not to be to get to do to be , and it 's not to be an very bit , and it 's not to be an very bit .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and the idea is not not a very bit , it 's not a very bit .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=13700/98132, loss=4.662409
+the fact that 's the world , the world are a lot of the world .|	|the sister who had done that brave deed was put into an education camp .
+but what 's what you do n't get ?|	|now , what if that picture links to all of your pictures ?
+this is what ?|	|you know , is it rational ?
+it 's a lot of the world , but we 're going to get the world , and it 's a lot of the world , and it 's a lot of the world , and it 's a lot of the world ,|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and the world are the world , it 's a very bit .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=13800/98132, loss=4.731108
+the world is the world , the world , the world is a lot of a world .|	|the sister who had done that brave deed was put into an education camp .
+but if you do n't have to be , `` the `` `` the world are a lot of a world .|	|now , what if that picture links to all of your pictures ?
+it 's the lot of the world .|	|you know , is it rational ?
+it 's a lot of a lot of a lot of a world , but the little bit , the world , the little bit , it 's a lot of the world .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and the world is a lot of the world , it 's a lot of a world .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=13900/98132, loss=4.632375
+the first , the world are the world , the world are a world .|	|the sister who had done that brave deed was put into an education camp .
+but what 's what is that , `` what is a `` `` `` what are a little world ?|	|now , what if that picture links to all of your pictures ?
+this is what is it ?|	|you know , is it rational ?
+it 's a very bit , but the first thing , the first thing , it 's a very bit , and it 's a very bit , it 's a very bit , it 's a very bit , it 's a very bit , it 's a|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and the world are a world , it 's a very bit .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=14000/98132, loss=4.670124
+the other thing that are the best , the world are to be the own world .|	|the sister who had done that brave deed was put into an education camp .
+but what you do n't do n't do n't do the `` `` `` `` they are all of the world ?|	|now , what if that picture links to all of your pictures ?
+this is what 's the problem ?|	|you know , is it rational ?
+it 's a very problem to be the same , and they 're all the same , and they 're not to do it .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and we are the same , and it 's not to the same thing .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=14100/98132, loss=4.579959
+the other thing that the most thing you 're going to do a little bit .|	|the sister who had done that brave deed was put into an education camp .
+but i said , `` you know , `` you 're going to do you to do a lot of the way ?|	|now , what if that picture links to all of your pictures ?
+this is what is this .|	|you know , is it rational ?
+it 's a lot of a same , you 're a same way that you 're going to get the same and you 're going to do to do to do .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and the other thing you 're going to do it .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=14200/98132, loss=4.699915
+the first thing that are the way that we 're going to be a very bit of a very bit of a very bit .|	|the sister who had done that brave deed was put into an education camp .
+but how is it , how is how how are you ?|	|now , what if that picture links to all of your pictures ?
+this is what is this ?|	|you know , is it rational ?
+it 's a very bit , and they 're not going to be a lot of the way that you 're not not not not not not not not not not not not not not not not not not not not not not not not not not not not|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and we 're going to be the same way that 's not not not not not not not not not not not not not not not not not not not not not not not not not not not not not not not not not not not not not not|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=14300/98132, loss=4.595001
+and the world are the world , the world are a world .|	|the sister who had done that brave deed was put into an education camp .
+but what do you do n't do n't do n't have to do to do a lot of a world ?|	|now , what if that picture links to all of your pictures ?
+so that 's what is that ?|	|you know , is it rational ?
+and it 's a lot of a world , and we 're going to do n't have to do that .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and we 're going to do that that 's not a very bit .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=14400/98132, loss=4.692983
+the first thing is the world , and the lot of the world , we have a lot of a lot of a new way .|	|the sister who had done that brave deed was put into an education camp .
+but you do n't have that what do you do that ?|	|now , what if that picture links to all of your pictures ?
+this is what 's the ?|	|you know , is it rational ?
+it 's a lot of an way , but you 're going to have to do that that 's a lot of the way that you 're going to do that .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and then the world is that that 's not that that 's not that that 's not that that 's the very bit .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=14500/98132, loss=4.681680
+the world , the world are the world , the world are a same world .|	|the sister who had done that brave deed was put into an education camp .
+but what 's the time that you can do the same ?|	|now , what if that picture links to all of your pictures ?
+this is what ?|	|you know , is it rational ?
+it 's a very bit of the world , because the way that you have the same thing that 's the same thing that 's the same time that you have the same thing that 's the same time that you have a very bit of the same time|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and the world are the same time that 's the same thing that 's the same thing .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=14600/98132, loss=4.623189
+the world is the world , the world 's a lot of a world .|	|the sister who had done that brave deed was put into an education camp .
+but what is what you do that ?|	|now , what if that picture links to all of your pictures ?
+this is what ?|	|you know , is it rational ?
+it 's a lot of the way that 's a lot of the world , and the way that 's a lot of the way .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and the world is the world 's the way that 's the way .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=14700/98132, loss=4.501590
+the first thing the world are the world , the world 's a little bit .|	|the sister who had done that brave deed was put into an education camp .
+but it 's what you can have to do it ?|	|now , what if that picture links to all of your pictures ?
+it 's what ?|	|you know , is it rational ?
+it 's a very bit , but you know , `` well , it 's a little bit , but it 's a very bit of the world , but it 's not a little bit , but it 's not a little bit , but it 's not|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and the first thing is the bit , it 's not the bit .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=14800/98132, loss=4.621248
+the first thing that we have to the first thing that 's a kind of a kind of a|	|the sister who had done that brave deed was put into an education camp .
+but you do n't do you know that 's what they are going to do you do ?|	|now , what if that picture links to all of your pictures ?
+this is what ?|	|you know , is it rational ?
+it 's a lot of my first thing , we have to get a first thing , `` it 's about the first thing , `` it 's not about the first thing , it 's not about the first thing ,|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and we have to be more , it 's not what we 're not not more .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=14900/98132, loss=4.627759
+the first thing is the world of the world , we 're a lot of a lot of a world .|	|the sister who had done that brave deed was put into an education camp .
+but what it 's what you do n't do you do you do you do you do you do you do ?|	|now , what if that picture links to all of your pictures ?
+it 's the lot of ?|	|you know , is it rational ?
+it 's a lot of the world , but you 're a lot of the world , but it 's a lot of the world .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and the first thing is the world is not , it 's not the world .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=15000/98132, loss=4.591177
+the first thing that are the world of a world .|	|the sister who had done that brave deed was put into an education camp .
+but you know , `` what do you do n't be going to do ?|	|now , what if that picture links to all of your pictures ?
+this is the different ?|	|you know , is it rational ?
+it 's a lot of a lot of a lot of the world , but it 's a lot of the world .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and this is the world of the world that we 're going to do .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=15100/98132, loss=4.638416
+the last thing that are a lot of a same thing .|	|the sister who had done that brave deed was put into an education camp .
+but i do n't do that what you 're going to do ?|	|now , what if that picture links to all of your pictures ?
+so this is what ?|	|you know , is it rational ?
+it 's a lot of a same , and a lot of a same thing , and i 'm a lot of the same thing .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and this is the same thing that is a same thing .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=15200/98132, loss=4.681021
+the first thing that the most thing you have a lot of the same thing .|	|the sister who had done that brave deed was put into an education camp .
+but you can see , you can see you to do the lot of you can do you have ?|	|now , what if that picture links to all of your pictures ?
+this is what 's the|	|you know , is it rational ?
+it 's a lot of my way , and you can see the same and you 're not able to get the same thing .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and the most thing that you can see that , it 's not the lot of the same .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=15300/98132, loss=4.739301
+the first thing that was a lot of a way .|	|the sister who had done that brave deed was put into an education camp .
+but what 's going to do to do to do ?|	|now , what if that picture links to all of your pictures ?
+this is what ?|	|you know , is it rational ?
+it 's a lot of the way , but i 'm going to get the way .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and the first thing that is that we 're going to get the way .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=15400/98132, loss=4.438966
+the first thing that the first thing , in a few , a few of a very bit .|	|the sister who had done that brave deed was put into an education camp .
+but what is you very much ?|	|now , what if that picture links to all of your pictures ?
+this is what ?|	|you know , is it rational ?
+it 's a very bit , and you can be a lot of a few , it 's a lot of the same , it 's not a lot of the same , it 's not a lot of the same , it 's not a lot of the|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and in the first time , it 's not a lot of the same .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=15500/98132, loss=4.508121
+the first , that 's the first thing that we 've been a lot of a few time .|	|the sister who had done that brave deed was put into an education camp .
+but what 's what we do that we are going to do the same ?|	|now , what if that picture links to all of your pictures ?
+this is what 's what ?|	|you know , is it rational ?
+it 's a great time that we 've been been a few of the first time that i 've been been a lot of the same time that i 've been been a lot of the same time that i 've been been a lot of the same time|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and the first thing that is that we 've been been a lot of the same time .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=15600/98132, loss=4.587363
+the first , the world is that we can have a lot of a year .|	|the sister who had done that brave deed was put into an education camp .
+but so , so , what do you , `` what do you do to do you can do you have to do ?|	|now , what if that picture links to all of your pictures ?
+so this is what ?|	|you know , is it rational ?
+it 's a very bit , and then you can be a lot of the same , and then you can be a lot of the same , and then you can do it .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and then the last time , it 's not a lot of the world .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=15700/98132, loss=4.553192
+the first time that the way that is a few way that is a few one .|	|the sister who had done that brave deed was put into an education camp .
+but what do you know , you are going to do you ?|	|now , what if that picture links to all of your pictures ?
+this is the question ?|	|you know , is it rational ?
+there is a few one of the way that i 've n't have a lot of the way that is a few and you know ,|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and the second time is that that is the way that is the way that is the way that is the way .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=15800/98132, loss=4.554013
+the first is the way that the way that 's a very very very very very|	|the sister who had done that brave deed was put into an education camp .
+but what it 's what we do n't have to do it ?|	|now , what if that picture links to all of your pictures ?
+this is what ?|	|you know , is it rational ?
+it 's a very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and the first is the way that is the way that 's the way .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=15900/98132, loss=4.553064
+the last last one of the world , a lot of a very very a very very a very very a very very a very very a very very|	|the sister who had done that brave deed was put into an education camp .
+but what is you to do you to do you ?|	|now , what if that picture links to all of your pictures ?
+this is what ?|	|you know , is it rational ?
+it 's a very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and this is the question that 's not going to be going to be going to be going to be .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=16000/98132, loss=4.580681
+the last idea , the idea that the idea of the world , in the other , a lot of a new way , a lot of a new way .|	|the sister who had done that brave deed was put into an education camp .
+but what do you do it , what it 's what we do n't do it ?|	|now , what if that picture links to all of your pictures ?
+this is what 's the idea ?|	|you know , is it rational ?
+it 's a very very very a very bit , but a lot of a new , a lot of a new , a lot of a new , it 's a lot of a lot of a new , it 's a lot of a lot of a|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and i have the lot of the idea that it 's not that it 's not a lot of the way .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=16100/98132, loss=4.427885
+the world is the world of the world , the world 's a new thing .|	|the sister who had done that brave deed was put into an education camp .
+but what it 's going to do you do that how do you do the question ?|	|now , what if that picture links to all of your pictures ?
+it 's the question ?|	|you know , is it rational ?
+it 's a very very a very very a new thing , a new thing , a new thing , `` it 's a new thing , it 's a new thing .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and the world is the world that 's the world .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=16200/98132, loss=4.728046
+the world is the new thing of a year .|	|the sister who had done that brave deed was put into an education camp .
+but what is you really , what you can do you do ?|	|now , what if that picture links to all of your pictures ?
+that 's the question ?|	|you know , is it rational ?
+it 's a lot of the world , and then , the year , the world , that 's not a lot of the way .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and the question is that that 's not the way that we 're going to do .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=16300/98132, loss=4.643445
+the first thing that the world is the world of a world .|	|the sister who had done that brave deed was put into an education camp .
+but you know , `` the question is the question ?|	|now , what if that picture links to all of your pictures ?
+so that is the ?|	|you know , is it rational ?
+it 's a very bit of a very bit , which is a very bit of a very bit of a world and a lot of the world and the way that is a lot of the world .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and the first thing is the way that is very very own .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=16400/98132, loss=4.595203
+the world is the world of the world , which 's the first thing .|	|the sister who had done that brave deed was put into an education camp .
+but what do you do , `` what do you do to do to do to do to do to do to do to do to do to do to do to do to do to do to do ?|	|now , what if that picture links to all of your pictures ?
+this is the question ?|	|you know , is it rational ?
+it 's a lot of a lot of the world , which you 're going to be a lot of a lot of a lot of the world , and a lot of the world , and it 's a lot of the world .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and the world are the question of the world . it 's not be the same .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=16500/98132, loss=4.488326
+the first is that the world are the first thing in a year .|	|the sister who had done that brave deed was put into an education camp .
+but what 's the question is that how are you do to do to do to do ?|	|now , what if that picture links to all of your pictures ?
+this is that ?|	|you know , is it rational ?
+there 's a lot of the first , a first , a first and a lot of the world , that 's a lot of the same .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and the first is that that 's not very much .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=16600/98132, loss=4.490947
+the first , the world is the same way that you have a lot of a new way .|	|the sister who had done that brave deed was put into an education camp .
+but what do you do n't do the lot of the way that are the same way ?|	|now , what if that picture links to all of your pictures ?
+this is the question ?|	|you know , is it rational ?
+it was a lot of the same , a lot of a new way , and the way that you 're going to get the same way .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and the other thing is the same thing that is the way that they are the same .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=16700/98132, loss=4.698812
+and the reason that are the way that was a lot of a new way .|	|the sister who had done that brave deed was put into an education camp .
+but what is you do n't be going to be going to be going to be going to be going to be going to be ?|	|now , what if that picture links to all of your pictures ?
+this is what ?|	|you know , is it rational ?
+and it was a lot , you can be a lot of a way and the way and the way that you 're going to be going to be .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and in the time , you 're not not be able to be able to be .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=16800/98132, loss=4.766901
+the first , the people , the people , you can see a lot of a lot of a lot of a lot of a lot of a|	|the sister who had done that brave deed was put into an education camp .
+but what 's you , what 's you do n't do you do with your other ?|	|now , what if that picture links to all of your pictures ?
+that 's the lot of ?|	|you know , is it rational ?
+it 's a lot of a lot of a lot of a lot of a lot of the world , and you can see you know , you 're going to see you .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and the last thing , that 's what you do n't see you that it 's going to make the lot of the time .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=16900/98132, loss=4.503837
+the world is the world , in a very world .|	|the sister who had done that brave deed was put into an education camp .
+but what is you do to do it ? ''|	|now , what if that picture links to all of your pictures ?
+this is what ?|	|you know , is it rational ?
+it was a very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and in the world , you can see you 're going to have to do it .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=17000/98132, loss=4.703750
+the world , the world in the world , in a world , in a world .|	|the sister who had done that brave deed was put into an education camp .
+but what do you do , `` how do you do to do to do to do to do to do to do to do to do to do ?|	|now , what if that picture links to all of your pictures ?
+this is what we do ?|	|you know , is it rational ?
+it 's a lot of a lot of a lot of a lot of a lot of a lot of a lot of a lot of a lot of a lot of a lot of a lot of a lot of a lot of a lot of a lot|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and in the world , it 's not not not be a lot of people .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=17100/98132, loss=4.255632
+the world is the big thing , in a big way , in a big way .|	|the sister who had done that brave deed was put into an education camp .
+but what you do n't do it 's how they are going to do it ?|	|now , what if that picture links to all of your pictures ?
+this is what we do ?|	|you know , is it rational ?
+it 's a lot of a lot of a big , a lot of a big , a lot of a big , it 's a lot of a big , it 's a lot of a big way .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and in fact , it 's not that it 's not a lot of life .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=17200/98132, loss=4.462559
+the first , the people have to be a lot of a new way .|	|the sister who had done that brave deed was put into an education camp .
+but what is it , what we can do n't have to get it ?|	|now , what if that picture links to all of your pictures ?
+this is the way ?|	|you know , is it rational ?
+it 's a very bit , the first , a lot of a way , the people , the way , the way , the way .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and in the world , the people are not going to be it .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=17300/98132, loss=4.567728
+the first , the world is to be a lot of a very bit .|	|the sister who had done that brave deed was put into an education camp .
+but what 's what you do , `` what 's you to do you do about a way ?|	|now , what if that picture links to all of your pictures ?
+this is what 's ?|	|you know , is it rational ?
+it 's a very bit , or a little way , a little way , a little way , or a little way , or a little way , or it 's not a very bit .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and in the world , you can see it 's not a lot of a lot of a very bit .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=17400/98132, loss=4.318354
+the first , the people are a little bit of a new way .|	|the sister who had done that brave deed was put into an education camp .
+but what 's you to do that ?|	|now , what if that picture links to all of your pictures ?
+this is what ?|	|you know , is it rational ?
+it 's a lot of a way , and a little bit and that was not a little bit of the way .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and the people are not not a lot of the way .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=17500/98132, loss=4.319751
+the first , the world , the world , you have to get a lot of a very bit .|	|the sister who had done that brave deed was put into an education camp .
+but i think , `` what you do n't think , `` what you do n't have to do with a lot of a way ?|	|now , what if that picture links to all of your pictures ?
+this is the real ?|	|you know , is it rational ?
+it 's a very bit , because a lot of a very bit , a little bit , and it 's a little bit , and so it 's a very bit ,|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and the world is not not not be the world .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=17600/98132, loss=4.652751
+the first , the world is been a lot of a very bit .|	|the sister who had done that brave deed was put into an education camp .
+but what 's what you can have to do you have to do you have to do you have to do you have to do you have to do with your own ?|	|now , what if that picture links to all of your pictures ?
+so that 's what ?|	|you know , is it rational ?
+it 's a lot of a lot of a very bit , a little bit of the world , which is n't n't be a little bit of a very bit .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and in the world , it 's not what it is n't be going to be .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=17700/98132, loss=4.569245
+the first , the world , the world , a little bit of a way .|	|the sister who had done that brave deed was put into an education camp .
+but it 's not how how do you want to do ?|	|now , what if that picture links to all of your pictures ?
+this is the way ?|	|you know , is it rational ?
+it 's a lot of a lot of a way and a little bit of the way and that 's a little bit of the way , but it 's not a little bit .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and in the world of the world , it 's not really really as a lot of our way .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=17800/98132, loss=4.652311
+the first , the world , the world , a little bit of a world .|	|the sister who had done that brave deed was put into an education camp .
+but how do you know how they 're going to be going to be a lot of people ?|	|now , what if that picture links to all of your pictures ?
+that 's the right ?|	|you know , is it rational ?
+it 's a lot of a lot of a lot of a world , a little bit of the world , but it 's a very bit .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and in the world , that 's not that they 're going to be a lot of people .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=17900/98132, loss=4.444930
+the first of the world is the first thing , to a little bit of a right .|	|the sister who had done that brave deed was put into an education camp .
+but what 's what we do n't have to do to do to do ?|	|now , what if that picture links to all of your pictures ?
+that 's the right ?|	|you know , is it rational ?
+it 's a little bit , a little bit of a little bit of the world , but the first thing , the first thing , the way , the way , the right .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and in the world , you 're not the right of the right of the world .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=18000/98132, loss=4.590535
+the first of the world is to be a little bit of a world .|	|the sister who had done that brave deed was put into an education camp .
+but what it is n't be going to be going to be going to be going to be going to be going to be ?|	|now , what if that picture links to all of your pictures ?
+it 's what ?|	|you know , is it rational ?
+it was a little bit of a little bit of the world and the world that it was not very very very bit .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and then the world is n't be not the world that we are going to be going to be .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=18100/98132, loss=4.633421
+the first of the world , the world , the world , in the world , in a same way , in a same way , in a right of a world .|	|the sister who had done that brave deed was put into an education camp .
+but when you think , `` well , you are going to do you have to do ?|	|now , what if that picture links to all of your pictures ?
+this is what ?|	|you know , is it rational ?
+it 's a very bit , in the same , a little bit of the same , a little bit of the same and that you can think it 's not very very very very very very very very very very very very very very very very very very|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and in the world , the first of the world is not not the same way .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=18200/98132, loss=4.328776
+the first , the world , the world , the first , in a little bit of a little bit .|	|the sister who had done that brave deed was put into an education camp .
+but what 's what you can be , what 's what you can have to be going to be going to be ?|	|now , what if that picture links to all of your pictures ?
+this is what ?|	|you know , is it rational ?
+it was a little bit , the first , a little bit of a little bit , a little bit of the same and , the little bit of the world , the little bit of the world , the little bit of the same , the little bit|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and the first of the world , you can see , this is what we are not all of them .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=18300/98132, loss=4.591983
+the first , the most of the world is to be a little bit of a new way .|	|the sister who had done that brave deed was put into an education camp .
+but what 's what you can say , `` what are you get them to make a lot of the world ?|	|now , what if that picture links to all of your pictures ?
+it 's the idea ?|	|you know , is it rational ?
+it was a lot of a lot of the world , a little bit of the world and a little bit of the world , and you can be a little bit of the way .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and in the world , the people is n't that they are going to be all of them .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=18400/98132, loss=4.589821
+the first thing that the way that was in a very bit of a very bit of a very bit .|	|the sister who had done that brave deed was put into an education camp .
+but you know , `` the way that you can see it ?|	|now , what if that picture links to all of your pictures ?
+that is the idea ?|	|you know , is it rational ?
+it was a very bit , or a few , a few , that 's the very bit of the way , it 's not very very very bit .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and in the world , you can see that that 's the way that 's the way .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=18500/98132, loss=4.516575
+the first thing that the world is to be in the world , in a new , in a new time .|	|the sister who had done that brave deed was put into an education camp .
+but what is what , what is what you can do to do to do to do to do ?|	|now , what if that picture links to all of your pictures ?
+that is what ?|	|you know , is it rational ?
+it was a very bit , a lot of a new , a new , a new , and the new thing , and the new thing , the new , that was n't a very bit .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and in the world , you are n't , it 's the good .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=18600/98132, loss=4.507665
+the first , the most of the world is to be in a new way , in a new way .|	|the sister who had done that brave deed was put into an education camp .
+but what 's what you 're going to be going to be able to be a lot of your brain ?|	|now , what if that picture links to all of your pictures ?
+that 's what ?|	|you know , is it rational ?
+it 's a big , which , in the world , a little bit of the world , and the internet has n't be able to be a new , that 's not a lot of the way .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and in the world , that 's what 's going to be that that 's going to be able to be .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=18700/98132, loss=4.589486
+the first , the most of the most , the most , a few , a few , a few , a little bit of a way .|	|the sister who had done that brave deed was put into an education camp .
+but , it 's what you 're going to say , you 're going to be going to be going to be going to be going to be going to be going to be going to be going to be going to be going to be going to be|	|now , what if that picture links to all of your pictures ?
+that 's what ?|	|you know , is it rational ?
+it 's a lot of a few , a little bit , a little bit , and the most thing , that 's a lot of a way , that 's a little bit , and you 're going to be .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and in the last , you can see , you 're not , and that 's the way that 's going to be .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=18800/98132, loss=4.458171
+the first , the most are the future , in a future , in a future .|	|the sister who had done that brave deed was put into an education camp .
+but what 's what you 're going to say , you 're going to be going to be going to be going to be going to be going to be going to be ?|	|now , what if that picture links to all of your pictures ?
+so , that 's what ?|	|you know , is it rational ?
+it 's a lot of a lot , which is a lot of a few and a lot of a few and so you 're not a lot of a way that you 're not .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and in the future , you 're not just just . that 's the same way that are all of our future .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=18900/98132, loss=4.420112
+the world was the world that the most of a story of a world .|	|the sister who had done that brave deed was put into an education camp .
+but what would you say , if you can do it ?|	|now , what if that picture links to all of your pictures ?
+it 's what ?|	|you know , is it rational ?
+it 's a lot of a lot of a world , a lot of a world , and the most thing that 's not a very bit .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and in the world , the world is n't that we are going to be a lot of a lot of a world .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=19000/98132, loss=4.521194
+the world is the most of the world that the most people are a few of a very bit of a very bit of a very bit of a|	|the sister who had done that brave deed was put into an education camp .
+but what 's what you do n't know , if you do n't know ?|	|now , what if that picture links to all of your pictures ?
+is the question ?|	|you know , is it rational ?
+and there 's a very bit , the people , a few , a few , a few , a few , a few of the same , a few of the same , a few , the other , the other , the other , the other ,|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and in the world , the people are the first time of the world , the most of the world is the same way .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=19100/98132, loss=4.493215
+the first thing that are the way of a way , in a way , in a way , a|	|the sister who had done that brave deed was put into an education camp .
+but what 's what , you can do you know what are you do ?|	|now , what if that picture links to all of your pictures ?
+it 's a good ?|	|you know , is it rational ?
+it 's a big , a way , a city of a city , a city of a way , and the way that 's a very bit .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and in the way , you can not not the way that 's not a way that 's a way that are a way that 's a way .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=19200/98132, loss=4.486589
+the first thing that the people are to be the same thing , in a middle of a new time .|	|the sister who had done that brave deed was put into an education camp .
+but what would you do what they do n't have to do with your same ?|	|now , what if that picture links to all of your pictures ?
+this is the problem ?|	|you know , is it rational ?
+it 's a big , which , in fact , a few of the same , a few of the same , a very bit of the same , which is the same , which is the same .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and in the world , they are n't know that 's the same thing .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=19300/98132, loss=4.442979
+the first , the world , the world , a little bit of a new , a new , a|	|the sister who had done that brave deed was put into an education camp .
+but what does you know , if you do n't be to be a new people ?|	|now , what if that picture links to all of your pictures ?
+this is that ?|	|you know , is it rational ?
+it 's a little bit , which , a little bit , a little bit , a little bit , a little bit , a little bit , that 's not a very bit .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and the world , you know that , that 's the first thing .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=19400/98132, loss=4.509180
+the first thing that the people are a big bit of a new city .|	|the sister who had done that brave deed was put into an education camp .
+but how do you know , if you want to be going to be going to be going to be going to be going to be going to be ?|	|now , what if that picture links to all of your pictures ?
+this is the problem ?|	|you know , is it rational ?
+it 's a big bit , which , in fact , a little bit of the city of the city , a little bit of the city and the city , which is no big .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and the people are not , you know that 's the big way .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=19500/98132, loss=4.691012
+the world is the big , a very bit of a very bit .|	|the sister who had done that brave deed was put into an education camp .
+but what does you do you know what 's going to be going to be going to be doing to be going to be doing to be going to be a big ?|	|now , what if that picture links to all of your pictures ?
+this is the problem ?|	|you know , is it rational ?
+it 's a very bit , a very bit , a very bit , a very bit of the brain , a very bit of the brain , and the brain is a very bit of the same , and the brain is a very bit .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and in the world , you can see the way that 's the way that 's the way .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=19600/98132, loss=4.348443
+the world is the big , a big bit of a new year .|	|the sister who had done that brave deed was put into an education camp .
+but what do you know what do you do with a lot of what ?|	|now , what if that picture links to all of your pictures ?
+this is the right ?|	|you know , is it rational ?
+it was a big bit , a lot of a new year , a lot of the same , which is n't the same , which is n't the same .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and in course , this is the big thing that is the same way .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=19700/98132, loss=4.547483
+the first thing that the world is the same , the people that the year is a lot of a new time .|	|the sister who had done that brave deed was put into an education camp .
+but how do you know , if you 're going to do , if you 're going to use your same , they 're going to use your same ?|	|now , what if that picture links to all of your pictures ?
+this is the problem ?|	|you know , is it rational ?
+it 's a lot of a lot of a lot of a lot of a lot of a very bit , a little bit of a lot of a year , a lot of the same , a very bit of the same , a very bit of the|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and in the world , the world is the same , and they 're going to see that , and that 's the same way that 's the same way .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=19800/98132, loss=4.506236
+the first thing that are the first time , in a few , a few of a few .|	|the sister who had done that brave deed was put into an education camp .
+but what do you know , you can do you know , you can do you do to do ?|	|now , what if that picture links to all of your pictures ?
+that is the right ?|	|you know , is it rational ?
+it was a very bit of a few , which is a lot of a few of the world , which is very very good , which is very good .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and in the world , you know that they are going to do to do .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=19900/98132, loss=4.271867
+the first thing that the most people are to be a few years .|	|the sister who had done that brave deed was put into an education camp .
+but how do you do , `` what 's you to do ?|	|now , what if that picture links to all of your pictures ?
+this is what ?|	|you know , is it rational ?
+it 's a very bit , in the same , a very bit of the world , a little bit of the world , and the most thing , the most , the most , the most , the most , the very bit of the same .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and in the world , you do n't know this is what this is what you 're going to be .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=20000/98132, loss=4.229578
+the world , the most of the world are the story , in a new time .|	|the sister who had done that brave deed was put into an education camp .
+but what would you say , `` what would you have to be ?|	|now , what if that picture links to all of your pictures ?
+this is the story ?|	|you know , is it rational ?
+it 's a very bit , a very bit , a little bit of the time , a little bit of the time , the little bit of the time , the little bit of the time , the|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and in the time , you know that this is what they 're going to be .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=20100/98132, loss=4.288212
+the world 's the most world that we 're going to be a little bit of a new way .|	|the sister who had done that brave deed was put into an education camp .
+but , it 's not , what 's you to do with your own ?|	|now , what if that picture links to all of your pictures ?
+that 's the most ?|	|you know , is it rational ?
+it 's a little bit , the same , a little bit of the world , a little bit of the same , the same , the same , the same , the same , the same , the same , the same , the same , the|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and the most thing , the most thing that is not the same way .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=20200/98132, loss=4.292275
+and the world are the same way , the same , a little bit of a new .|	|the sister who had done that brave deed was put into an education camp .
+but what do you know , you know , you can see you can do you get to be going to be ?|	|now , what if that picture links to all of your pictures ?
+that 's the same ?|	|you know , is it rational ?
+it 's a lot of a lot of the same , a little bit of the same , a little bit of the same , the way , the way is n't , the|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and in the world , you can see that they are going to be these people to be .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=20300/98132, loss=4.404357
+the world is the same way , the same , a few of a few .|	|the sister who had done that brave deed was put into an education camp .
+but , how , `` well , you can do you get to do to do to do ? to do ?|	|now , what if that picture links to all of your pictures ?
+this is the same ?|	|you know , is it rational ?
+it 's a lot of a lot of a few , a little bit of a world and the same , the same , the same , the same , you know , `` the same , you know , the|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and the world is not very much to the same way .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=20400/98132, loss=4.365536
+the world are the same way , a lot of a lot of a lot of a|	|the sister who had done that brave deed was put into an education camp .
+but , you know , you can see you ?|	|now , what if that picture links to all of your pictures ?
+this is why ?|	|you know , is it rational ?
+it was a lot of a lot of a lot of the world , a lot of the world , and you can see , you can see , and you can see .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and the world is that you can see you to be .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=20500/98132, loss=4.434265
+the first , the world are the way to have to be a few .|	|the sister who had done that brave deed was put into an education camp .
+but how do you do to do to do to do to do ?|	|now , what if that picture links to all of your pictures ?
+this is what ?|	|you know , is it rational ?
+it 's a very bit , to be a lot of the way , a lot of the way , a lot of the way , the way , the way , the way , the way , the way , the way , the way that 's not|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and in the way , you can see that they are to get to the way .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=20600/98132, loss=4.513273
+the first , the world are the world of the world , a few example .|	|the sister who had done that brave deed was put into an education camp .
+but how do you know , you know , you can say , you can be going to be a lot of the things ?|	|now , what if that picture links to all of your pictures ?
+this is the right ?|	|you know , is it rational ?
+it 's a very bit of a lot of a lot of a few , a little bit of a few , a little bit of the world and the other thing of the world , the other thing , the other thing .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and in the world , you can see that that are the same thing .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=20700/98132, loss=4.443994
+the first , the world are the same way to the same way to have a few story .|	|the sister who had done that brave deed was put into an education camp .
+but what does you do that , `` what are you to do with their own ?|	|now , what if that picture links to all of your pictures ?
+this is the same ?|	|you know , is it rational ?
+it 's a very bit of a very bit , which is a lot of a very bit of a old , a old , a old , a very bit of the same , and the same thing of the world and the same , it 's not|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and in the world , the world are not that that are the same thing .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=20800/98132, loss=4.273818
+the first thing , the world are the first thing , a little bit of a new thing .|	|the sister who had done that brave deed was put into an education camp .
+but what does you know , if you can do you get the things to do with the same time ?|	|now , what if that picture links to all of your pictures ?
+this is what ?|	|you know , is it rational ?
+it 's a very bit , because a little bit of a very bit of a very bit , a very bit of a very bit , a very bit of a very bit of the world , a very bit of the first thing .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and in the world , you can see that , this is all of the things .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=20900/98132, loss=4.428793
+the first , the world , the world are the same , the first , in a few , a little bit .|	|the sister who had done that brave deed was put into an education camp .
+but how do you know , if you know , how are you about your own time ?|	|now , what if that picture links to all of your pictures ?
+this is what ?|	|you know , is it rational ?
+it was a very bit , which is a lot of a bit , a little bit , a little bit , a little bit , the first , the first , the first , the very bit of the same , the very bit of the same ,|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and the first thing is that we are not going to do this is the same thing .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=21000/98132, loss=4.406793
+the first , the world are the first thing of a new bit of a new .|	|the sister who had done that brave deed was put into an education camp .
+but what do you know what you can do you know about you ?|	|now , what if that picture links to all of your pictures ?
+this is what ?|	|you know , is it rational ?
+it 's a very bit of a bit , a little bit of a little bit and a little bit of the first , that is n't .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and in the world , you know that this is the same thing .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=21100/98132, loss=4.393060
+the first is the most of the things that the first are the new time .|	|the sister who had done that brave deed was put into an education camp .
+but how do you know , you know , they are the same things ?|	|now , what if that picture links to all of your pictures ?
+this is the first ?|	|you know , is it rational ?
+it was a new , and it was been a new , and the first thing is the same and the first thing is the same , and the first thing is the same .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and the first thing is that they are all the things .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=21200/98132, loss=4.316544
+the first , the people are the same things , the whole one , in a new one .|	|the sister who had done that brave deed was put into an education camp .
+but how do it , how do you know how they can do about how ?|	|now , what if that picture links to all of your pictures ?
+this is the same ?|	|you know , is it rational ?
+it 's a very bit , which is a lot of a lot of the same , a little bit , a little bit , and that 's not actually a lot of the same , the same , the same , the same ,|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and in the world , they 're not all this things .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=21300/98132, loss=4.549249
+the first , the people are all the same , which is a lot of a lot of a lot of a lot of a|	|the sister who had done that brave deed was put into an education camp .
+but how do you think how they can get to get you to get how to get their ?|	|now , what if that picture links to all of your pictures ?
+this is what ?|	|you know , is it rational ?
+it 's a lot of the first , which is a lot of the same , which is a lot of the same , which is not very much , which is not to be the same ,|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and the first thing is that we 're all the same .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=21400/98132, loss=4.462994
+the first , the first thing that the first thing , the first thing , in the first , the first thing ,|	|the sister who had done that brave deed was put into an education camp .
+but what do you know , you can see you to do to do to do to do to do to do to do to do to do to do to do to do to do to do to do to do to do to do ?|	|now , what if that picture links to all of your pictures ?
+it 's what ?|	|you know , is it rational ?
+it 's a kind of the first , which was a lot of the first , a very bit , a little bit , the first , the first thing , the first thing , the first thing , the first thing , the first thing , the first|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and in the first , you can see this .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=21500/98132, loss=4.304323
+the first , the world that are going to be able to have to get a lot of a lot of a lot of a few .|	|the sister who had done that brave deed was put into an education camp .
+but how do you know , if you do n't have to do you get a lot of ?|	|now , what if that picture links to all of your pictures ?
+that 's the first ?|	|you know , is it rational ?
+it 's a very bit , or a lot of the way of the world , a lot of the world , and that 's not a lot of the way that you 're .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and in the world , you know that we 're going to do that .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=21600/98132, loss=4.469396
+the first , the world are the world , which is a lot of a different .|	|the sister who had done that brave deed was put into an education camp .
+but how do you know , what the people are going to be going to be going to be going to be going to be going to be going to be going to be going to be going to be going to be going to be going to be|	|now , what if that picture links to all of your pictures ?
+that 's the right ?|	|you know , is it rational ?
+it 's a very bit , which a lot of people , a very bit of the world , that 's not a very bit of the way that it 's going to be a very bit .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and in the world , you know that 's going to be to be to be .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=21700/98132, loss=4.704741
+the first , the most time is the very bit of a little bit of a little bit .|	|the sister who had done that brave deed was put into an education camp .
+but how do you know , if you do n't have to do you get with your way ?|	|now , what if that picture links to all of your pictures ?
+so this is the right ?|	|you know , is it rational ?
+it 's a very bit , which is a very bit of a little bit of the next , which is a very bit of the way , which is n't a very bit of a very bit of a very bit , which is it .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and in the world , you 're all of the way that are going to be all of a little bit of them .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=21800/98132, loss=4.460294
+the first , the world are the world that the world is to be a few of a few of a few .|	|the sister who had done that brave deed was put into an education camp .
+but how is it , if you can get you about your own time ?|	|now , what if that picture links to all of your pictures ?
+so that 's the right ?|	|you know , is it rational ?
+it was a very bit of a great , which is a lot of the world , a little bit of the world , the most of the world , the next , the next , the next , the next , the next , the next , the|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and in the world , you can see that we 're going to be to make the world .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=21900/98132, loss=4.480575
+the first , these are the world , the world , the world , a little bit of a very bit of a very bit of a very bit of a very bit of a very bit of a|	|the sister who had done that brave deed was put into an education camp .
+but i do n't know what they do n't have to make you ?|	|now , what if that picture links to all of your pictures ?
+so that 's what ?|	|you know , is it rational ?
+it 's a very bit of a lot of a lot of the world , or the next , a very bit of the world , they 're not very very very very bit of the world .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and in the world , they 're not not not the same thing .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=22000/98132, loss=4.442672
+the first , the world , the world , the world are going to have to have to make a lot of a little bit of a little bit of a little bit of a little bit .|	|the sister who had done that brave deed was put into an education camp .
+but how do you know , if you know , if you know , if you know , what they 're going to do about how they 're going to do ?|	|now , what if that picture links to all of your pictures ?
+it 's what ?|	|you know , is it rational ?
+it 's a very bit , because it 's a lot of a little bit , a little bit of the world , a little bit of the world , a little bit of the world , the world , the world , the world , the world ,|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and in the world , you know , they 're going to see that , and that 's going to be going to be going to be going to be going to be going to be going to be going to be going to be going to be going|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=22100/98132, loss=4.396838
+the first of the world , the world of them , the first of a few of a very bit of a few .|	|the sister who had done that brave deed was put into an education camp .
+but how do you know , if you can be going to be going to be going to be going to be going to be going to be going to be going to be going to be going to be going to be ?|	|now , what if that picture links to all of your pictures ?
+so that 's why ?|	|you know , is it rational ?
+it was a very bit of which , with a few , a few of a very bit of a few and a very bit of the world , a very bit of the world of the world , and the first of them .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and in the world , you know that we 're going to be going to be going to be .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=22200/98132, loss=4.496736
+the first , the world is that the world are going to be going to get a very bit .|	|the sister who had done that brave deed was put into an education camp .
+but how is it , if you 're going to get to get to get to get with the same ?|	|now , what if that picture links to all of your pictures ?
+so that 's what ?|	|you know , is it rational ?
+it 's a very bit , which is a very bit of the same , a very bit of the world , a very bit of the world , which is very very very very very very very very very very very very very very very very very very|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and in the world , you 're not very much than the same thing .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=22300/98132, loss=4.658305
+the first thing is the world , the little one of a little bit of a very bit .|	|the sister who had done that brave deed was put into an education camp .
+but what is what what is you to say about you ?|	|now , what if that picture links to all of your pictures ?
+is that ?|	|you know , is it rational ?
+it 's a very bit , which is a little bit of the world , a little bit of the world , the little thing , the little thing , the little thing , the very very very very very very very very very very very very very very|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and in the world , you know , is it 's very much .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=22400/98132, loss=4.286901
+the first thing that the world are the same thing , `` the first thing , in a little time .|	|the sister who had done that brave deed was put into an education camp .
+but how do you think about you can be about your people ?|	|now , what if that picture links to all of your pictures ?
+this is why ?|	|you know , is it rational ?
+it 's an one , which is a little time , and the same , the same , the same , the same , the same , the same , the same , the same , the same , the same , it 's not a very bit .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and in the world , you can think that 's all the same thing .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=22500/98132, loss=4.604073
+the first , the world are the same thing that are going to be a big one .|	|the sister who had done that brave deed was put into an education camp .
+but how it 's , if you do n't have to do that ?|	|now , what if that picture links to all of your pictures ?
+is that 's ?|	|you know , is it rational ?
+it 's a little bit , which is a little bit of the same , a little bit of the same , the first , the first thing , the first thing .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and in the first , they 're not very much .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=22600/98132, loss=4.385603
+the first , the people are the same thing , the same thing is a new thing .|	|the sister who had done that brave deed was put into an education camp .
+but how are it , if you can be going to be able to be able to be able to be able to be ?|	|now , what if that picture links to all of your pictures ?
+is that ?|	|you know , is it rational ?
+it 's a huge , to a lot of a new , a little bit , a little bit , a little bit , that 's not a lot of the same thing .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and in the same , you can see this .|	|and indeed they should . these are important questions to answer .
+
+epoch=1, iter=22700/98132, loss=4.321420
+the first thing that are the same thing of a lot of a new time .|	|the sister who had done that brave deed was put into an education camp .
+but how are you , if you can do you get you ?|	|now , what if that picture links to all of your pictures ?
+is that 's what ?|	|you know , is it rational ?
+it 's a lot of a lot of a lot of a lot of the same , a lot of the same , and the same thing is not a lot of the same thing .|	|it could be this peculiar , wondrous , bizarre collaboration kind of conversation between tom and the strange , external thing that was not quite tom .
+and in the world , you can see this .|	|and indeed they
