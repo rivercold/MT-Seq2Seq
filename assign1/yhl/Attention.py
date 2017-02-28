@@ -14,8 +14,7 @@ class Attention():
 
     # define dynet model for the encoder-decoder model
     def __init__(self, train_src_file, train_tgt_file,
-                 num_layers=1, embed_size=150, hidden_size=128, attention_size=128, load_from=None):
-
+                 num_layers=1, embed_size=150, hidden_size=128, attention_size=128, load_from=None, beam_search=False):
         self.num_layers = num_layers
         self.embed_size, self.hidden_size, self.attention_size = embed_size, hidden_size, attention_size
 
@@ -27,10 +26,14 @@ class Attention():
                                                                                                         target=True)
         self.src_sent_vecs, self.tgt_sent_vecs = sort_by_length(self.src_sent_vecs, self.tgt_sent_vecs)
 
+        if beam_search:
+            self.LP = compute_length_prob(self.src_sent_vecs, self.tgt_sent_vecs)
+
         if load_from is not None:
             [self.l2r_builder, self.r2l_builder, self.dec_builder,
              self.src_lookup, self.tgt_lookup, self.W_y, self.b_y,
              self.W_eh, self.W_hh, self.W1_att_e, self.W1_att_f, self.w2_att] = self.model.load(load_from)
+            print "Finish loading"
         else:
             self.l2r_builder = LSTMBuilder(self.num_layers, self.embed_size, self.hidden_size, self.model)
             self.r2l_builder = LSTMBuilder(self.num_layers, self.embed_size, self.hidden_size, self.model)
@@ -200,6 +203,77 @@ class Attention():
 
         return loss, sum(lengths)
 
+
+
+    def translate_beam_sentence(self, src_sent_vec, max_len=50 ,beam_width=3):
+        dy.renew_cg()
+        def softmax(x):
+            scoreMatExp = numpy.exp(numpy.asarray(x))
+            return scoreMatExp / scoreMatExp.sum(0)
+        def top_no_stop_list(rank_ids,stopID,beam_size):
+            count, top_list = 0, []
+            for i in rank_ids:
+                if (i%self.tgt_vocab_size) != stopID:
+                    top_list.append(i)
+                    count += 1
+                if count == beam_size:
+                    return top_list
+
+        W_y = dy.parameter(self.W_y)
+        b_y = dy.parameter(self.b_y)
+        W1_att_e = dy.parameter(self.W1_att_e)
+        W1_att_f = dy.parameter(self.W1_att_f)
+        w2_att = dy.parameter(self.w2_att)
+        stopID, dec_state = self.tgt_token_to_id['</S>'], None
+        ls = len(src_sent_vec)
+        H_f, encoded, encoded_h = self.encode(src_sent_vec)
+        max_seq = (float('-inf'),["<S>"])
+        beam_list = [(encoded_h, None, 0, ["<S>"]) for _ in range(beam_width)] #  dec_sate/h_e(only the first), c_t, embed, log_prob,tran_seq
+        # Decoder - # Set the intial state to the result of the encoder
+        iter = 0
+        while iter < max_len:
+            dec_state_list, c_t_list, y_star_list = [],[], []
+            for i, state in enumerate(beam_list):
+                #print "{} beamwidth iter {} beam {}".format(beam_width,iter, i)
+                [dec_state, c_t, log_prob, trans_seq] = state
+                if iter == 0:
+                    c_t = self.__attention_mlp(H_f, dec_state, W1_att_e, W1_att_f, w2_att)
+                    dec_state = self.dec_builder.initial_state()
+                    embed =  encoded
+                else:
+                    cID = self.tgt_token_to_id[trans_seq[-1]]
+                    embed = dy.lookup(self.tgt_lookup,cID)
+                dec_state = dec_state.add_input(dy.concatenate([embed, c_t]))
+                h_e = dec_state.output()
+                c_t = self.__attention_mlp(H_f, h_e, W1_att_e, W1_att_f, w2_att)
+                dec_state_list.append(dec_state)
+                c_t_list.append(c_t)
+                y_star = numpy.log(softmax((W_y * dy.concatenate([h_e, c_t]) + b_y).npvalue()))
+                y_star_list.append(y_star)
+                # Get probability distribution for the next word to be generated
+                end_prob = log_prob + y_star[stopID]
+                p = y_star + log_prob
+                lt = len(trans_seq)
+                #print lt, end_prob/float(lt)
+                if end_prob/float(lt) > max_seq[0]:
+                    max_seq = (end_prob/float(lt), trans_seq)
+                if i == 0:
+                    beam_p = p
+                else:
+                    beam_p = numpy.concatenate([beam_p,p])
+            temp = numpy.argpartition(-beam_p, 2*beam_width)
+            top_width_ids = top_no_stop_list(temp,stopID, beam_width)
+            tmp = []
+            for rank, pid in enumerate(top_width_ids):
+                state_id = pid//self.tgt_vocab_size
+                token_id = pid%self.tgt_vocab_size
+                #print rank, pid, state_id, token_id, state_id
+                #print beam_list[state_id][2], pid, beam_p[pid]
+                tmp.append((dec_state_list[state_id],c_t_list[state_id], beam_list[state_id][2] + y_star_list[state_id][token_id], beam_list[state_id][3]+[self.tgt_id_to_token[token_id]]))
+            beam_list = tmp
+            iter += 1
+        return ' '.join(max_seq[1][1:])
+
     def translate_sentence(self, src_sent_vec, max_len=50):
         dy.renew_cg()
         W_y = dy.parameter(self.W_y)
@@ -241,7 +315,7 @@ class Attention():
 
         return ' '.join(trans_sentence[1:])
 
-    def train(self, test_src_file, test_tgt_file, num_epoch=20, report_iter=100, save=False, start_epoch=0):
+    def train(self, test_src_file, test_tgt_file, num_epoch=20, report_iter=100, beam_search=False, save=False, start_epoch=0):
         src_sent_vecs_test = read_test_file(test_src_file, self.src_token_to_id)
         tgt_sentences_test = read_test_file(test_tgt_file)
 
@@ -255,7 +329,7 @@ class Attention():
                 loss_avg += loss_val
                 loss.backward()
                 self.trainer.update()
-                if (j + 1) % report_iter == 0:
+                if (j) % report_iter == 0:
                     loss_avg /= report_iter
                     print 'epoch=%d, iter=%d, loss=%f' % (i + 1, j + 1, loss_avg)
                     loss_avg = 0.
@@ -268,7 +342,7 @@ class Attention():
                                 .format(i + 1 + start_epoch, self.num_layers, self.hidden_size, self.embed_size,
                                         self.attention_size, ctime))
 
-    def train_batch(self, test_src_file, test_tgt_file, num_epoch=20, batch_size=20, save=False,
+    def train_batch(self, test_src_file, test_tgt_file, num_epoch=20, batch_size=20, beam_search=False, save=False,
                     start_epoch=0):
         src_sent_vecs_test = read_test_file(test_src_file, self.src_token_to_id)
         tgt_sentences_test = read_test_file(test_tgt_file)
@@ -318,9 +392,8 @@ class Attention():
     def test(self, src_sent_vecs_test, tgt_sentences_test):
         num_test = len(src_sent_vecs_test)
         for i in xrange(num_test):
-            trans_sent = self.translate_sentence(src_sent_vecs_test[i])
+            trans_sent = self.translate_beam_sentence(src_sent_vecs_test[i])
             print trans_sent + '|\t|' + tgt_sentences_test[i]
-        print
 
     def save_model(self, file_name):
         folder_path = "../models"
@@ -332,6 +405,21 @@ class Attention():
         self.model.save(file_path, theta)
         print 'saved to {0}'.format(file_path)
 
+    def eval(self, test_src_file, test_tgt_file, eval_file="./results/test_beam.txt"):
+        src_sent_vecs_test = read_test_file(test_src_file, self.src_token_to_id)
+        tgt_sentences_test = read_test_file(test_tgt_file)
+        #randIndex = random.sample(xrange(len(src_sent_vecs_test)), 10)
+        #src_sents = [src_sent_vecs_test[k] for k in randIndex]
+        #tgt_sents = [tgt_sentences_test[k] for k in randIndex]
+        eval_file = open(eval_file,"w")
+        num_test = len(src_sent_vecs_test)
+        for i in xrange(num_test):
+            if (i+1)%10 == 0:
+                print "eval num {0}".format(i+1)
+            # trans_sent = self.translate_beam_sentence(src_sent_vecs_test[i])
+            trans_sent = self.translate_sentence(src_sent_vecs_test[i])
+            print trans_sent+ "|\t|" + tgt_sentences_test[i]
+            eval_file.write(trans_sent+"\n")
 
 def save_model(model, file_path):
     folder_path = "../models"
@@ -361,6 +449,15 @@ def test4():
     att = Attention(train_de, train_en, num_layers=2, load_from='../models/LSTM_epoch_4_layer2_hidden_128_embed_150_att_128_02-20-16-59-09')
     att.train_batch(valid_de, valid_en, save=False)
 
+def test_beam(num_test=10):
+    att = Attention(train_de, train_en, num_layers=2, load_from='../models/LSTM_epoch_4_layer2_hidden_128_embed_150_att_128_02-20-16-59-09')
+    att.test()
+    randIndex = random.sample(xrange(num_test), 10)
+    src_sent_vecs_test = read_test_file(valid_de, self.src_token_to_id)
+    tgt_sentences_test = read_test_file(valid_en)
+    src_sents = [src_sent_vecs_test[k] for k in randIndex]
+    tgt_sents = [tgt_sentences_test[k] for k in randIndex]
+    self.test(src_sents, tgt_sents)
 
 def main():
     parser = argparse.ArgumentParser()
@@ -375,14 +472,22 @@ def main():
     parser.add_argument('-bs', type=int, default=20)
     parser.add_argument('--dynet-mem', type=int, default=3072)
     parser.add_argument('--dynet-gpu-ids', type=int, default=3)
+    parser.add_argument('-beam',default=False)
+    parser.add_argument('-beam-width',default=3)
+    parser.add_argument('-eval',type=bool, default=False)
     args = parser.parse_args()
 
     att = Attention(train_de, train_en, num_layers=args.layer, embed_size=args.embed,
-                    hidden_size=args.hid, attention_size=args.att, load_from=args.load)
-    if args.batch:
-        att.train_batch(valid_de, valid_en, save=args.save, start_epoch=args.se, batch_size=args.bs)
+                    hidden_size=args.hid, attention_size=args.att, load_from=args.load, beam_search=args.beam)
+    if args.eval:
+        print "start evaluatuon!"
+        att.eval(test_de, test_en)
     else:
-        att.train(valid_de, valid_en, save=args.save, start_epoch=args.se)
+        print "start training!"
+        if args.batch:
+            att.train_batch(valid_de, valid_en, save=args.save, start_epoch=args.se, batch_size=args.bs)
+        else:
+            att.train(valid_de, valid_en, save=args.save, start_epoch=args.se)
 
 if __name__ == '__main__':
     main()

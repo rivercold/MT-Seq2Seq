@@ -2,6 +2,8 @@ __author__ = 'yuhongliang324'
 
 import os
 from collections import defaultdict
+import nltk
+import numpy as np
 
 data_root = '../../data'
 train_en = os.path.join(data_root, 'train.en-de.low.filt.en')
@@ -23,7 +25,6 @@ def read_file(file_name, threshold=1, target=False):
     lines = reader.readlines()
     reader.close()
     sentences = map(lambda x: x.strip().split(), lines)
-
     tok_count = defaultdict(int)
 
     for sent in sentences:
@@ -103,6 +104,17 @@ def sort_by_length(src_vecs, tgt_vecs):
     tgt_vecs = [item[1] for item in cb]
     return src_vecs, tgt_vecs
 
+def compute_length_prob(src_vecs,tgt_vecs):
+    print "Computing length prob for beam search!"
+    num_sent = len(src_vecs)
+    #max_ls, max_lt = max(map(lambda x: len(x), src_vecs)), max(map(lambda x: len(x), tgt_vecs))
+    LP = np.zeros((120,120))
+    for i in range(num_sent):
+        ls, lt = len(src_vecs[i]), len(tgt_vecs[i])
+        LP[ls,lt] += 1
+    LP /= float(num_sent) # add smoothing
+    return LP
+
 
 # For target batch: pad at the end
 def make_pad(vecs, padID):
@@ -131,12 +143,18 @@ def make_pad_bidirection(vecs, startID, stopID):
             pads[j + num_startID][i] = vecs[i][j]
     return pads, lengths, maxLen
 
+def eval_BLEU(hypothesis, reference): # hypothesis and reference are list of tokens
+    BLEUscore = nltk.translate.bleu_score.bleu([reference],hypothesis,weights=(0.25, 0.25,0.25,0.25))
+    return BLEUscore
 
 def test1():
     tok_ID, ID_tok, sentVecs, vocSize = read_file(train_en)
     for i in xrange(10):
         print sentVecs[i]
     print vocSize
+
+# def calculate_length_prior_Prob(src_vecs, tgt_vecs):
+
 
 
 if __name__ == '__main__':

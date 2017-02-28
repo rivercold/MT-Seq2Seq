@@ -56,7 +56,7 @@ class EncoderDecoder:
             h_fs.append(enc_state.output())
         encoded_h = enc_state.output()
         encoded_e = W_eh * encoded_h
-        h_fs_matrix = transfer_to_matrix(h_fs)
+        h_fs_matrix = (h_fs)
         return encoded_h, encoded_e, h_fs_matrix
 
     # Training step over a single sentence pair
@@ -79,14 +79,14 @@ class EncoderDecoder:
                 x_t = dy.concatenate(c_t,encoded_e)
                 start = False
             else:
-                h_e = dec_state.output()
-                c_t = self.__attention_mlp(h_fs,h_e)
+                #c_t = self.__attention_mlp(h_fs,h_e)
                 embed = dy.lookup(self.tgt_lookup, cID)
                 x_t = dy.concatenate(c_t,embed)
 
             dec_state = dec_state.add_input(x_t)
-            c_t_plus_1 = self.__attention_mlp(h_fs,dec_state.output())
-            y_star = W_y * dy.concatenate(dec_state.output(),c_t_plus_1) + b_y
+            h_e = dec_state.output()
+            c_t = self.__attention_mlp(h_fs,h_e)
+            y_star = W_y * dy.concatenate(dec_state.output(),c_t) + b_y
             p = dy.softmax(y_star)
             loss = -dy.log(dy.pick(p, nID))
             losses.append(loss)
