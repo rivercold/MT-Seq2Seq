@@ -10,6 +10,7 @@ valid_en = os.path.join(data_root, 'valid.en-de.low.en')
 valid_de = os.path.join(data_root, 'valid.en-de.low.de')
 test_en = os.path.join(data_root, 'test.en-de.low.en')
 test_de = os.path.join(data_root, 'test.en-de.low.de')
+blind_de = os.path.join(data_root, 'blind.en-de.low.de')
 
 toy_train_en = os.path.join(data_root, 'toy.train.en')
 toy_train_de = os.path.join(data_root, 'toy.train.de')
