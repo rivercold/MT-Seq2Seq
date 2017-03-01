@@ -13,50 +13,40 @@
 
 ### Usage for Attention model
 optional arguments:
-
-  -h, --help            show this help message and exit
   
-  -batch BATCH          Whether or not use batch training (default: False)
+  -batch: Whether or not use batch training (default: False)
   
-  -layer LAYER          Number of LSTM layers (default: 2)
+  -layer: Number of LSTM layers (default: 2)
   
-  -embed EMBED          Embedding size (default: 200)
+  -embed: Embedding size (default: 200)
   
-  -hid HID              Hidden size (default: 128)
+  -hid: Hidden size (default: 128)
   
-  -att ATT              Attention size (default: 128)
+  -att: Attention size (default: 128)
   
-  -load LOAD            Model path to load (default: None)
+  -load: Model path to load (default: None)
   
-  -save SAVE            Whether or not save the model during training
-                        (default: True)
+  -save: Whether or not save the model during training (default: True)
                         
-  -se SE                Starting epoch, used for continue training from a
-                        certain node (default: 0)
+  -se: Starting epoch, used for continue training from a certain node (default: 0)
                         
-  -bs BS                Batch size (default: 20)
+  -bs: Batch size (default: 20)
   
-  --dynet-mem DYNET_MEM
-  
-  --dynet-gpu-ids DYNET_GPU_IDS
-  
-  -beam BEAM            Whether or not use Beam search in translation
-                        (default: False)
+  -beam: Whether or not use Beam search in translation (default: False)
                         
-  -beam-width BEAM_WIDTH
-                        Beam width (default: 3)
+  -beam-width: Beam width (default: 3)
                         
-  -pred PRED            Only prediction without training (default: False)
+  -pred: Only prediction without training (default: False)
   
-  -train_en TRAIN_EN    Target sentence file for training (default: None)
+  -train_en: Target sentence file for training (default: None)
   
-  -train_de TRAIN_DE    Source sentence file for training (default: None)
+  -train_de: Source sentence file for training (default: None)
   
-  -test_en TEST_EN      Target sentence file for testing (default: None)
+  -test_en: Target sentence file for testing (default: None)
   
-  -test_de TEST_DE      Source sentence file for testing (default: None)
+  -test_de: Source sentence file for testing (default: None)
   
-  -result RESULT        Result translation file for target testing sentences
+  -result: Result translation file for target testing sentences
                         (default: None)
 ### Example command
 Train:
