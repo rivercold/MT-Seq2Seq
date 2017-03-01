@@ -1,11 +1,13 @@
 __author__ = 'yuhongliang324'
 
-import dynet as dy
-from dynet import LSTMBuilder
-from util_yhl import *
-import numpy
 import random
 import math
+
+import dynet as dy
+from dynet import LSTMBuilder
+import numpy
+
+from assign1.util import *
 
 
 class EncoderDecoder:

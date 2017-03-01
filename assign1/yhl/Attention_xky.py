@@ -1,13 +1,15 @@
 __author__ = 'yuhongliang324'
 
-import dynet as dy
-from dynet import LSTMBuilder
-from util_yhl import *
-import numpy
 import random
 import time
 import math
 import argparse
+
+import dynet as dy
+from dynet import LSTMBuilder
+import numpy
+
+from assign1.util import *
 
 
 class Attention():
