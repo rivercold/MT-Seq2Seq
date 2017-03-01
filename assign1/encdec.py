@@ -7,7 +7,7 @@ import dynet as dy
 from dynet import LSTMBuilder
 import numpy
 
-from assign1.util import *
+from util import *
 
 
 class EncoderDecoder:
