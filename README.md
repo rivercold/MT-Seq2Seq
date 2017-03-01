@@ -10,6 +10,11 @@
     + -output/
         + blind.predict: prediction of blind set
         + test.predict: prediction of test set
+### Example command
+Train:
+```bash
+python Attention.py --dynet-mem 4000 -batch True -save True -train_en ../data/train.en-de.low.en -train_de ../data/train.en-de.low.de
+```
 
 ### Usage for Attention model
 optional arguments:
@@ -48,8 +53,3 @@ optional arguments:
   
   -result: Result translation file for target testing sentences
                         (default: None)
-### Example command
-Train:
-```bash
-python Attention.py --dynet-mem 4000 -batch True -save True -train_en ../data/train.en-de.low.en -train_de ../data/train.en-de.low.de
-```
