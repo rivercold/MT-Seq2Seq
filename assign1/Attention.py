@@ -391,7 +391,7 @@ class Attention():
     def test(self, src_sent_vecs_test, tgt_sentences_test):
         num_test = len(src_sent_vecs_test)
         for i in xrange(num_test):
-            trans_sent = self.translate_beam_sentence(src_sent_vecs_test[i])
+            trans_sent = self.translate_sentence(src_sent_vecs_test[i])
             print trans_sent + '|\t|' + tgt_sentences_test[i]
 
     def save_model(self, file_name):
